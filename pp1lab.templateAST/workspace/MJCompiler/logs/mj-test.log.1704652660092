@@ -1,0 +1,5 @@
+INFO  19:29:26,058 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:29:26,232 - #2 program
+ERROR 19:29:26,232 - 
+Sintaksna greska na liniji 3
+ERROR 19:29:26,233 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

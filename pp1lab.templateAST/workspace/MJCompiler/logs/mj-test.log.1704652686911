@@ -1,0 +1,27 @@
+INFO  19:37:40,096 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:37:40,101 - #2 program
+INFO  19:37:40,102 - #12 test301
+INFO  19:37:40,102 - #5 namespace
+INFO  19:37:40,102 - #12 Konstante
+INFO  19:37:40,102 - #3 {
+INFO  19:37:40,102 - #6 const
+INFO  19:37:40,102 - #12 int
+INFO  19:37:40,102 - #12 nula
+INFO  19:37:40,102 - #7 =
+INFO  19:37:40,102 - #11 0
+INFO  19:37:40,102 - #9 ;
+INFO  19:37:40,103 - #6 const
+INFO  19:37:40,103 - #12 int
+INFO  19:37:40,103 - #12 jedan
+INFO  19:37:40,103 - #7 =
+INFO  19:37:40,103 - #11 1
+INFO  19:37:40,103 - #9 ;
+INFO  19:37:40,103 - #6 const
+INFO  19:37:40,103 - #12 int
+INFO  19:37:40,103 - #12 pet
+INFO  19:37:40,104 - #7 =
+INFO  19:37:40,104 - #11 5
+INFO  19:37:40,104 - #9 ;
+INFO  19:37:40,104 - #3 {
+INFO  19:37:40,104 - #4 }
+INFO  19:37:40,104 - #4 }
