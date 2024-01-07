@@ -1,0 +1,194 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+
+terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST, EQUAL, COMMA, SEMI, STATIC;
+terminal Integer NUMBER ;
+terminal String IDENT ;
+terminal String BOOLCONST ;
+terminal String LETTER ;
+terminal LBOXBRAC, RBOXBRAC, LPAREN, RPAREN, COL, IF, BREAK, ELSE, CONTINUE;
+terminal RETURN, FOR;
+
+nonterminal Program, NamespaceList, NameSpaceList, DeclList, MethodDeclList;
+nonterminal Namespace, DeclType, ConstDecl, VarDecl, MethodDecl;
+nonterminal Type, ConstType, ConstTypeList ;
+nonterminal BracketForArray, ListVarDecl, StaticInitializer, StatementList;
+nonterminal Statement, MethodDecl, TypeList, FormParsOpt, VarDeclOpt, FormPars, ListFormPars;
+nonterminal IdentOpt, DesignatorStatement, Condition, ElseOpt, ExprOpt, Designator;
+nonterminal Expr, NumConstOpt, DesignatorStatementOpt, CondFactOpt;
+
+
+Program ::= (Program) PROG IDENT NamespaceList DeclList LBRACE MethodDeclList RBRACE;
+NamespaceList ::=(NamespaceList) NamespaceList Namespace
+				|
+				  (NoNamespace) /* epsilon */
+				;
+DeclList ::= (DeclList) DeclList DeclType
+			|
+			(NoDecl) /* epsilon */
+			; 
+DeclType ::= (ConstDeclType) ConstDecl
+			|
+			(VarDeclType) VarDecl
+			;
+MethodDeclList ::= (MethodDeclList) MethodDeclList MethodDecl
+			|
+			(NoMethodDeclList) /*epsilon*/
+			;
+			
+Namespace ::= (Namespace) NAMESPACE IDENT LBRACE DeclList LBRACE MethodDeclList RBRACE RBRACE;
+
+ConstDecl ::= (ConstDecl) CONST Type IDENT EQUAL ConstType ConstTypeList;
+ConstTypeList ::= (ConstTypeList) ConstTypeList COMMA IDENT EQUAL ConstType
+			|
+			(NoConstTypeList) /* epsilon */
+			;
+ConstType ::= (NumConstType) NUMBER
+			|
+			(CharConstType) LETTER
+			|
+			(BoolConstType) BOOLCONST
+			;
+			
+VarDecl ::= (VarDecl) Type IDENT BracketForArray ListVarDecl SEMI;
+
+BracketForArray ::= (BracketsForArray) LBOXBRAC RBOXBRAC
+					|
+					(NoBracketForArray) /* epsilon */
+					;
+					
+ListVarDecl ::= (ListVarDecl) ListVarDecl COMMA IDENT BracketForArray
+				|
+				(NoListVarDecl) /* epsilon */
+				;
+				
+StaticInitializer = (StaticInitializer) STATIC LBRACE StatementList RBRACE;
+
+StatementList ::= (StatementList) StatementList Statement
+				|
+				(NoStatementList) /* epsilon */
+				;
+MethodDecl ::= (MethodDecl) TypeList IDENT LPAREN FormParsOpt RPAREN VarDeclOpt LBRACE StatementList RBRACE;
+
+TypeList ::= (TypeMethod) Type
+			|
+			(VoidType) VOID
+			;
+
+
+FormParsOpt ::= (FormParsOpt) FormPars
+				|
+				(NoFormPars) /* epsilon */
+				;
+				
+VarDeclOpt ::= (VarDecl) VarDecl
+				|
+				(NoVarDecl) /* epsilon */
+				;
+				
+FormPars ::= (FormPars) Type IDENT BracketForArray ListFormPars
+ListFormPars ::= (ListFormPars) ListFormPars COMMA Type IDENT BracketForArray
+				|
+				(NoListFormPars) /* epsilon */
+				;
+
+Type ::= (Type) IdentOpt IDENT;
+IdentOpt ::= (IdentOpt) IDENT COL COL
+			|
+			(NoIdentOpt) /* epsilon */
+			
+Statement ::= (Statement) DesignatorStatement SEMI
+			|
+			(If) IF LPAREN Condition RPAREN Statement ElseOpt
+			|
+			(Break) BREAK SEMI
+			|
+			(Continue) CONTINUE SEMI
+			|
+			(Return) RETURN ExprOpt SEMI
+			|
+			(Read) READ LPAREN Designator RPAREN SEMI
+			|
+			(Print) PRINT LPAREN Expr NumConstOpt RPAREN SEMI
+			|
+			(For) FOR LPAREN DesignatorStatementOpt SEMI CondFactOpt SEMI DesignatorStatementOpt RPAREN Statement
+			|
+			LBRACE StatementList RBRACE
+			;
+			
+ElseOpt ::= (ElseOpt) ELSE Statement
+			|
+			(NoElseOpt) /* epsilon */
+			;
+			
+ExprOpt ::= (ExprOpt) Expr
+			|
+			(NoExpr) /* epsilon */
+			;
+			
+NumConstOpt ::= (NumConstOpt) COMMA NUMBER
+			|
+			(NoNumConst) /* epsilon */
+			;
+DesignatorStatementOpt ::= (DesignatorStatementOpt) DesignatorStatementOpt COMMA DesignatorStatement
+						|
+						(DesignatorStatementTerminal) DesignatorStatement
+						;
+
+CondFactOpt ::= (CondFactOpt) CondFact
+			|
+			(NoCondFact) /* epsilon */	
+
