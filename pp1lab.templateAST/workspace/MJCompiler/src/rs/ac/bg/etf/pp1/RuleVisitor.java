@@ -9,14 +9,14 @@ public class RuleVisitor extends VisitorAdaptor{
 	int printCallCount = 0;
 	int varDeclCount = 0;
 	
-	public void visit(VarDecl varDecl) {
+	public void visit(VarDeclClass varDecl) {
 		varDeclCount++;
 	}
 	
-	// ako je pozvan print iz programa
-//	public void visit(PrintStmt PrintStmt) {
-//		printCallCount++;
-//		log.info("Prepoznata naredba print!");
-//	}
+	 //ako je pozvan print iz programa
+	public void visit(PrintClass PrintStmt) {
+		printCallCount++;
+		log.info("Prepoznata naredba print!");
+	}
 
 }

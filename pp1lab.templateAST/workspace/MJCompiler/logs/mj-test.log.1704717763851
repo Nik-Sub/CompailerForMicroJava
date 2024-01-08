@@ -1,0 +1,36 @@
+INFO  13:42:06,598 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  13:42:06,638 - #2 program
+INFO  13:42:06,639 - #12 test301
+INFO  13:42:06,639 - #5 namespace
+INFO  13:42:06,640 - #12 Konstante
+INFO  13:42:06,641 - #3 {
+INFO  13:42:06,641 - #6 const
+INFO  13:42:06,642 - #12 int
+INFO  13:42:06,645 - #12 nula
+INFO  13:42:06,646 - #7 =
+INFO  13:42:06,646 - #11 0
+INFO  13:42:06,646 - #9 ;
+INFO  13:42:06,648 - #6 const
+INFO  13:42:06,649 - #12 int
+INFO  13:42:06,649 - #12 jedan
+INFO  13:42:06,649 - #7 =
+INFO  13:42:06,649 - #11 1
+INFO  13:42:06,650 - #9 ;
+INFO  13:42:06,650 - #6 const
+INFO  13:42:06,650 - #12 int
+INFO  13:42:06,650 - #12 pet
+INFO  13:42:06,651 - #7 =
+INFO  13:42:06,651 - #11 5
+INFO  13:42:06,651 - #9 ;
+INFO  13:42:06,651 - #3 {
+INFO  13:42:06,651 - #4 }
+INFO  13:42:06,653 - #4 }
+INFO  13:42:06,653 - #5 namespace
+INFO  13:42:06,653 - #12 Nizovi
+INFO  13:42:06,654 - #3 {
+INFO  13:42:06,654 - #12 int
+INFO  13:42:06,654 - #12 niz
+INFO  13:42:06,654 - #15 [
+ERROR 13:42:06,654 - 
+Sintaksna greska na liniji 14
+ERROR 13:42:06,654 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14

@@ -74,7 +74,10 @@ nonterminal ListExpressions, ListDesignator, Assignop, ActParsOpt, ListExpr, Des
 nonterminal Condition, CondTerm, CondTermList, OptRelop, CondFactList;
 nonterminal Term, AdditionList, MinusOpt, Factor, MultiplicationList;
 nonterminal OptParen, ListParams, ListIdent, Label, Relop, Addop, Mulop, ExprFactor, ActPars;
-nonterminal AssignOperator, MtchStatement, UnmtchStatement;
+nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
+
+
+precedence left ELSE;
 
 
 Program ::= (ProgramClass) PROG IDENT NamespaceList DeclList LBRACE MethodDeclList RBRACE
@@ -102,7 +105,7 @@ MethodDeclList ::=(MethodDeclListClass) MethodDeclList MethodDecl
 Namespace ::= (NamespaceClass) NAMESPACE IDENT LBRACE DeclList LBRACE MethodDeclList RBRACE RBRACE
 			;
 
-ConstDecl ::= (ConstDeclClass) CONST Type IDENT EQUAL ConstType ConstTypeList
+ConstDecl ::= (ConstDeclClass) CONST Type IDENT EQUAL ConstType ConstTypeList SEMI
 			;
 
 ConstTypeList ::=(ConstTypeListClass) ConstTypeList COMMA IDENT EQUAL ConstType
@@ -113,21 +116,28 @@ ConstType ::= (BoolConstTypeClass) BOOLCONST
            | (CharConstTypeClass) LETTER
            | (NumConstTypeClass) NUMBER
            ;
+           
+Type ::= (TypeClass) IdentOpt IDENT
+		;
+
+IdentOpt ::= (IdentOptClass) IDENTCOLCOL
+			 |
+			 (NoIdentOptClass) /* epsilon */
+             ;
 
 TypeList ::= (VoidTypeClass) VOID
           | (TypeMethodClass) Type
           ;
+          
 
-MethodDecl ::= (MethodDeclClass) TypeList IDENT LPAREN FormParsOpt RPAREN VarDeclOpt LBRACE StatementList RBRACE
-			;
+VarDecl ::= (VarDeclClass) Type IDENT BracketForArray ListVarDecl SEMI
+          	;
 
-StatementList ::= (StatementListClass) StatementList Statement
-				| (NoStatementListClass) /* epsilon */
-                ;
-
-StaticInitializer ::= (StaticInitializerClass) STATIC LBRACE StatementList RBRACE
-			;
-
+VarDeclOpt ::= (VarDeclOptClass) VarDecl
+			|
+			(NoVarDeclOptClass) /* epsilon */
+            ;
+            
 ListVarDecl ::= (ListVarDeclClass) ListVarDecl COMMA IDENT BracketForArray
 				|
 				(NoListVarDeclClass) /* epsilon */
@@ -138,15 +148,8 @@ BracketForArray ::= (BracketsForArrayClass) LBOXBRAC RBOXBRAC
 				(NoBracketForArrayClass) /* epsilon */
                 ;
 
-VarDecl ::= (VarDeclClass) Type IDENT BracketForArray ListVarDecl SEMI
-			|
-			(NoVarDeclClass) /* epsilon */
-          	;
-
-VarDeclOpt ::= (VarDeclOptClass) VarDecl
-			|
-			(NoVarDeclOptClass) /* epsilon */
-            ;
+MethodDecl ::= (MethodDeclClass) TypeList IDENT LPAREN FormParsOpt RPAREN MethodDeclVarList LBRACE StatementList RBRACE
+			;
 
 FormParsOpt ::= (FormParsOptClass) FormPars
 				| 
@@ -154,79 +157,73 @@ FormParsOpt ::= (FormParsOptClass) FormPars
                 ;
 
 FormPars ::= (FormParsClass) Type IDENT BracketForArray ListFormPars
-			 |
-			 (NoFormParsClass) /* epsilon */
-            ;
+            	;
 
 ListFormPars ::= (ListFormParsClass) ListFormPars COMMA Type IDENT BracketForArray
 				|
 				(NoListFormParsClass) /* epsilon */
                 ;
+                
+MethodDeclVarList ::= (MethodDeclVarListClass) MethodDeclVarList VarDecl 
+					|
+					(NoMethodDeclVarListClass) /* epsilon */
+					;
 
-Type ::= (TypeClass) IdentOpt IDENT
-		;
+StatementList ::= (StatementListClass) StatementList Statement
+				| (NoStatementListClass) /* epsilon */
+                ;
 
-IdentOpt ::= (IdentOptClass) IDENTCOLCOL
-			 |
-			 (NoIdentOptClass) /* epsilon */
-             ;
-
-
-Statement ::= (MatchedStmt) MtchStatement
-		   |
-		   (UnmatchedStmt) UnmtchStatement
-		   ; 
-
-MtchStatement ::= (StatementListClassBranch) LBRACE StatementList RBRACE
-           | (ForClass) FOR LPAREN DesignatorStatementOpt SEMI CondFactOpt SEMI DesignatorStatementOpt RPAREN Statement
-           | (PrintClass) PRINT LPAREN Expr NumConstOpt RPAREN SEMI
-           | (ReadClass) READ LPAREN Designator RPAREN SEMI
-           | (ReturnClass) RETURN ExprOpt SEMI
-           | (ContinueClass) CONTINUE SEMI
-           | (BreakClass) BREAK SEMI
-           | (IfClass) IF LPAREN Condition RPAREN Statement ElseOpt
-           | (StatementClass) DesignatorStatement SEMI
-           ;
-
-UnmtchStatement ::= (UnmatchedIf) IF LPAREN Condition RPAREN Statement
-		 	|
-		 	(UnmatchedIfElse) IF LPAREN Condition RPAREN MtchStatement ELSE UnmtchStatement
-		 	;
-
-
-
-ElseOpt ::= (ElseOptClass) ELSE Statement
-			|
-			(NoElseOptClass) /* epsilon */
+StaticInitializer ::= (StaticInitializerClass) STATIC LBRACE StatementList RBRACE
 			;
 
-ExprOpt				::= (ExprOptClass) Expr
-					|
-					(NoExprClass) /* epsilon */
-					;
 
-NumConstOpt			::=
-					(NumConstOptClass) COMMA NUMBER
-					|
-					(NoNumConstClass) /* epsilon */
-					;
 
-DesignatorStatementOpt ::= (DesignatorStatementTerminalClass) DesignatorStatement
-						|
-						(DesignatorStatementListClass) DesignatorStatementOpt COMMA DesignatorStatement
-						;
 
-CondFactOpt			::= (CondFactOptClass) CondFact
-					|
-					(NoCondFactOptClass) /* epsilon */
-					;
+
+
+
+
+Statement ::= (StatementClass) DesignatorStatement SEMI
+           |
+           (IfClass) IF LPAREN Condition RPAREN Statement ElseOpt
+           |
+           (BreakClass) BREAK SEMI
+           |
+           (ContinueClass) CONTINUE SEMI
+           |
+           (ReturnClass) RETURN ExprOpt SEMI
+           |
+           (ReadClass) READ LPAREN Designator RPAREN SEMI
+           |
+           (PrintClass) PRINT LPAREN Expr NumConstOpt RPAREN SEMI
+           |
+           (ForClass) FOR LPAREN DesignatorStatementOpt SEMI CondFactOpt SEMI DesignatorStatementOpt RPAREN Statement
+           |
+           (StatementListClassBranch) LBRACE StatementList RBRACE
+           ;
+
+
+
 
 DesignatorStatement	::= (DesignatorStatementWithSomeOperationsClass) Designator ListExpressions 
 					|
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator ASTERISK Designator RBOXBRAC EQUAL Designator
 					;
 
-ListExpressions		::= (AssignOperatorClass) AssignOperator Expr
+Designator			::= (DesignatorClass) IdentOpt IDENT ListIdent
+					;
+					
+ListIdent			::= (ListIdentClass) ListIdent SufixForIdent
+					|
+					(NoListIdentClass) /* epsilon */
+					;
+					
+SufixForIdent 		::= (IdentListIdentClass) DOT IDENT
+					|
+					(ExprListIdentClass) LBOXBRAC Expr RBOXBRAC
+					;
+					
+ListExpressions		::= (AssignOperatorClass) Assignop Expr
 					|
 					(ParenOperatorClass) LPAREN ActParsOpt RPAREN
 					|
@@ -241,54 +238,10 @@ ActPars 			::= (ActParsClass) Expr ListExpr
 ActParsOpt			::= (ActParsOptClass) ActPars
 					|
 					(NoActParsOptClass) /* epsilon */
-					;
-
-ListExpr			::= (ListExprClass) ListExpr COMMA Expr
-					|
-					(NoListExprClass) /* epsilon */
-					;
-
-ListDesignator		::= (ListDesignatorClass) ListDesignator DesignatorOpt COMMA
-					|
-					(NoListDesignatorClass) /* epsilon */
-					;
-
-DesignatorOpt		::= (DesignaorOptClass) Designator
-					|
-					(NoDesignatorOptClass) /* epsilon */
-					;
-
-Condition			::= (CondtionClass) CondTerm CondTermList
-					;
-
-CondTermList		::= (CondTermListClass) OR CondTerm CondTermList
-					|
-					(NoCondTermListClass) /* epsilon */
-					;
-
-CondTerm			::= (CondTermClass) CondFact CondFactList
-					|
-					(NoCondTermClass) /* epsilon */
-					;
-
-CondFactList		::= (CondFactListClass) AND CondFact CondFactList
-					|
-					(NoCondFactListClass) /* epsilon */
-					;
-
-CondFact			::= (CondFactClass) Expr OptRelop
-					|
-					(NoCondFactClass) /* epsilon */
-					;
-
-OptRelop			::= (OptRelopClass) Relop Expr
-					|
-					(NoOptRelopClass) /* epsilon */
-					;
-
+					;	
+					
 Expr				::= (ExprClass) MinusOpt Term AdditionList
-					;
-
+					;					
 MinusOpt			::= (MinusOptClass) MINUS
 					|
 					(NoMinusOptClass) /* epsilon */
@@ -330,18 +283,107 @@ ListParams			::= (ListParamsActParsOptClass) LPAREN ActParsOpt RPAREN
 					|
 					(ListParamsExprExprClass) LBOXBRAC Expr RBOXBRAC
 					;
+				
+					
+NumConstOpt			::=
+					(NumConstOptClass) COMMA NUMBER
+					|
+					(NoNumConstClass) /* epsilon */
+					;			
+					
 
-Designator			::= (DesignatorClass) IdentOpt IDENT ListIdent
+
+
+ElseOpt ::= (ElseOptClass) ELSE Statement
+			|
+			(NoElseOptClass) /* epsilon */
+			;
+
+ExprOpt				::= (ExprOptClass) Expr
+					|
+					(NoExprClass) /* epsilon */
 					;
 
-ListIdent			::= (ListIdentClass) ListIdent
-					|
-					(IdentListIdentClass) DOT IDENT
-					|
-					(ExprListIdentClass) LBOXBRAC Expr RBOXBRAC
-					|
-					(NoListIdentClass) /* epsilon */
+
+
+DesignatorStatementOpt ::= (DesignatorStatementTerminalClass) DesignatorStatement
+						|
+						(DesignatorStatementListClass) DesignatorStatementOpt COMMA DesignatorStatement
+						|
+						(NoDesignatorStatementOptClass) /* epsilon */
+						;
+
+
+
+
+
+
+CondFact			::= (CondFactClass) Expr OptRelop
 					;
+
+
+CondFactOpt			::= (CondFactOptClass) CondFact
+					|
+					(NoCondFactOptClass) /* epsilon */
+					;
+
+
+
+
+ListExpr			::= (ListExprClass) ListExpr COMMA Expr
+					|
+					(NoListExprClass) /* epsilon */
+					;
+
+ListDesignator		::= (ListDesignatorClass) ListDesignator DesignatorOpt COMMA
+					|
+					(NoListDesignatorClass) /* epsilon */
+					;
+
+DesignatorOpt		::= (DesignaorOptClass) Designator
+					|
+					(NoDesignatorOptClass) /* epsilon */
+					;
+
+Condition			::= (CondtionClass) CondTerm CondTermList
+					;
+
+CondTermList		::= (CondTermListClass) OR CondTerm CondTermList
+					|
+					(NoCondTermListClass) /* epsilon */
+					;
+
+CondTerm			::= (CondTermClass) CondFact CondFactList
+					;
+
+CondFactList		::= (CondFactListClass) AND CondFact CondFactList
+					|
+					(NoCondFactListClass) /* epsilon */
+					;
+
+
+
+OptRelop			::= (OptRelopClass) Relop Expr
+					|
+					(NoOptRelopClass) /* epsilon */
+					;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Label				::= (LabelIdentClass) IDENT
 					;
