@@ -1,11 +1,11 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/0/2024 20:54:47
+// 8/0/2024 13:12:33
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class UnmatchedIf extends UnmtchStatement {
+public class UnmatchedIf extends UnmatchedStatement {
 
     private Condition Condition;
     private Statement Statement;

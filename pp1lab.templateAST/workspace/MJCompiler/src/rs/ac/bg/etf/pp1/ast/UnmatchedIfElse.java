@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/0/2024 20:54:47
+// 8/0/2024 13:12:33
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class UnmatchedIfElse extends UnmtchStatement {
+public class UnmatchedIfElse extends UnmatchedStatement {
 
     private Condition Condition;
-    private MtchStatement MtchStatement;
-    private UnmtchStatement UnmtchStatement;
+    private MatchedStatement MatchedStatement;
+    private UnmatchedStatement UnmatchedStatement;
 
-    public UnmatchedIfElse (Condition Condition, MtchStatement MtchStatement, UnmtchStatement UnmtchStatement) {
+    public UnmatchedIfElse (Condition Condition, MatchedStatement MatchedStatement, UnmatchedStatement UnmatchedStatement) {
         this.Condition=Condition;
         if(Condition!=null) Condition.setParent(this);
-        this.MtchStatement=MtchStatement;
-        if(MtchStatement!=null) MtchStatement.setParent(this);
-        this.UnmtchStatement=UnmtchStatement;
-        if(UnmtchStatement!=null) UnmtchStatement.setParent(this);
+        this.MatchedStatement=MatchedStatement;
+        if(MatchedStatement!=null) MatchedStatement.setParent(this);
+        this.UnmatchedStatement=UnmatchedStatement;
+        if(UnmatchedStatement!=null) UnmatchedStatement.setParent(this);
     }
 
     public Condition getCondition() {
@@ -28,20 +28,20 @@ public class UnmatchedIfElse extends UnmtchStatement {
         this.Condition=Condition;
     }
 
-    public MtchStatement getMtchStatement() {
-        return MtchStatement;
+    public MatchedStatement getMatchedStatement() {
+        return MatchedStatement;
     }
 
-    public void setMtchStatement(MtchStatement MtchStatement) {
-        this.MtchStatement=MtchStatement;
+    public void setMatchedStatement(MatchedStatement MatchedStatement) {
+        this.MatchedStatement=MatchedStatement;
     }
 
-    public UnmtchStatement getUnmtchStatement() {
-        return UnmtchStatement;
+    public UnmatchedStatement getUnmatchedStatement() {
+        return UnmatchedStatement;
     }
 
-    public void setUnmtchStatement(UnmtchStatement UnmtchStatement) {
-        this.UnmtchStatement=UnmtchStatement;
+    public void setUnmatchedStatement(UnmatchedStatement UnmatchedStatement) {
+        this.UnmatchedStatement=UnmatchedStatement;
     }
 
     public void accept(Visitor visitor) {
@@ -50,21 +50,21 @@ public class UnmatchedIfElse extends UnmtchStatement {
 
     public void childrenAccept(Visitor visitor) {
         if(Condition!=null) Condition.accept(visitor);
-        if(MtchStatement!=null) MtchStatement.accept(visitor);
-        if(UnmtchStatement!=null) UnmtchStatement.accept(visitor);
+        if(MatchedStatement!=null) MatchedStatement.accept(visitor);
+        if(UnmatchedStatement!=null) UnmatchedStatement.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Condition!=null) Condition.traverseTopDown(visitor);
-        if(MtchStatement!=null) MtchStatement.traverseTopDown(visitor);
-        if(UnmtchStatement!=null) UnmtchStatement.traverseTopDown(visitor);
+        if(MatchedStatement!=null) MatchedStatement.traverseTopDown(visitor);
+        if(UnmatchedStatement!=null) UnmatchedStatement.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Condition!=null) Condition.traverseBottomUp(visitor);
-        if(MtchStatement!=null) MtchStatement.traverseBottomUp(visitor);
-        if(UnmtchStatement!=null) UnmtchStatement.traverseBottomUp(visitor);
+        if(MatchedStatement!=null) MatchedStatement.traverseBottomUp(visitor);
+        if(UnmatchedStatement!=null) UnmatchedStatement.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -79,14 +79,14 @@ public class UnmatchedIfElse extends UnmtchStatement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(MtchStatement!=null)
-            buffer.append(MtchStatement.toString("  "+tab));
+        if(MatchedStatement!=null)
+            buffer.append(MatchedStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(UnmtchStatement!=null)
-            buffer.append(UnmtchStatement.toString("  "+tab));
+        if(UnmatchedStatement!=null)
+            buffer.append(UnmatchedStatement.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
