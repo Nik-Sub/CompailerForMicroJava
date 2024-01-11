@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,14 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class VarDeclClass extends VarDecl {
 
     private Type Type;
-    private String I2;
+    private String varName;
     private BracketForArray BracketForArray;
     private ListVarDecl ListVarDecl;
 
-    public VarDeclClass (Type Type, String I2, BracketForArray BracketForArray, ListVarDecl ListVarDecl) {
+    public VarDeclClass (Type Type, String varName, BracketForArray BracketForArray, ListVarDecl ListVarDecl) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.I2=I2;
+        this.varName=varName;
         this.BracketForArray=BracketForArray;
         if(BracketForArray!=null) BracketForArray.setParent(this);
         this.ListVarDecl=ListVarDecl;
@@ -30,12 +30,12 @@ public class VarDeclClass extends VarDecl {
         this.Type=Type;
     }
 
-    public String getI2() {
-        return I2;
+    public String getVarName() {
+        return varName;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setVarName(String varName) {
+        this.varName=varName;
     }
 
     public BracketForArray getBracketForArray() {
@@ -89,7 +89,7 @@ public class VarDeclClass extends VarDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+varName);
         buffer.append("\n");
 
         if(BracketForArray!=null)

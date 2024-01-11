@@ -1,22 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class MethodDeclClass extends MethodDecl {
 
-    private TypeList TypeList;
-    private String I2;
+    private MethodTypeName MethodTypeName;
     private FormParsOpt FormParsOpt;
     private MethodDeclVarList MethodDeclVarList;
     private StatementList StatementList;
 
-    public MethodDeclClass (TypeList TypeList, String I2, FormParsOpt FormParsOpt, MethodDeclVarList MethodDeclVarList, StatementList StatementList) {
-        this.TypeList=TypeList;
-        if(TypeList!=null) TypeList.setParent(this);
-        this.I2=I2;
+    public MethodDeclClass (MethodTypeName MethodTypeName, FormParsOpt FormParsOpt, MethodDeclVarList MethodDeclVarList, StatementList StatementList) {
+        this.MethodTypeName=MethodTypeName;
+        if(MethodTypeName!=null) MethodTypeName.setParent(this);
         this.FormParsOpt=FormParsOpt;
         if(FormParsOpt!=null) FormParsOpt.setParent(this);
         this.MethodDeclVarList=MethodDeclVarList;
@@ -25,20 +23,12 @@ public class MethodDeclClass extends MethodDecl {
         if(StatementList!=null) StatementList.setParent(this);
     }
 
-    public TypeList getTypeList() {
-        return TypeList;
+    public MethodTypeName getMethodTypeName() {
+        return MethodTypeName;
     }
 
-    public void setTypeList(TypeList TypeList) {
-        this.TypeList=TypeList;
-    }
-
-    public String getI2() {
-        return I2;
-    }
-
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setMethodTypeName(MethodTypeName MethodTypeName) {
+        this.MethodTypeName=MethodTypeName;
     }
 
     public FormParsOpt getFormParsOpt() {
@@ -70,7 +60,7 @@ public class MethodDeclClass extends MethodDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(TypeList!=null) TypeList.accept(visitor);
+        if(MethodTypeName!=null) MethodTypeName.accept(visitor);
         if(FormParsOpt!=null) FormParsOpt.accept(visitor);
         if(MethodDeclVarList!=null) MethodDeclVarList.accept(visitor);
         if(StatementList!=null) StatementList.accept(visitor);
@@ -78,14 +68,14 @@ public class MethodDeclClass extends MethodDecl {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(TypeList!=null) TypeList.traverseTopDown(visitor);
+        if(MethodTypeName!=null) MethodTypeName.traverseTopDown(visitor);
         if(FormParsOpt!=null) FormParsOpt.traverseTopDown(visitor);
         if(MethodDeclVarList!=null) MethodDeclVarList.traverseTopDown(visitor);
         if(StatementList!=null) StatementList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(TypeList!=null) TypeList.traverseBottomUp(visitor);
+        if(MethodTypeName!=null) MethodTypeName.traverseBottomUp(visitor);
         if(FormParsOpt!=null) FormParsOpt.traverseBottomUp(visitor);
         if(MethodDeclVarList!=null) MethodDeclVarList.traverseBottomUp(visitor);
         if(StatementList!=null) StatementList.traverseBottomUp(visitor);
@@ -97,13 +87,10 @@ public class MethodDeclClass extends MethodDecl {
         buffer.append(tab);
         buffer.append("MethodDeclClass(\n");
 
-        if(TypeList!=null)
-            buffer.append(TypeList.toString("  "+tab));
+        if(MethodTypeName!=null)
+            buffer.append(MethodTypeName.toString("  "+tab));
         else
             buffer.append(tab+"  null");
-        buffer.append("\n");
-
-        buffer.append(" "+tab+I2);
         buffer.append("\n");
 
         if(FormParsOpt!=null)

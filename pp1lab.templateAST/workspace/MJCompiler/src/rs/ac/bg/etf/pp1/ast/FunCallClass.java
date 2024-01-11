@@ -1,20 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class DesignatorStatementWithSomeOperationsClass extends DesignatorStatement {
+public class FunCallClass extends Factor {
 
     private Designator Designator;
-    private ListExpressions ListExpressions;
+    private ActParsOpt ActParsOpt;
 
-    public DesignatorStatementWithSomeOperationsClass (Designator Designator, ListExpressions ListExpressions) {
+    public FunCallClass (Designator Designator, ActParsOpt ActParsOpt) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.ListExpressions=ListExpressions;
-        if(ListExpressions!=null) ListExpressions.setParent(this);
+        this.ActParsOpt=ActParsOpt;
+        if(ActParsOpt!=null) ActParsOpt.setParent(this);
     }
 
     public Designator getDesignator() {
@@ -25,12 +25,12 @@ public class DesignatorStatementWithSomeOperationsClass extends DesignatorStatem
         this.Designator=Designator;
     }
 
-    public ListExpressions getListExpressions() {
-        return ListExpressions;
+    public ActParsOpt getActParsOpt() {
+        return ActParsOpt;
     }
 
-    public void setListExpressions(ListExpressions ListExpressions) {
-        this.ListExpressions=ListExpressions;
+    public void setActParsOpt(ActParsOpt ActParsOpt) {
+        this.ActParsOpt=ActParsOpt;
     }
 
     public void accept(Visitor visitor) {
@@ -39,25 +39,25 @@ public class DesignatorStatementWithSomeOperationsClass extends DesignatorStatem
 
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
-        if(ListExpressions!=null) ListExpressions.accept(visitor);
+        if(ActParsOpt!=null) ActParsOpt.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(ListExpressions!=null) ListExpressions.traverseTopDown(visitor);
+        if(ActParsOpt!=null) ActParsOpt.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(ListExpressions!=null) ListExpressions.traverseBottomUp(visitor);
+        if(ActParsOpt!=null) ActParsOpt.traverseBottomUp(visitor);
         accept(visitor);
     }
 
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("DesignatorStatementWithSomeOperationsClass(\n");
+        buffer.append("FunCallClass(\n");
 
         if(Designator!=null)
             buffer.append(Designator.toString("  "+tab));
@@ -65,14 +65,14 @@ public class DesignatorStatementWithSomeOperationsClass extends DesignatorStatem
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(ListExpressions!=null)
-            buffer.append(ListExpressions.toString("  "+tab));
+        if(ActParsOpt!=null)
+            buffer.append(ActParsOpt.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [DesignatorStatementWithSomeOperationsClass]");
+        buffer.append(") [FunCallClass]");
         return buffer.toString();
     }
 }

@@ -1,17 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ParenOperatorClass extends ListExpressions {
+public class ParenOperatorClass extends DesignatorStatement {
 
+    private Designator Designator;
     private ActParsOpt ActParsOpt;
 
-    public ParenOperatorClass (ActParsOpt ActParsOpt) {
+    public ParenOperatorClass (Designator Designator, ActParsOpt ActParsOpt) {
+        this.Designator=Designator;
+        if(Designator!=null) Designator.setParent(this);
         this.ActParsOpt=ActParsOpt;
         if(ActParsOpt!=null) ActParsOpt.setParent(this);
+    }
+
+    public Designator getDesignator() {
+        return Designator;
+    }
+
+    public void setDesignator(Designator Designator) {
+        this.Designator=Designator;
     }
 
     public ActParsOpt getActParsOpt() {
@@ -27,15 +38,18 @@ public class ParenOperatorClass extends ListExpressions {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Designator!=null) Designator.accept(visitor);
         if(ActParsOpt!=null) ActParsOpt.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Designator!=null) Designator.traverseTopDown(visitor);
         if(ActParsOpt!=null) ActParsOpt.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Designator!=null) Designator.traverseBottomUp(visitor);
         if(ActParsOpt!=null) ActParsOpt.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -44,6 +58,12 @@ public class ParenOperatorClass extends ListExpressions {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ParenOperatorClass(\n");
+
+        if(Designator!=null)
+            buffer.append(Designator.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(ActParsOpt!=null)
             buffer.append(ActParsOpt.toString("  "+tab));

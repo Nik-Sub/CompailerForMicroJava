@@ -38,6 +38,7 @@ parser code {:
     }
     
     public void report_info(String message, Object info) {
+    	
     	StringBuilder msg = new StringBuilder(message); 
     	if (info instanceof Symbol)
             msg.append (" na liniji ").append(((Symbol)info).left);
@@ -45,6 +46,11 @@ parser code {:
     }
     
 :}
+
+init with {:
+	errorDetected = false;
+:}
+
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -63,25 +69,33 @@ terminal LBOXBRAC, RBOXBRAC, LPAREN, RPAREN, COL, IF, BREAK, ELSE, CONTINUE;
 terminal RETURN, FOR, ASTERISK, INC, DEC, OR, AND, NEW, DOT, EQUALEQUAL, DIFF;
 terminal GT, GET, LT, LET, PLUS, MINUS, VOID, PERCENT, DIVISION, PRINT, READ, FOLLOWS, SPACE, IDENTCOLCOL;
 
-nonterminal Program, NamespaceList, DeclList, MethodDeclList;
-nonterminal Namespace, DeclType, ConstDecl, VarDecl, MethodDecl;
-nonterminal Type, ConstType, ConstTypeList ;
+nonterminal NamespaceList, DeclList, MethodDeclList;
+nonterminal Namespace, DeclType, ConstDecl, VarDecl;
+nonterminal ConstType, ConstTypeList ;
 nonterminal BracketForArray, ListVarDecl, StaticInitializer, StatementList;
 nonterminal Statement, TypeList, FormParsOpt, VarDeclOpt, FormPars, ListFormPars;
-nonterminal IdentOpt, DesignatorStatement, ElseOpt, ExprOpt, Designator;
-nonterminal Expr, NumConstOpt, DesignatorStatementOpt, CondFactOpt, CondFact;
+nonterminal IdentOpt, DesignatorStatement, ElseOpt, ExprOpt;
+nonterminal NumConstOpt, DesignatorStatementOpt, CondFactOpt, CondFact;
 nonterminal ListExpressions, ListDesignator, Assignop, ActParsOpt, ListExpr, DesignatorOpt;
 nonterminal Condition, CondTerm, CondTermList, OptRelop, CondFactList;
-nonterminal Term, AdditionList, MinusOpt, Factor, MultiplicationList;
+nonterminal AdditionList, MinusOpt, MultiplicationList;
 nonterminal OptParen, ListParams, ListIdent, Label, Relop, Addop, Mulop, ExprFactor, ActPars;
 nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
+nonterminal ReturnNoExprClass;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr;
+
 
 
 precedence left ELSE;
 
 
-Program ::= (ProgramClass) PROG IDENT NamespaceList DeclList LBRACE MethodDeclList RBRACE
+Program ::= (ProgramClass) PROG ProgName:p NamespaceList DeclList LBRACE MethodDeclList RBRACE
 			;
+
+ProgName ::= (ProgNameClass) IDENT:progName;
 
 NamespaceList ::=(NamespaceListClass) NamespaceList Namespace
 				|
@@ -117,7 +131,7 @@ ConstType ::= (BoolConstTypeClass) BOOLCONST
            | (NumConstTypeClass) NUMBER
            ;
            
-Type ::= (TypeClass) IdentOpt IDENT
+Type ::= (TypeClass) IdentOpt IDENT:typeName
 		;
 
 IdentOpt ::= (IdentOptClass) IDENTCOLCOL
@@ -130,7 +144,7 @@ TypeList ::= (VoidTypeClass) VOID
           ;
           
 
-VarDecl ::= (VarDeclClass) Type IDENT BracketForArray ListVarDecl SEMI
+VarDecl ::= (VarDeclClass) Type:varType IDENT:varName BracketForArray ListVarDecl SEMI
           	;
 
 VarDeclOpt ::= (VarDeclOptClass) VarDecl
@@ -148,8 +162,13 @@ BracketForArray ::= (BracketsForArrayClass) LBOXBRAC RBOXBRAC
 				(NoBracketForArrayClass) /* epsilon */
                 ;
 
-MethodDecl ::= (MethodDeclClass) TypeList IDENT LPAREN FormParsOpt RPAREN MethodDeclVarList LBRACE StatementList RBRACE
+MethodDecl ::= (MethodDeclClass) MethodTypeName LPAREN FormParsOpt RPAREN MethodDeclVarList LBRACE StatementList RBRACE
 			;
+			
+MethodTypeName ::= (ReturnTypeClass) Type:t IDENT:methName
+				|
+				(VoidRetTypeClass) VOID IDENT:methName
+				;
 
 FormParsOpt ::= (FormParsOptClass) FormPars
 				| 
@@ -191,7 +210,9 @@ Statement ::= (StatementClass) DesignatorStatement SEMI
            |
            (ContinueClass) CONTINUE SEMI
            |
-           (ReturnClass) RETURN ExprOpt SEMI
+           (ReturnClass) RETURN Expr:t SEMI
+           |
+           (ReturnNoExpressionClass) RETURN SEMI
            |
            (ReadClass) READ LPAREN Designator RPAREN SEMI
            |
@@ -205,12 +226,18 @@ Statement ::= (StatementClass) DesignatorStatement SEMI
 
 
 
-DesignatorStatement	::= (DesignatorStatementWithSomeOperationsClass) Designator ListExpressions 
+DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop Expr:e
+					|
+					(ParenOperatorClass) Designator:dest LPAREN ActParsOpt RPAREN
+					|
+					(DecClass) Designator:dest INC
+					|
+					(IncClass) Designator:dest DEC 
 					|
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator ASTERISK Designator RBOXBRAC EQUAL Designator
 					;
 
-Designator			::= (DesignatorClass) IdentOpt IDENT ListIdent
+Designator			::= (DesignatorClass) IdentOpt IDENT:desigName ListIdent
 					;
 					
 ListIdent			::= (ListIdentClass) ListIdent SufixForIdent
@@ -222,15 +249,6 @@ SufixForIdent 		::= (IdentListIdentClass) DOT IDENT
 					|
 					(ExprListIdentClass) LBOXBRAC Expr RBOXBRAC
 					;
-					
-ListExpressions		::= (AssignOperatorClass) Assignop Expr
-					|
-					(ParenOperatorClass) LPAREN ActParsOpt RPAREN
-					|
-					(DecClass) INC
-					|
-					(IncClass) DEC
-					;
 
 ActPars 			::= (ActParsClass) Expr ListExpr
 					;
@@ -240,7 +258,9 @@ ActParsOpt			::= (ActParsOptClass) ActPars
 					(NoActParsOptClass) /* epsilon */
 					;	
 					
-Expr				::= (ExprClass) MinusOpt Term AdditionList
+Expr				::= (AddExprClass) Expr:te Addop Term:t
+					|
+					(ExprClass) MinusOpt Term:te
 					;					
 MinusOpt			::= (MinusOptClass) MINUS
 					|
@@ -271,7 +291,9 @@ Factor				::= (ExprFactorClass) LPAREN Expr RPAREN
 					|
 					(NumberClass) NUMBER
 					|
-					(DesignatorClassBranch) Designator OptParen
+					(FunCallClass) Designator:func LPAREN ActParsOpt RPAREN
+					|
+					(VarClass) Designator:d
 					;
 
 OptParen 			::= (OptParenClass) LPAREN ActParsOpt RPAREN

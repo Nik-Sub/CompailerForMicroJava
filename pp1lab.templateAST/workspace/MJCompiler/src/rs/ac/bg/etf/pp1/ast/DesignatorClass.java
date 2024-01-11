@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesignatorClass extends Designator {
 
     private IdentOpt IdentOpt;
-    private String I2;
+    private String desigName;
     private ListIdent ListIdent;
 
-    public DesignatorClass (IdentOpt IdentOpt, String I2, ListIdent ListIdent) {
+    public DesignatorClass (IdentOpt IdentOpt, String desigName, ListIdent ListIdent) {
         this.IdentOpt=IdentOpt;
         if(IdentOpt!=null) IdentOpt.setParent(this);
-        this.I2=I2;
+        this.desigName=desigName;
         this.ListIdent=ListIdent;
         if(ListIdent!=null) ListIdent.setParent(this);
     }
@@ -27,12 +27,12 @@ public class DesignatorClass extends Designator {
         this.IdentOpt=IdentOpt;
     }
 
-    public String getI2() {
-        return I2;
+    public String getDesigName() {
+        return desigName;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setDesigName(String desigName) {
+        this.desigName=desigName;
     }
 
     public ListIdent getListIdent() {
@@ -75,7 +75,7 @@ public class DesignatorClass extends Designator {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+desigName);
         buffer.append("\n");
 
         if(ListIdent!=null)

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2024 15:53:9
+// 11/0/2024 13:16:24
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,12 @@ package rs.ac.bg.etf.pp1.ast;
 public class TypeClass extends Type {
 
     private IdentOpt IdentOpt;
-    private String I2;
+    private String typeName;
 
-    public TypeClass (IdentOpt IdentOpt, String I2) {
+    public TypeClass (IdentOpt IdentOpt, String typeName) {
         this.IdentOpt=IdentOpt;
         if(IdentOpt!=null) IdentOpt.setParent(this);
-        this.I2=I2;
+        this.typeName=typeName;
     }
 
     public IdentOpt getIdentOpt() {
@@ -24,12 +24,12 @@ public class TypeClass extends Type {
         this.IdentOpt=IdentOpt;
     }
 
-    public String getI2() {
-        return I2;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
+    public void setTypeName(String typeName) {
+        this.typeName=typeName;
     }
 
     public void accept(Visitor visitor) {
@@ -61,7 +61,7 @@ public class TypeClass extends Type {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
+        buffer.append(" "+tab+typeName);
         buffer.append("\n");
 
         buffer.append(tab);

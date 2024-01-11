@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="PLUS"/>
+		<item key="selection" value="ListExpressions"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
-			<item value="PLUS"/>
-			<item value="MINUS"/>
-			<item value="CondFact"/>
-			<item value="Relop"/>
-			<item value="IdentOpt"/>
-			<item value="DOT"/>
-			<item value="ListIdent"/>
-			<item value="Designator"/>
-			<item value="ListParams"/>
-			<item value="Number"/>
-			<item value="COMMA"/>
-			<item value="47"/>
-			<item value="nelegalan"/>
-			<item value="designator"/>
-			<item value="expr"/>
+			<item value="ListExpressions"/>
+			<item value="EQUAL"/>
+			<item value="ReturnClass"/>
+			<item value="bool"/>
+			<item value="Bool"/>
+			<item value="opsasa"/>
+			<item value="ReturnTypeClass"/>
+			<item value="VarDecl"/>
+			<item value="Deklarisana promenljiva"/>
+			<item value="FunCall"/>
+			<item value="FuncCall"/>
+			<item value="MethodDeclClass"/>
+			<item value="Meth"/>
+			<item value="MethDeclClas"/>
+			<item value="MethDeclClass"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -30,8 +30,8 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item key="DIALOG_WIDTH" value="284"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-		<item key="DIALOG_HEIGHT" value="391"/>
-		<item key="DIALOG_X_ORIGIN" value="626"/>
-		<item key="DIALOG_Y_ORIGIN" value="475"/>
+		<item key="DIALOG_HEIGHT" value="382"/>
+		<item key="DIALOG_X_ORIGIN" value="988"/>
+		<item key="DIALOG_Y_ORIGIN" value="244"/>
 	</section>
 </section>

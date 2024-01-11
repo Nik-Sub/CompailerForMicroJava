@@ -16,7 +16,7 @@ public class RuleVisitor extends VisitorAdaptor{
 	 //ako je pozvan print iz programa
 	public void visit(PrintClass PrintStmt) {
 		printCallCount++;
-		log.info("Prepoznata naredba print!");
+		//log.info("Prepoznata naredba print!");
 	}
 
 }
