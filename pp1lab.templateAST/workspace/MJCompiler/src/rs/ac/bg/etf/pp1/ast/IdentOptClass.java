@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class IdentOptClass extends IdentOpt {
 
-    public IdentOptClass () {
+    private String I1;
+
+    public IdentOptClass (String I1) {
+        this.I1=I1;
+    }
+
+    public String getI1() {
+        return I1;
+    }
+
+    public void setI1(String I1) {
+        this.I1=I1;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class IdentOptClass extends IdentOpt {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("IdentOptClass(\n");
+
+        buffer.append(" "+tab+I1);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [IdentOptClass]");

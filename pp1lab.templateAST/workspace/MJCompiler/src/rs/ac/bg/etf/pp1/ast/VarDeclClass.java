@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,16 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class VarDeclClass extends VarDecl {
 
     private Type Type;
-    private String varName;
-    private BracketForArray BracketForArray;
+    private KindOfVar KindOfVar;
     private ListVarDecl ListVarDecl;
 
-    public VarDeclClass (Type Type, String varName, BracketForArray BracketForArray, ListVarDecl ListVarDecl) {
+    public VarDeclClass (Type Type, KindOfVar KindOfVar, ListVarDecl ListVarDecl) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.varName=varName;
-        this.BracketForArray=BracketForArray;
-        if(BracketForArray!=null) BracketForArray.setParent(this);
+        this.KindOfVar=KindOfVar;
+        if(KindOfVar!=null) KindOfVar.setParent(this);
         this.ListVarDecl=ListVarDecl;
         if(ListVarDecl!=null) ListVarDecl.setParent(this);
     }
@@ -30,20 +28,12 @@ public class VarDeclClass extends VarDecl {
         this.Type=Type;
     }
 
-    public String getVarName() {
-        return varName;
+    public KindOfVar getKindOfVar() {
+        return KindOfVar;
     }
 
-    public void setVarName(String varName) {
-        this.varName=varName;
-    }
-
-    public BracketForArray getBracketForArray() {
-        return BracketForArray;
-    }
-
-    public void setBracketForArray(BracketForArray BracketForArray) {
-        this.BracketForArray=BracketForArray;
+    public void setKindOfVar(KindOfVar KindOfVar) {
+        this.KindOfVar=KindOfVar;
     }
 
     public ListVarDecl getListVarDecl() {
@@ -60,20 +50,20 @@ public class VarDeclClass extends VarDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(BracketForArray!=null) BracketForArray.accept(visitor);
+        if(KindOfVar!=null) KindOfVar.accept(visitor);
         if(ListVarDecl!=null) ListVarDecl.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(BracketForArray!=null) BracketForArray.traverseTopDown(visitor);
+        if(KindOfVar!=null) KindOfVar.traverseTopDown(visitor);
         if(ListVarDecl!=null) ListVarDecl.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(BracketForArray!=null) BracketForArray.traverseBottomUp(visitor);
+        if(KindOfVar!=null) KindOfVar.traverseBottomUp(visitor);
         if(ListVarDecl!=null) ListVarDecl.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -89,11 +79,8 @@ public class VarDeclClass extends VarDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+varName);
-        buffer.append("\n");
-
-        if(BracketForArray!=null)
-            buffer.append(BracketForArray.toString("  "+tab));
+        if(KindOfVar!=null)
+            buffer.append(KindOfVar.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

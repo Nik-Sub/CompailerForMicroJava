@@ -71,8 +71,8 @@ terminal GT, GET, LT, LET, PLUS, MINUS, VOID, PERCENT, DIVISION, PRINT, READ, FO
 
 nonterminal NamespaceList, DeclList, MethodDeclList;
 nonterminal Namespace, DeclType, ConstDecl, VarDecl;
-nonterminal ConstType, ConstTypeList ;
-nonterminal BracketForArray, ListVarDecl, StaticInitializer, StatementList;
+nonterminal ConstTypeList ;
+nonterminal BracketForArray, StaticInitializer, StatementList;
 nonterminal Statement, TypeList, FormParsOpt, VarDeclOpt, FormPars, ListFormPars;
 nonterminal IdentOpt, DesignatorStatement, ElseOpt, ExprOpt;
 nonterminal NumConstOpt, DesignatorStatementOpt, CondFactOpt, CondFact;
@@ -81,11 +81,11 @@ nonterminal Condition, CondTerm, CondTermList, OptRelop, CondFactList;
 nonterminal AdditionList, MinusOpt, MultiplicationList;
 nonterminal OptParen, ListParams, ListIdent, Label, Relop, Addop, Mulop, ExprFactor, ActPars;
 nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
-nonterminal ReturnNoExprClass;
+nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType;
 
 
 
@@ -116,25 +116,36 @@ MethodDeclList ::=(MethodDeclListClass) MethodDeclList MethodDecl
 				 | (NoMethodDeclListClass) /*epsilon*/
                  ;
 
-Namespace ::= (NamespaceClass) NAMESPACE IDENT LBRACE DeclList LBRACE MethodDeclList RBRACE RBRACE
+Namespace ::= (NamespaceClass) NAMESPACE NamespaceName LBRACE DeclList LBRACE MethodDeclList RBRACE EndOfNamespace
+			;
+			
+NamespaceName ::= (NamespaceNameClass) IDENT:Name
+				;			
+
+EndOfNamespace ::= (EndOfNamespace) RBRACE
+				;
+
+ConstDecl ::= (ConstDeclClass) CONST Type ConstInit ConstTypeList SEMI
+			;
+			
+ConstInit ::= (ConstInitClass) IDENT:Name EQUAL ConstType:value
 			;
 
-ConstDecl ::= (ConstDeclClass) CONST Type IDENT EQUAL ConstType ConstTypeList SEMI
-			;
-
-ConstTypeList ::=(ConstTypeListClass) ConstTypeList COMMA IDENT EQUAL ConstType
+ConstTypeList ::=(ConstTypeListClass) ConstTypeList COMMA ConstInit
 				| (NoConstTypeListClass) /* epsilon */
                 ;
 
-ConstType ::= (BoolConstTypeClass) BOOLCONST
-           | (CharConstTypeClass) LETTER
-           | (NumConstTypeClass) NUMBER
+ConstType ::= (BoolConstTypeClass) BOOLCONST:value
+           | (CharConstTypeClass) LETTER:value
+           | (NumConstTypeClass) NUMBER:value
            ;
            
-Type ::= (TypeClass) IdentOpt IDENT:typeName
+Type ::= (TypeClass) IDENT:typeName
+		|
+		(TypeWithPrefixClass) IDENT COL COL IDENT:typeName /* ovo je ja mislim samo ako imam klasu unutar namespacea */
 		;
 
-IdentOpt ::= (IdentOptClass) IDENTCOLCOL
+IdentOpt ::= (IdentOptClass) IDENT COL COL
 			 |
 			 (NoIdentOptClass) /* epsilon */
              ;
@@ -144,15 +155,21 @@ TypeList ::= (VoidTypeClass) VOID
           ;
           
 
-VarDecl ::= (VarDeclClass) Type:varType IDENT:varName BracketForArray ListVarDecl SEMI
+VarDecl ::= (VarDeclClass) Type:varType KindOfVar ListVarDecl SEMI
           	;
+          	
+          	
+KindOfVar ::= (VarNoArrayClass) IDENT:name
+			|
+			(VarArrayClass) IDENT:name LBOXBRAC RBOXBRAC
+			;
 
 VarDeclOpt ::= (VarDeclOptClass) VarDecl
 			|
 			(NoVarDeclOptClass) /* epsilon */
             ;
             
-ListVarDecl ::= (ListVarDeclClass) ListVarDecl COMMA IDENT BracketForArray
+ListVarDecl ::= (ListVarDeclClass) COMMA KindOfVar ListVarDecl 
 				|
 				(NoListVarDeclClass) /* epsilon */
                 ;
@@ -175,13 +192,18 @@ FormParsOpt ::= (FormParsOptClass) FormPars
 				(NoFormParsOptClass) /* epsilon */
                 ;
 
-FormPars ::= (FormParsClass) Type IDENT BracketForArray ListFormPars
+FormPars ::= (FormParsClass) Type KindOfPar ListFormPars
             	;
 
-ListFormPars ::= (ListFormParsClass) ListFormPars COMMA Type IDENT BracketForArray
+ListFormPars ::= (ListFormParsClass) ListFormPars COMMA Type KindOfPar
 				|
 				(NoListFormParsClass) /* epsilon */
                 ;
+
+KindOfPar ::= (ParNoArrayClass) IDENT:name
+			|
+			(ParArrayClass) IDENT:name LBOXBRAC RBOXBRAC
+			;
                 
 MethodDeclVarList ::= (MethodDeclVarListClass) MethodDeclVarList VarDecl 
 					|
@@ -237,8 +259,11 @@ DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop Expr:e
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator ASTERISK Designator RBOXBRAC EQUAL Designator
 					;
 
-Designator			::= (DesignatorClass) IdentOpt IDENT:desigName ListIdent
+Designator			::= (DesignatorClass) IDENT:desigName ListIdent
+					|
+					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName ListIdent
 					;
+					
 					
 ListIdent			::= (ListIdentClass) ListIdent SufixForIdent
 					|
@@ -283,7 +308,7 @@ MultiplicationList	::= (MultiplicationListClass) Mulop Factor MultiplicationList
 
 Factor				::= (ExprFactorClass) LPAREN Expr RPAREN
 					|
-					(NewTypeClass) NEW Type ListParams
+					(NewTypeClass) NEW Type:nameOfType ListParams
 					|
 					(BoolConstClass) BOOLCONST
 					|

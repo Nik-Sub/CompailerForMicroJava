@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class BoolConstTypeClass extends ConstType {
 
-    private String B1;
+    private String value;
 
-    public BoolConstTypeClass (String B1) {
-        this.B1=B1;
+    public BoolConstTypeClass (String value) {
+        this.value=value;
     }
 
-    public String getB1() {
-        return B1;
+    public String getValue() {
+        return value;
     }
 
-    public void setB1(String B1) {
-        this.B1=B1;
+    public void setValue(String value) {
+        this.value=value;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class BoolConstTypeClass extends ConstType {
         buffer.append(tab);
         buffer.append("BoolConstTypeClass(\n");
 
-        buffer.append(" "+tab+B1);
+        buffer.append(" "+tab+value);
         buffer.append("\n");
 
         buffer.append(tab);

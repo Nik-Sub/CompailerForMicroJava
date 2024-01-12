@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,15 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ConstTypeListClass extends ConstTypeList {
 
     private ConstTypeList ConstTypeList;
-    private String I2;
-    private ConstType ConstType;
+    private ConstInit ConstInit;
 
-    public ConstTypeListClass (ConstTypeList ConstTypeList, String I2, ConstType ConstType) {
+    public ConstTypeListClass (ConstTypeList ConstTypeList, ConstInit ConstInit) {
         this.ConstTypeList=ConstTypeList;
         if(ConstTypeList!=null) ConstTypeList.setParent(this);
-        this.I2=I2;
-        this.ConstType=ConstType;
-        if(ConstType!=null) ConstType.setParent(this);
+        this.ConstInit=ConstInit;
+        if(ConstInit!=null) ConstInit.setParent(this);
     }
 
     public ConstTypeList getConstTypeList() {
@@ -27,20 +25,12 @@ public class ConstTypeListClass extends ConstTypeList {
         this.ConstTypeList=ConstTypeList;
     }
 
-    public String getI2() {
-        return I2;
+    public ConstInit getConstInit() {
+        return ConstInit;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public ConstType getConstType() {
-        return ConstType;
-    }
-
-    public void setConstType(ConstType ConstType) {
-        this.ConstType=ConstType;
+    public void setConstInit(ConstInit ConstInit) {
+        this.ConstInit=ConstInit;
     }
 
     public void accept(Visitor visitor) {
@@ -49,18 +39,18 @@ public class ConstTypeListClass extends ConstTypeList {
 
     public void childrenAccept(Visitor visitor) {
         if(ConstTypeList!=null) ConstTypeList.accept(visitor);
-        if(ConstType!=null) ConstType.accept(visitor);
+        if(ConstInit!=null) ConstInit.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ConstTypeList!=null) ConstTypeList.traverseTopDown(visitor);
-        if(ConstType!=null) ConstType.traverseTopDown(visitor);
+        if(ConstInit!=null) ConstInit.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ConstTypeList!=null) ConstTypeList.traverseBottomUp(visitor);
-        if(ConstType!=null) ConstType.traverseBottomUp(visitor);
+        if(ConstInit!=null) ConstInit.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -75,11 +65,8 @@ public class ConstTypeListClass extends ConstTypeList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(ConstType!=null)
-            buffer.append(ConstType.toString("  "+tab));
+        if(ConstInit!=null)
+            buffer.append(ConstInit.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

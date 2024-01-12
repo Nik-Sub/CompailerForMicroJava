@@ -76,10 +76,8 @@ nonterminal Namespace Namespace;
 nonterminal DeclType DeclType;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarDecl VarDecl;
-nonterminal ConstType ConstType;
 nonterminal ConstTypeList ConstTypeList ;
 nonterminal BracketForArray BracketForArray;
-nonterminal ListVarDecl ListVarDecl;
 nonterminal StaticInitializer StaticInitializer;
 nonterminal StatementList StatementList;
 nonterminal Statement Statement;
@@ -124,10 +122,13 @@ nonterminal UnmtchStatement UnmtchStatement;
 nonterminal MethodDeclVarList MethodDeclVarList;
 nonterminal SufixForIdent SufixForIdent;
 nonterminal ReturnNoExprClass ReturnNoExprClass;
+nonterminal ConstInit ConstInit;
+nonterminal EndOfNamespace EndOfNamespace;
+nonterminal NamespaceName NamespaceName;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType;
 
 
 
@@ -158,25 +159,36 @@ MethodDeclList ::=(MethodDeclListClass) MethodDeclList:M1 MethodDecl:M2 {: RESUL
 				 | (NoMethodDeclListClass) {: RESULT=new NoMethodDeclListClass(); :} /*epsilon*/
                  ;
 
-Namespace ::= (NamespaceClass) NAMESPACE IDENT:I1 LBRACE DeclList:D2 LBRACE MethodDeclList:M3 RBRACE RBRACE {: RESULT=new NamespaceClass(I1, D2, M3); RESULT.setLine(I1left); :}
+Namespace ::= (NamespaceClass) NAMESPACE NamespaceName:N1 LBRACE DeclList:D2 LBRACE MethodDeclList:M3 RBRACE EndOfNamespace:E4 {: RESULT=new NamespaceClass(N1, D2, M3, E4); RESULT.setLine(N1left); :}
+			;
+			
+NamespaceName ::= (NamespaceNameClass) IDENT:Name {: RESULT=new NamespaceNameClass(Name); RESULT.setLine(Nameleft); :}
+				;			
+
+EndOfNamespace ::= (EndOfNamespace) RBRACE {: RESULT=new EndOfNamespace(); :}
+				;
+
+ConstDecl ::= (ConstDeclClass) CONST Type:T1 ConstInit:C2 ConstTypeList:C3 SEMI {: RESULT=new ConstDeclClass(T1, C2, C3); RESULT.setLine(T1left); :}
+			;
+			
+ConstInit ::= (ConstInitClass) IDENT:Name EQUAL ConstType:value {: RESULT=new ConstInitClass(Name, value); RESULT.setLine(Nameleft); :}
 			;
 
-ConstDecl ::= (ConstDeclClass) CONST Type:T1 IDENT:I2 EQUAL ConstType:C3 ConstTypeList:C4 SEMI {: RESULT=new ConstDeclClass(T1, I2, C3, C4); RESULT.setLine(T1left); :}
-			;
-
-ConstTypeList ::=(ConstTypeListClass) ConstTypeList:C1 COMMA IDENT:I2 EQUAL ConstType:C3 {: RESULT=new ConstTypeListClass(C1, I2, C3); RESULT.setLine(C1left); :}
+ConstTypeList ::=(ConstTypeListClass) ConstTypeList:C1 COMMA ConstInit:C2 {: RESULT=new ConstTypeListClass(C1, C2); RESULT.setLine(C1left); :}
 				| (NoConstTypeListClass) {: RESULT=new NoConstTypeListClass(); :} /* epsilon */
                 ;
 
-ConstType ::= (BoolConstTypeClass) BOOLCONST:B1 {: RESULT=new BoolConstTypeClass(B1); RESULT.setLine(B1left); :}
-           | (CharConstTypeClass) LETTER:L1 {: RESULT=new CharConstTypeClass(L1); RESULT.setLine(L1left); :}
-           | (NumConstTypeClass) NUMBER:N1 {: RESULT=new NumConstTypeClass(N1); RESULT.setLine(N1left); :}
+ConstType ::= (BoolConstTypeClass) BOOLCONST:value {: RESULT=new BoolConstTypeClass(value); RESULT.setLine(valueleft); :}
+           | (CharConstTypeClass) LETTER:value {: RESULT=new CharConstTypeClass(value); RESULT.setLine(valueleft); :}
+           | (NumConstTypeClass) NUMBER:value {: RESULT=new NumConstTypeClass(value); RESULT.setLine(valueleft); :}
            ;
            
-Type ::= (TypeClass) IdentOpt:I1 IDENT:typeName {: RESULT=new TypeClass(I1, typeName); RESULT.setLine(I1left); :}
+Type ::= (TypeClass) IDENT:typeName {: RESULT=new TypeClass(typeName); RESULT.setLine(typeNameleft); :}
+		|
+		(TypeWithPrefixClass) IDENT:I1 COL COL IDENT:typeName {: RESULT=new TypeWithPrefixClass(I1, typeName); RESULT.setLine(I1left); :} /* ovo je ja mislim samo ako imam klasu unutar namespacea */
 		;
 
-IdentOpt ::= (IdentOptClass) IDENTCOLCOL {: RESULT=new IdentOptClass(); :}
+IdentOpt ::= (IdentOptClass) IDENT:I1 COL COL {: RESULT=new IdentOptClass(I1); RESULT.setLine(I1left); :}
 			 |
 			 (NoIdentOptClass) {: RESULT=new NoIdentOptClass(); :} /* epsilon */
              ;
@@ -186,15 +198,21 @@ TypeList ::= (VoidTypeClass) VOID {: RESULT=new VoidTypeClass(); :}
           ;
           
 
-VarDecl ::= (VarDeclClass) Type:varType IDENT:varName BracketForArray:B1 ListVarDecl:L2 SEMI {: RESULT=new VarDeclClass(varType, varName, B1, L2); RESULT.setLine(varTypeleft); :}
+VarDecl ::= (VarDeclClass) Type:varType KindOfVar:K1 ListVarDecl:L2 SEMI {: RESULT=new VarDeclClass(varType, K1, L2); RESULT.setLine(varTypeleft); :}
           	;
+          	
+          	
+KindOfVar ::= (VarNoArrayClass) IDENT:name {: RESULT=new VarNoArrayClass(name); RESULT.setLine(nameleft); :}
+			|
+			(VarArrayClass) IDENT:name LBOXBRAC RBOXBRAC {: RESULT=new VarArrayClass(name); RESULT.setLine(nameleft); :}
+			;
 
 VarDeclOpt ::= (VarDeclOptClass) VarDecl:V1 {: RESULT=new VarDeclOptClass(V1); RESULT.setLine(V1left); :}
 			|
 			(NoVarDeclOptClass) {: RESULT=new NoVarDeclOptClass(); :} /* epsilon */
             ;
             
-ListVarDecl ::= (ListVarDeclClass) ListVarDecl:L1 COMMA IDENT:I2 BracketForArray:B3 {: RESULT=new ListVarDeclClass(L1, I2, B3); RESULT.setLine(L1left); :}
+ListVarDecl ::= (ListVarDeclClass) COMMA KindOfVar:K1 ListVarDecl:L2 {: RESULT=new ListVarDeclClass(K1, L2); RESULT.setLine(K1left); :} 
 				|
 				(NoListVarDeclClass) {: RESULT=new NoListVarDeclClass(); :} /* epsilon */
                 ;
@@ -217,13 +235,18 @@ FormParsOpt ::= (FormParsOptClass) FormPars:F1 {: RESULT=new FormParsOptClass(F1
 				(NoFormParsOptClass) {: RESULT=new NoFormParsOptClass(); :} /* epsilon */
                 ;
 
-FormPars ::= (FormParsClass) Type:T1 IDENT:I2 BracketForArray:B3 ListFormPars:L4 {: RESULT=new FormParsClass(T1, I2, B3, L4); RESULT.setLine(T1left); :}
+FormPars ::= (FormParsClass) Type:T1 KindOfPar:K2 ListFormPars:L3 {: RESULT=new FormParsClass(T1, K2, L3); RESULT.setLine(T1left); :}
             	;
 
-ListFormPars ::= (ListFormParsClass) ListFormPars:L1 COMMA Type:T2 IDENT:I3 BracketForArray:B4 {: RESULT=new ListFormParsClass(L1, T2, I3, B4); RESULT.setLine(L1left); :}
+ListFormPars ::= (ListFormParsClass) ListFormPars:L1 COMMA Type:T2 KindOfPar:K3 {: RESULT=new ListFormParsClass(L1, T2, K3); RESULT.setLine(L1left); :}
 				|
 				(NoListFormParsClass) {: RESULT=new NoListFormParsClass(); :} /* epsilon */
                 ;
+
+KindOfPar ::= (ParNoArrayClass) IDENT:name {: RESULT=new ParNoArrayClass(name); RESULT.setLine(nameleft); :}
+			|
+			(ParArrayClass) IDENT:name LBOXBRAC RBOXBRAC {: RESULT=new ParArrayClass(name); RESULT.setLine(nameleft); :}
+			;
                 
 MethodDeclVarList ::= (MethodDeclVarListClass) MethodDeclVarList:M1 VarDecl:V2 {: RESULT=new MethodDeclVarListClass(M1, V2); RESULT.setLine(M1left); :} 
 					|
@@ -279,8 +302,11 @@ DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop:A1 Expr:e
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator:L1 ASTERISK Designator:D2 RBOXBRAC EQUAL Designator:D3 {: RESULT=new DesignatorStatementWithArrayClass(L1, D2, D3); RESULT.setLine(L1left); :}
 					;
 
-Designator			::= (DesignatorClass) IdentOpt:I1 IDENT:desigName ListIdent:L2 {: RESULT=new DesignatorClass(I1, desigName, L2); RESULT.setLine(I1left); :}
+Designator			::= (DesignatorClass) IDENT:desigName ListIdent:L1 {: RESULT=new DesignatorClass(desigName, L1); RESULT.setLine(desigNameleft); :}
+					|
+					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName ListIdent:L1 {: RESULT=new DesignatorWithPrefixClass(prefix, desigName, L1); RESULT.setLine(prefixleft); :}
 					;
+					
 					
 ListIdent			::= (ListIdentClass) ListIdent:L1 SufixForIdent:S2 {: RESULT=new ListIdentClass(L1, S2); RESULT.setLine(L1left); :}
 					|
@@ -325,7 +351,7 @@ MultiplicationList	::= (MultiplicationListClass) Mulop:M1 Factor:F2 Multiplicati
 
 Factor				::= (ExprFactorClass) LPAREN Expr:E1 RPAREN {: RESULT=new ExprFactorClass(E1); RESULT.setLine(E1left); :}
 					|
-					(NewTypeClass) NEW Type:T1 ListParams:L2 {: RESULT=new NewTypeClass(T1, L2); RESULT.setLine(T1left); :}
+					(NewTypeClass) NEW Type:nameOfType ListParams:L1 {: RESULT=new NewTypeClass(nameOfType, L1); RESULT.setLine(nameOfTypeleft); :}
 					|
 					(BoolConstClass) BOOLCONST:B1 {: RESULT=new BoolConstClass(B1); RESULT.setLine(B1left); :}
 					|

@@ -1,0 +1,473 @@
+INFO  18:40:51,367 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:40:51,451 - #2 program
+INFO  18:40:51,451 - #12 test302
+INFO  18:40:51,451 - #5 namespace
+INFO  18:40:51,452 - #12 Addition
+INFO  18:40:51,453 - #3 {
+INFO  18:40:51,453 - #3 {
+INFO  18:40:51,453 - #12 int
+INFO  18:40:51,454 - #12 sum
+INFO  18:40:51,454 - #17 (
+INFO  18:40:51,454 - #12 int
+INFO  18:40:51,455 - #12 z
+INFO  18:40:51,455 - #8 ,
+INFO  18:40:51,455 - #12 int
+INFO  18:40:51,456 - #12 d
+INFO  18:40:51,456 - #18 )
+INFO  18:40:51,456 - #3 {
+INFO  18:40:51,457 - #24 return
+INFO  18:40:51,457 - #12 z
+INFO  18:40:51,458 - #39 +
+INFO  18:40:51,460 - #12 d
+INFO  18:40:51,462 - #9 ;
+INFO  18:40:51,462 - #4 }
+INFO  18:40:51,462 - #12 int
+INFO  18:40:51,462 - #12 inkrement
+INFO  18:40:51,463 - #17 (
+INFO  18:40:51,463 - #12 int
+INFO  18:40:51,463 - #12 a
+INFO  18:40:51,463 - #8 ,
+INFO  18:40:51,463 - #12 int
+INFO  18:40:51,463 - #12 inc
+INFO  18:40:51,463 - #18 )
+INFO  18:40:51,463 - #12 int
+INFO  18:40:51,463 - #12 pom
+INFO  18:40:51,463 - #9 ;
+INFO  18:40:51,464 - #3 {
+INFO  18:40:51,464 - #20 if
+INFO  18:40:51,464 - #17 (
+INFO  18:40:51,464 - #12 inc
+INFO  18:40:51,465 - #33 ==
+INFO  18:40:51,465 - #11 1
+INFO  18:40:51,466 - #18 )
+INFO  18:40:51,468 - #12 pom
+INFO  18:40:51,468 - #7 =
+INFO  18:40:51,468 - #11 1
+INFO  18:40:51,470 - #9 ;
+INFO  18:40:51,470 - #22 else
+INFO  18:40:51,470 - #20 if
+INFO  18:40:51,470 - #17 (
+INFO  18:40:51,470 - #12 inc
+INFO  18:40:51,470 - #33 ==
+INFO  18:40:51,471 - #11 2
+INFO  18:40:51,471 - #18 )
+INFO  18:40:51,471 - #12 pom
+INFO  18:40:51,471 - #7 =
+INFO  18:40:51,471 - #12 a
+INFO  18:40:51,471 - #9 ;
+INFO  18:40:51,471 - #24 return
+INFO  18:40:51,472 - #12 sum
+INFO  18:40:51,472 - #17 (
+INFO  18:40:51,472 - #12 a
+INFO  18:40:51,472 - #8 ,
+INFO  18:40:51,473 - #12 pom
+INFO  18:40:51,473 - #18 )
+INFO  18:40:51,473 - #9 ;
+INFO  18:40:51,473 - #4 }
+INFO  18:40:51,473 - #4 }
+INFO  18:40:51,474 - #4 }
+INFO  18:40:51,474 - #12 int
+INFO  18:40:51,475 - #12 x
+INFO  18:40:51,475 - #9 ;
+INFO  18:40:51,475 - #3 {
+INFO  18:40:51,475 - #41 void
+INFO  18:40:51,475 - #12 main
+INFO  18:40:51,475 - #17 (
+INFO  18:40:51,475 - #18 )
+INFO  18:40:51,476 - #3 {
+INFO  18:40:51,476 - #4 }
+INFO  18:40:51,476 - #4 }
+INFO  18:40:51,481 - ProgramClass(
+  ProgNameClass(
+   test302
+  ) [ProgNameClass]
+  NamespaceListClass(
+    NoNamespaceClass(
+    ) [NoNamespaceClass]
+    NamespaceClass(
+      NamespaceNameClass(
+       Addition
+      ) [NamespaceNameClass]
+      NoDeclClass(
+      ) [NoDeclClass]
+      MethodDeclListClass(
+        MethodDeclListClass(
+          NoMethodDeclListClass(
+          ) [NoMethodDeclListClass]
+          MethodDeclClass(
+            ReturnTypeClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+             sum
+            ) [ReturnTypeClass]
+            FormParsOptClass(
+              FormParsClass(
+                TypeClass(
+                 int
+                ) [TypeClass]
+                ParNoArrayClass(
+                 z
+                ) [ParNoArrayClass]
+                ListFormParsClass(
+                  NoListFormParsClass(
+                  ) [NoListFormParsClass]
+                  TypeClass(
+                   int
+                  ) [TypeClass]
+                  ParNoArrayClass(
+                   d
+                  ) [ParNoArrayClass]
+                ) [ListFormParsClass]
+              ) [FormParsClass]
+            ) [FormParsOptClass]
+            NoMethodDeclVarListClass(
+            ) [NoMethodDeclVarListClass]
+            StatementListClass(
+              NoStatementListClass(
+              ) [NoStatementListClass]
+              ReturnClass(
+                AddExprClass(
+                  ExprClass(
+                    NoMinusOptClass(
+                    ) [NoMinusOptClass]
+                    TermClass(
+                      VarClass(
+                        DesignatorClass(
+                         z
+                          NoListIdentClass(
+                          ) [NoListIdentClass]
+                        ) [DesignatorClass]
+                      ) [VarClass]
+                      NoMultiplicationListClass(
+                      ) [NoMultiplicationListClass]
+                    ) [TermClass]
+                  ) [ExprClass]
+                  AddOpClass(
+                  ) [AddOpClass]
+                  TermClass(
+                    VarClass(
+                      DesignatorClass(
+                       d
+                        NoListIdentClass(
+                        ) [NoListIdentClass]
+                      ) [DesignatorClass]
+                    ) [VarClass]
+                    NoMultiplicationListClass(
+                    ) [NoMultiplicationListClass]
+                  ) [TermClass]
+                ) [AddExprClass]
+              ) [ReturnClass]
+            ) [StatementListClass]
+          ) [MethodDeclClass]
+        ) [MethodDeclListClass]
+        MethodDeclClass(
+          ReturnTypeClass(
+            TypeClass(
+             int
+            ) [TypeClass]
+           inkrement
+          ) [ReturnTypeClass]
+          FormParsOptClass(
+            FormParsClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              ParNoArrayClass(
+               a
+              ) [ParNoArrayClass]
+              ListFormParsClass(
+                NoListFormParsClass(
+                ) [NoListFormParsClass]
+                TypeClass(
+                 int
+                ) [TypeClass]
+                ParNoArrayClass(
+                 inc
+                ) [ParNoArrayClass]
+              ) [ListFormParsClass]
+            ) [FormParsClass]
+          ) [FormParsOptClass]
+          MethodDeclVarListClass(
+            NoMethodDeclVarListClass(
+            ) [NoMethodDeclVarListClass]
+            VarDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              VarNoArrayClass(
+               pom
+              ) [VarNoArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [VarDeclClass]
+          ) [MethodDeclVarListClass]
+          StatementListClass(
+            StatementListClass(
+              NoStatementListClass(
+              ) [NoStatementListClass]
+              IfClass(
+                CondtionClass(
+                  CondTermClass(
+                    CondFactClass(
+                      ExprClass(
+                        NoMinusOptClass(
+                        ) [NoMinusOptClass]
+                        TermClass(
+                          VarClass(
+                            DesignatorClass(
+                             inc
+                              NoListIdentClass(
+                              ) [NoListIdentClass]
+                            ) [DesignatorClass]
+                          ) [VarClass]
+                          NoMultiplicationListClass(
+                          ) [NoMultiplicationListClass]
+                        ) [TermClass]
+                      ) [ExprClass]
+                      OptRelopClass(
+                        EqualequalClass(
+                        ) [EqualequalClass]
+                        ExprClass(
+                          NoMinusOptClass(
+                          ) [NoMinusOptClass]
+                          TermClass(
+                            NumberClass(
+                             1
+                            ) [NumberClass]
+                            NoMultiplicationListClass(
+                            ) [NoMultiplicationListClass]
+                          ) [TermClass]
+                        ) [ExprClass]
+                      ) [OptRelopClass]
+                    ) [CondFactClass]
+                    NoCondFactListClass(
+                    ) [NoCondFactListClass]
+                  ) [CondTermClass]
+                  NoCondTermListClass(
+                  ) [NoCondTermListClass]
+                ) [CondtionClass]
+                StatementClass(
+                  AssignOperatorClass(
+                    DesignatorClass(
+                     pom
+                      NoListIdentClass(
+                      ) [NoListIdentClass]
+                    ) [DesignatorClass]
+                    AssignopClass(
+                    ) [AssignopClass]
+                    ExprClass(
+                      NoMinusOptClass(
+                      ) [NoMinusOptClass]
+                      TermClass(
+                        NumberClass(
+                         1
+                        ) [NumberClass]
+                        NoMultiplicationListClass(
+                        ) [NoMultiplicationListClass]
+                      ) [TermClass]
+                    ) [ExprClass]
+                  ) [AssignOperatorClass]
+                ) [StatementClass]
+                ElseOptClass(
+                  IfClass(
+                    CondtionClass(
+                      CondTermClass(
+                        CondFactClass(
+                          ExprClass(
+                            NoMinusOptClass(
+                            ) [NoMinusOptClass]
+                            TermClass(
+                              VarClass(
+                                DesignatorClass(
+                                 inc
+                                  NoListIdentClass(
+                                  ) [NoListIdentClass]
+                                ) [DesignatorClass]
+                              ) [VarClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [TermClass]
+                          ) [ExprClass]
+                          OptRelopClass(
+                            EqualequalClass(
+                            ) [EqualequalClass]
+                            ExprClass(
+                              NoMinusOptClass(
+                              ) [NoMinusOptClass]
+                              TermClass(
+                                NumberClass(
+                                 2
+                                ) [NumberClass]
+                                NoMultiplicationListClass(
+                                ) [NoMultiplicationListClass]
+                              ) [TermClass]
+                            ) [ExprClass]
+                          ) [OptRelopClass]
+                        ) [CondFactClass]
+                        NoCondFactListClass(
+                        ) [NoCondFactListClass]
+                      ) [CondTermClass]
+                      NoCondTermListClass(
+                      ) [NoCondTermListClass]
+                    ) [CondtionClass]
+                    StatementClass(
+                      AssignOperatorClass(
+                        DesignatorClass(
+                         pom
+                          NoListIdentClass(
+                          ) [NoListIdentClass]
+                        ) [DesignatorClass]
+                        AssignopClass(
+                        ) [AssignopClass]
+                        ExprClass(
+                          NoMinusOptClass(
+                          ) [NoMinusOptClass]
+                          TermClass(
+                            VarClass(
+                              DesignatorClass(
+                               a
+                                NoListIdentClass(
+                                ) [NoListIdentClass]
+                              ) [DesignatorClass]
+                            ) [VarClass]
+                            NoMultiplicationListClass(
+                            ) [NoMultiplicationListClass]
+                          ) [TermClass]
+                        ) [ExprClass]
+                      ) [AssignOperatorClass]
+                    ) [StatementClass]
+                    NoElseOptClass(
+                    ) [NoElseOptClass]
+                  ) [IfClass]
+                ) [ElseOptClass]
+              ) [IfClass]
+            ) [StatementListClass]
+            ReturnClass(
+              ExprClass(
+                NoMinusOptClass(
+                ) [NoMinusOptClass]
+                TermClass(
+                  FunCallClass(
+                    DesignatorClass(
+                     sum
+                      NoListIdentClass(
+                      ) [NoListIdentClass]
+                    ) [DesignatorClass]
+                    ActParsOptClass(
+                      ActParsClass(
+                        ExprClass(
+                          NoMinusOptClass(
+                          ) [NoMinusOptClass]
+                          TermClass(
+                            VarClass(
+                              DesignatorClass(
+                               a
+                                NoListIdentClass(
+                                ) [NoListIdentClass]
+                              ) [DesignatorClass]
+                            ) [VarClass]
+                            NoMultiplicationListClass(
+                            ) [NoMultiplicationListClass]
+                          ) [TermClass]
+                        ) [ExprClass]
+                        ListExprClass(
+                          NoListExprClass(
+                          ) [NoListExprClass]
+                          ExprClass(
+                            NoMinusOptClass(
+                            ) [NoMinusOptClass]
+                            TermClass(
+                              VarClass(
+                                DesignatorClass(
+                                 pom
+                                  NoListIdentClass(
+                                  ) [NoListIdentClass]
+                                ) [DesignatorClass]
+                              ) [VarClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [TermClass]
+                          ) [ExprClass]
+                        ) [ListExprClass]
+                      ) [ActParsClass]
+                    ) [ActParsOptClass]
+                  ) [FunCallClass]
+                  NoMultiplicationListClass(
+                  ) [NoMultiplicationListClass]
+                ) [TermClass]
+              ) [ExprClass]
+            ) [ReturnClass]
+          ) [StatementListClass]
+        ) [MethodDeclClass]
+      ) [MethodDeclListClass]
+      EndOfNamespace(
+      ) [EndOfNamespace]
+    ) [NamespaceClass]
+  ) [NamespaceListClass]
+  DeclListClass(
+    NoDeclClass(
+    ) [NoDeclClass]
+    VarDeclTypeClass(
+      VarDeclClass(
+        TypeClass(
+         int
+        ) [TypeClass]
+        VarNoArrayClass(
+         x
+        ) [VarNoArrayClass]
+        NoListVarDeclClass(
+        ) [NoListVarDeclClass]
+      ) [VarDeclClass]
+    ) [VarDeclTypeClass]
+  ) [DeclListClass]
+  MethodDeclListClass(
+    NoMethodDeclListClass(
+    ) [NoMethodDeclListClass]
+    MethodDeclClass(
+      VoidRetTypeClass(
+       main
+      ) [VoidRetTypeClass]
+      NoFormParsOptClass(
+      ) [NoFormParsOptClass]
+      NoMethodDeclVarListClass(
+      ) [NoMethodDeclVarListClass]
+      NoStatementListClass(
+      ) [NoStatementListClass]
+    ) [MethodDeclClass]
+  ) [MethodDeclListClass]
+) [ProgramClass]
+INFO  18:40:51,481 - ===================================
+INFO  18:40:51,484 - Postavljen namespace: Addition
+INFO  18:40:51,484 - Obradjuje se funkcija sum na liniji 8
+INFO  18:40:51,484 - Deklarisana promenljiva z na liniji 8
+INFO  18:40:51,484 - Deklarisana promenljiva d na liniji 8
+ERROR 18:40:51,485 - Greska u liniji 10 : ime z nije deklarisano! na liniji 10
+ERROR 18:40:51,485 - Greska u liniji 10 : ime d nije deklarisano! na liniji 10
+ERROR 18:40:51,485 - Greska u liniji 2 : nekompatibilni tipovi u izarzu za sabiranje.
+ERROR 18:40:51,485 - Greska u liniji 2: Tip izraza u return naredbi se ne slaze sa tipom povratne vrednosti funkcije.
+INFO  18:40:51,485 - Obradjuje se funkcija inkrement na liniji 14
+INFO  18:40:51,485 - Deklarisana promenljiva a na liniji 14
+INFO  18:40:51,485 - Deklarisana promenljiva inc na liniji 14
+INFO  18:40:51,485 - Trenutni namespace: Addition
+INFO  18:40:51,486 - Deklarisana promenljiva Addition::pom na liniji 15
+ERROR 18:40:51,486 - Greska u liniji 17 : ime inc nije deklarisano! na liniji 17
+INFO  18:40:51,486 - Usao u assignOperatorClass
+ERROR 18:40:51,486 - Greska u liniji 18 : ime inc nije deklarisano! na liniji 18
+ERROR 18:40:51,486 - Greska u liniji 18 : ime a nije deklarisano! na liniji 18
+INFO  18:40:51,486 - Usao u assignOperatorClass
+ERROR 18:40:51,486 - Greska na liniji 18 : nekompatiblni tipovi u dodeli vrednosti
+ERROR 18:40:51,486 - Greska u liniji 20 : ime a nije deklarisano! na liniji 20
+ERROR 18:40:51,486 - Pronadjen poziv funkcije 20 : ime DesignatorClass(
+ sum
+  NoListIdentClass(
+  ) [NoListIdentClass]
+) [DesignatorClass] nije funkcija! na liniji 20
+INFO  18:40:51,486 - Resetovan namespaceName
+INFO  18:40:51,486 - Trenutni namespace: 
+INFO  18:40:51,486 - Deklarisana promenljiva ::x na liniji 27
+INFO  18:40:51,486 - Obradjuje se funkcija main na liniji 32
+INFO  18:40:51,486 -  Print count calls = 0
+INFO  18:40:51,486 -  Deklarisanih promenljivih ima = 6
+INFO  18:40:51,486 - ===================================
+ERROR 18:40:51,487 - Parsiranje NIJE uspesno zavrseno!

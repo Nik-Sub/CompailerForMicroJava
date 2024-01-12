@@ -1,0 +1,15 @@
+INFO  15:24:11,881 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  15:24:12,037 - #2 program
+INFO  15:24:12,037 - #12 MJProgram
+INFO  15:24:12,037 - #12 int
+INFO  15:24:12,042 - #12 x
+INFO  15:24:12,042 - #15 [
+INFO  15:24:12,042 - #16 ]
+INFO  15:24:12,042 - #9 ;
+INFO  15:24:12,044 - #6 const
+INFO  15:24:12,044 - #12 int
+INFO  15:24:12,045 - #12 y
+INFO  15:24:12,045 - #9 ;
+ERROR 15:24:12,045 - 
+Sintaksna greska na liniji 2
+ERROR 15:24:12,045 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,16 +8,14 @@ package rs.ac.bg.etf.pp1.ast;
 public class FormParsClass extends FormPars {
 
     private Type Type;
-    private String I2;
-    private BracketForArray BracketForArray;
+    private KindOfPar KindOfPar;
     private ListFormPars ListFormPars;
 
-    public FormParsClass (Type Type, String I2, BracketForArray BracketForArray, ListFormPars ListFormPars) {
+    public FormParsClass (Type Type, KindOfPar KindOfPar, ListFormPars ListFormPars) {
         this.Type=Type;
         if(Type!=null) Type.setParent(this);
-        this.I2=I2;
-        this.BracketForArray=BracketForArray;
-        if(BracketForArray!=null) BracketForArray.setParent(this);
+        this.KindOfPar=KindOfPar;
+        if(KindOfPar!=null) KindOfPar.setParent(this);
         this.ListFormPars=ListFormPars;
         if(ListFormPars!=null) ListFormPars.setParent(this);
     }
@@ -30,20 +28,12 @@ public class FormParsClass extends FormPars {
         this.Type=Type;
     }
 
-    public String getI2() {
-        return I2;
+    public KindOfPar getKindOfPar() {
+        return KindOfPar;
     }
 
-    public void setI2(String I2) {
-        this.I2=I2;
-    }
-
-    public BracketForArray getBracketForArray() {
-        return BracketForArray;
-    }
-
-    public void setBracketForArray(BracketForArray BracketForArray) {
-        this.BracketForArray=BracketForArray;
+    public void setKindOfPar(KindOfPar KindOfPar) {
+        this.KindOfPar=KindOfPar;
     }
 
     public ListFormPars getListFormPars() {
@@ -60,20 +50,20 @@ public class FormParsClass extends FormPars {
 
     public void childrenAccept(Visitor visitor) {
         if(Type!=null) Type.accept(visitor);
-        if(BracketForArray!=null) BracketForArray.accept(visitor);
+        if(KindOfPar!=null) KindOfPar.accept(visitor);
         if(ListFormPars!=null) ListFormPars.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Type!=null) Type.traverseTopDown(visitor);
-        if(BracketForArray!=null) BracketForArray.traverseTopDown(visitor);
+        if(KindOfPar!=null) KindOfPar.traverseTopDown(visitor);
         if(ListFormPars!=null) ListFormPars.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Type!=null) Type.traverseBottomUp(visitor);
-        if(BracketForArray!=null) BracketForArray.traverseBottomUp(visitor);
+        if(KindOfPar!=null) KindOfPar.traverseBottomUp(visitor);
         if(ListFormPars!=null) ListFormPars.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -89,11 +79,8 @@ public class FormParsClass extends FormPars {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+I2);
-        buffer.append("\n");
-
-        if(BracketForArray!=null)
-            buffer.append(BracketForArray.toString("  "+tab));
+        if(KindOfPar!=null)
+            buffer.append(KindOfPar.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

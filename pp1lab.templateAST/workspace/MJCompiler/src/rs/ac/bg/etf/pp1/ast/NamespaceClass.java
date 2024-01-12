@@ -1,30 +1,34 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class NamespaceClass extends Namespace {
 
-    private String I1;
+    private NamespaceName NamespaceName;
     private DeclList DeclList;
     private MethodDeclList MethodDeclList;
+    private EndOfNamespace EndOfNamespace;
 
-    public NamespaceClass (String I1, DeclList DeclList, MethodDeclList MethodDeclList) {
-        this.I1=I1;
+    public NamespaceClass (NamespaceName NamespaceName, DeclList DeclList, MethodDeclList MethodDeclList, EndOfNamespace EndOfNamespace) {
+        this.NamespaceName=NamespaceName;
+        if(NamespaceName!=null) NamespaceName.setParent(this);
         this.DeclList=DeclList;
         if(DeclList!=null) DeclList.setParent(this);
         this.MethodDeclList=MethodDeclList;
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
+        this.EndOfNamespace=EndOfNamespace;
+        if(EndOfNamespace!=null) EndOfNamespace.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public NamespaceName getNamespaceName() {
+        return NamespaceName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setNamespaceName(NamespaceName NamespaceName) {
+        this.NamespaceName=NamespaceName;
     }
 
     public DeclList getDeclList() {
@@ -43,24 +47,38 @@ public class NamespaceClass extends Namespace {
         this.MethodDeclList=MethodDeclList;
     }
 
+    public EndOfNamespace getEndOfNamespace() {
+        return EndOfNamespace;
+    }
+
+    public void setEndOfNamespace(EndOfNamespace EndOfNamespace) {
+        this.EndOfNamespace=EndOfNamespace;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(NamespaceName!=null) NamespaceName.accept(visitor);
         if(DeclList!=null) DeclList.accept(visitor);
         if(MethodDeclList!=null) MethodDeclList.accept(visitor);
+        if(EndOfNamespace!=null) EndOfNamespace.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(NamespaceName!=null) NamespaceName.traverseTopDown(visitor);
         if(DeclList!=null) DeclList.traverseTopDown(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseTopDown(visitor);
+        if(EndOfNamespace!=null) EndOfNamespace.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(NamespaceName!=null) NamespaceName.traverseBottomUp(visitor);
         if(DeclList!=null) DeclList.traverseBottomUp(visitor);
         if(MethodDeclList!=null) MethodDeclList.traverseBottomUp(visitor);
+        if(EndOfNamespace!=null) EndOfNamespace.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -69,7 +87,10 @@ public class NamespaceClass extends Namespace {
         buffer.append(tab);
         buffer.append("NamespaceClass(\n");
 
-        buffer.append(" "+tab+I1);
+        if(NamespaceName!=null)
+            buffer.append(NamespaceName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(DeclList!=null)
@@ -80,6 +101,12 @@ public class NamespaceClass extends Namespace {
 
         if(MethodDeclList!=null)
             buffer.append(MethodDeclList.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(EndOfNamespace!=null)
+            buffer.append(EndOfNamespace.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

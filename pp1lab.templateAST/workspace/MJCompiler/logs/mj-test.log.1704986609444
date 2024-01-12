@@ -1,0 +1,89 @@
+INFO  15:40:11,329 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  15:40:11,417 - #2 program
+INFO  15:40:11,417 - #12 MJProgram
+INFO  15:40:11,417 - #12 int
+INFO  15:40:11,419 - #12 x
+INFO  15:40:11,420 - #8 ,
+INFO  15:40:11,420 - #12 n
+INFO  15:40:11,420 - #8 ,
+INFO  15:40:11,420 - #12 m
+INFO  15:40:11,420 - #9 ;
+INFO  15:40:11,421 - #6 const
+INFO  15:40:11,421 - #12 int
+INFO  15:40:11,421 - #12 y
+INFO  15:40:11,421 - #7 =
+INFO  15:40:11,421 - #11 3
+INFO  15:40:11,421 - #8 ,
+INFO  15:40:11,422 - #12 z
+INFO  15:40:11,422 - #7 =
+INFO  15:40:11,422 - #11 4
+INFO  15:40:11,422 - #9 ;
+INFO  15:40:11,423 - #3 {
+INFO  15:40:11,423 - #4 }
+INFO  15:40:11,427 - ProgramClass(
+  ProgNameClass(
+   MJProgram
+  ) [ProgNameClass]
+  NoNamespaceClass(
+  ) [NoNamespaceClass]
+  DeclListClass(
+    DeclListClass(
+      NoDeclClass(
+      ) [NoDeclClass]
+      VarDeclTypeClass(
+        VarDeclClass(
+          TypeClass(
+            NoIdentOptClass(
+            ) [NoIdentOptClass]
+           int
+          ) [TypeClass]
+          VarNoArrayClass(
+           x
+          ) [VarNoArrayClass]
+          ListVarDeclClass(
+            VarNoArrayClass(
+             n
+            ) [VarNoArrayClass]
+            ListVarDeclClass(
+              VarNoArrayClass(
+               m
+              ) [VarNoArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [ListVarDeclClass]
+          ) [ListVarDeclClass]
+        ) [VarDeclClass]
+      ) [VarDeclTypeClass]
+    ) [DeclListClass]
+    ConstDeclTypeClass(
+      ConstDeclClass(
+        TypeClass(
+          NoIdentOptClass(
+          ) [NoIdentOptClass]
+         int
+        ) [TypeClass]
+       y
+        NumConstTypeClass(
+         3
+        ) [NumConstTypeClass]
+        ConstTypeListClass(
+          NoConstTypeListClass(
+          ) [NoConstTypeListClass]
+         z
+          NumConstTypeClass(
+           4
+          ) [NumConstTypeClass]
+        ) [ConstTypeListClass]
+      ) [ConstDeclClass]
+    ) [ConstDeclTypeClass]
+  ) [DeclListClass]
+  NoMethodDeclListClass(
+  ) [NoMethodDeclListClass]
+) [ProgramClass]
+INFO  15:40:11,427 - ===================================
+INFO  15:40:11,430 - Deklarisana promenljiva m na liniji 8
+ERROR 15:40:11,430 - Greska na liniji 14 : nekompatiblni tipovi u dodeli vrednosti
+INFO  15:40:11,431 -  Print count calls = 0
+INFO  15:40:11,431 -  Deklarisanih promenljivih ima = 1
+INFO  15:40:11,431 - ===================================
+ERROR 15:40:11,431 - Parsiranje NIJE uspesno zavrseno!

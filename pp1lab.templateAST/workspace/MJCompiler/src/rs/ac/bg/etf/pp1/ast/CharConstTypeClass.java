@@ -1,24 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2024 13:16:24
+// 12/0/2024 15:9:10
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class CharConstTypeClass extends ConstType {
 
-    private String L1;
+    private String value;
 
-    public CharConstTypeClass (String L1) {
-        this.L1=L1;
+    public CharConstTypeClass (String value) {
+        this.value=value;
     }
 
-    public String getL1() {
-        return L1;
+    public String getValue() {
+        return value;
     }
 
-    public void setL1(String L1) {
-        this.L1=L1;
+    public void setValue(String value) {
+        this.value=value;
     }
 
     public void accept(Visitor visitor) {
@@ -41,7 +41,7 @@ public class CharConstTypeClass extends ConstType {
         buffer.append(tab);
         buffer.append("CharConstTypeClass(\n");
 
-        buffer.append(" "+tab+L1);
+        buffer.append(" "+tab+value);
         buffer.append("\n");
 
         buffer.append(tab);
