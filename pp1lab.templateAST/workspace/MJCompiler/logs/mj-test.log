@@ -1,117 +1,117 @@
-INFO  21:04:51,658 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  21:04:51,745 - #2 program
-INFO  21:04:51,745 - #12 test302
-INFO  21:04:51,745 - #5 namespace
-INFO  21:04:51,746 - #12 Addition
-INFO  21:04:51,746 - #3 {
-INFO  21:04:51,746 - #3 {
-INFO  21:04:51,747 - #12 int
-INFO  21:04:51,748 - #12 sum
-INFO  21:04:51,748 - #17 (
-INFO  21:04:51,748 - #12 int
-INFO  21:04:51,748 - #12 z
-INFO  21:04:51,748 - #8 ,
-INFO  21:04:51,749 - #12 int
-INFO  21:04:51,749 - #12 d
-INFO  21:04:51,749 - #18 )
-INFO  21:04:51,750 - #3 {
-INFO  21:04:51,751 - #24 return
-INFO  21:04:51,751 - #12 z
-INFO  21:04:51,753 - #39 +
-INFO  21:04:51,754 - #12 d
-INFO  21:04:51,756 - #9 ;
-INFO  21:04:51,756 - #4 }
-INFO  21:04:51,756 - #12 int
-INFO  21:04:51,757 - #12 inkrement
-INFO  21:04:51,757 - #17 (
-INFO  21:04:51,757 - #12 int
-INFO  21:04:51,757 - #12 a
-INFO  21:04:51,757 - #8 ,
-INFO  21:04:51,757 - #12 int
-INFO  21:04:51,757 - #12 inc
-INFO  21:04:51,757 - #18 )
-INFO  21:04:51,757 - #12 int
-INFO  21:04:51,757 - #12 pom
-INFO  21:04:51,757 - #9 ;
-INFO  21:04:51,758 - #3 {
-INFO  21:04:51,758 - #20 if
-INFO  21:04:51,758 - #17 (
-INFO  21:04:51,758 - #12 inc
-INFO  21:04:51,758 - #33 ==
-INFO  21:04:51,758 - #11 1
-INFO  21:04:51,760 - #18 )
-INFO  21:04:51,762 - #12 pom
-INFO  21:04:51,762 - #7 =
-INFO  21:04:51,762 - #11 1
-INFO  21:04:51,764 - #9 ;
-INFO  21:04:51,764 - #22 else
-INFO  21:04:51,765 - #20 if
-INFO  21:04:51,765 - #17 (
-INFO  21:04:51,765 - #12 inc
-INFO  21:04:51,765 - #33 ==
-INFO  21:04:51,765 - #11 2
-INFO  21:04:51,765 - #18 )
-INFO  21:04:51,765 - #12 pom
-INFO  21:04:51,765 - #7 =
-INFO  21:04:51,765 - #12 a
-INFO  21:04:51,765 - #9 ;
-INFO  21:04:51,765 - #24 return
-INFO  21:04:51,766 - #12 sum
-INFO  21:04:51,767 - #17 (
-INFO  21:04:51,767 - #12 a
-INFO  21:04:51,767 - #8 ,
-INFO  21:04:51,768 - #12 pom
-INFO  21:04:51,768 - #18 )
-INFO  21:04:51,768 - #9 ;
-INFO  21:04:51,768 - #4 }
-INFO  21:04:51,768 - #4 }
-INFO  21:04:51,768 - #4 }
-INFO  21:04:51,768 - #5 namespace
-INFO  21:04:51,769 - #12 Unpacking
-INFO  21:04:51,769 - #3 {
-INFO  21:04:51,769 - #12 int
-INFO  21:04:51,769 - #12 niz
-INFO  21:04:51,770 - #15 [
-INFO  21:04:51,770 - #16 ]
-INFO  21:04:51,770 - #8 ,
-INFO  21:04:51,770 - #12 niz2
-INFO  21:04:51,770 - #15 [
-INFO  21:04:51,770 - #16 ]
-INFO  21:04:51,770 - #8 ,
-INFO  21:04:51,770 - #12 niz3
-INFO  21:04:51,770 - #15 [
-INFO  21:04:51,770 - #16 ]
-INFO  21:04:51,770 - #9 ;
-INFO  21:04:51,770 - #12 int
-INFO  21:04:51,770 - #12 a
-INFO  21:04:51,770 - #8 ,
-INFO  21:04:51,770 - #12 b
-INFO  21:04:51,770 - #9 ;
-INFO  21:04:51,770 - #3 {
-INFO  21:04:51,770 - #4 }
-INFO  21:04:51,770 - #4 }
-INFO  21:04:51,771 - #12 int
-INFO  21:04:51,771 - #12 i
-INFO  21:04:51,771 - #9 ;
-INFO  21:04:51,771 - #12 bool
-INFO  21:04:51,771 - #12 ibool
-INFO  21:04:51,771 - #9 ;
-INFO  21:04:51,771 - #12 int
-INFO  21:04:51,771 - #12 niz2
-INFO  21:04:51,771 - #9 ;
-INFO  21:04:51,771 - #12 int
-INFO  21:04:51,771 - #12 niz
-INFO  21:04:51,771 - #15 [
-INFO  21:04:51,771 - #16 ]
-INFO  21:04:51,771 - #9 ;
-INFO  21:04:51,771 - #12 int
-INFO  21:04:51,771 - #12 a
-INFO  21:04:51,771 - #8 ,
-INFO  21:04:51,771 - #12 curr
-INFO  21:04:51,771 - #9 ;
-INFO  21:04:51,771 - #3 {
-INFO  21:04:51,771 - #4 }
-INFO  21:04:51,776 - ProgramClass(
+INFO  21:13:38,609 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:13:38,712 - #2 program
+INFO  21:13:38,712 - #14 test302
+INFO  21:13:38,712 - #5 namespace
+INFO  21:13:38,713 - #14 Addition
+INFO  21:13:38,713 - #3 {
+INFO  21:13:38,713 - #3 {
+INFO  21:13:38,714 - #14 int
+INFO  21:13:38,715 - #14 sum
+INFO  21:13:38,716 - #19 (
+INFO  21:13:38,716 - #14 int
+INFO  21:13:38,716 - #14 z
+INFO  21:13:38,716 - #8 ,
+INFO  21:13:38,717 - #14 int
+INFO  21:13:38,717 - #14 d
+INFO  21:13:38,717 - #20 )
+INFO  21:13:38,718 - #3 {
+INFO  21:13:38,719 - #26 return
+INFO  21:13:38,719 - #14 z
+INFO  21:13:38,720 - #41 +
+INFO  21:13:38,722 - #14 d
+INFO  21:13:38,724 - #9 ;
+INFO  21:13:38,724 - #4 }
+INFO  21:13:38,724 - #14 int
+INFO  21:13:38,724 - #14 inkrement
+INFO  21:13:38,724 - #19 (
+INFO  21:13:38,724 - #14 int
+INFO  21:13:38,724 - #14 a
+INFO  21:13:38,724 - #8 ,
+INFO  21:13:38,724 - #14 int
+INFO  21:13:38,724 - #14 inc
+INFO  21:13:38,724 - #20 )
+INFO  21:13:38,724 - #14 int
+INFO  21:13:38,725 - #14 pom
+INFO  21:13:38,725 - #9 ;
+INFO  21:13:38,726 - #3 {
+INFO  21:13:38,726 - #22 if
+INFO  21:13:38,726 - #19 (
+INFO  21:13:38,726 - #14 inc
+INFO  21:13:38,726 - #35 ==
+INFO  21:13:38,726 - #11 1
+INFO  21:13:38,728 - #20 )
+INFO  21:13:38,730 - #14 pom
+INFO  21:13:38,730 - #7 =
+INFO  21:13:38,730 - #11 1
+INFO  21:13:38,732 - #9 ;
+INFO  21:13:38,732 - #24 else
+INFO  21:13:38,732 - #22 if
+INFO  21:13:38,732 - #19 (
+INFO  21:13:38,732 - #14 inc
+INFO  21:13:38,732 - #35 ==
+INFO  21:13:38,732 - #11 2
+INFO  21:13:38,732 - #20 )
+INFO  21:13:38,732 - #14 pom
+INFO  21:13:38,732 - #7 =
+INFO  21:13:38,732 - #14 a
+INFO  21:13:38,732 - #9 ;
+INFO  21:13:38,732 - #26 return
+INFO  21:13:38,734 - #14 sum
+INFO  21:13:38,734 - #19 (
+INFO  21:13:38,734 - #14 a
+INFO  21:13:38,734 - #8 ,
+INFO  21:13:38,735 - #14 pom
+INFO  21:13:38,735 - #20 )
+INFO  21:13:38,735 - #9 ;
+INFO  21:13:38,735 - #4 }
+INFO  21:13:38,736 - #4 }
+INFO  21:13:38,736 - #4 }
+INFO  21:13:38,736 - #5 namespace
+INFO  21:13:38,737 - #14 Unpacking
+INFO  21:13:38,737 - #3 {
+INFO  21:13:38,737 - #14 int
+INFO  21:13:38,737 - #14 niz
+INFO  21:13:38,737 - #17 [
+INFO  21:13:38,737 - #18 ]
+INFO  21:13:38,737 - #8 ,
+INFO  21:13:38,737 - #14 niz2
+INFO  21:13:38,737 - #17 [
+INFO  21:13:38,737 - #18 ]
+INFO  21:13:38,737 - #8 ,
+INFO  21:13:38,737 - #14 niz3
+INFO  21:13:38,737 - #17 [
+INFO  21:13:38,737 - #18 ]
+INFO  21:13:38,737 - #9 ;
+INFO  21:13:38,737 - #14 int
+INFO  21:13:38,738 - #14 a
+INFO  21:13:38,738 - #8 ,
+INFO  21:13:38,738 - #14 b
+INFO  21:13:38,738 - #9 ;
+INFO  21:13:38,738 - #3 {
+INFO  21:13:38,738 - #4 }
+INFO  21:13:38,738 - #4 }
+INFO  21:13:38,738 - #14 int
+INFO  21:13:38,738 - #14 i
+INFO  21:13:38,738 - #9 ;
+INFO  21:13:38,738 - #14 bool
+INFO  21:13:38,738 - #14 ibool
+INFO  21:13:38,738 - #9 ;
+INFO  21:13:38,738 - #14 int
+INFO  21:13:38,738 - #14 niz2
+INFO  21:13:38,739 - #9 ;
+INFO  21:13:38,739 - #14 int
+INFO  21:13:38,739 - #14 niz
+INFO  21:13:38,739 - #17 [
+INFO  21:13:38,739 - #18 ]
+INFO  21:13:38,739 - #9 ;
+INFO  21:13:38,739 - #14 int
+INFO  21:13:38,739 - #14 a
+INFO  21:13:38,739 - #8 ,
+INFO  21:13:38,739 - #14 curr
+INFO  21:13:38,739 - #9 ;
+INFO  21:13:38,739 - #3 {
+INFO  21:13:38,739 - #4 }
+INFO  21:13:38,744 - ProgramClass(
   ProgNameClass(
    test302
   ) [ProgNameClass]
@@ -575,41 +575,41 @@ INFO  21:04:51,776 - ProgramClass(
   NoMethodDeclListClass(
   ) [NoMethodDeclListClass]
 ) [ProgramClass]
-INFO  21:04:51,776 - ===================================
-INFO  21:04:51,779 - Postavljen namespace: Addition
-INFO  21:04:51,779 - Obradjuje se funkcija sum na liniji 9
-INFO  21:04:51,779 - Deklarisana promenljiva z na liniji 9
-INFO  21:04:51,780 - Deklarisana promenljiva d na liniji 9
-INFO  21:04:51,780 - Obradjuje se funkcija inkrement na liniji 15
-INFO  21:04:51,780 - Deklarisana promenljiva a na liniji 15
-INFO  21:04:51,780 - Deklarisana promenljiva inc na liniji 15
-INFO  21:04:51,780 - Trenutni namespace: Addition
-INFO  21:04:51,780 - Deklarisana promenljiva pom na liniji 16
-INFO  21:04:51,780 - Usao u assignOperatorClass
-INFO  21:04:51,780 - Usao u assignOperatorClass
-INFO  21:04:51,780 - Pronadjen poziv funkcije 21 : ime Additionsum
-INFO  21:04:51,780 - Resetovan namespaceName
-INFO  21:04:51,780 - Postavljen namespace: Unpacking
-INFO  21:04:51,780 - Deklarisana promenljiva Unpacking::niz na liniji 28
-INFO  21:04:51,780 - Deklarisana promenljiva Unpacking::niz2 na liniji 28
-INFO  21:04:51,780 - Deklarisana promenljiva Unpacking::niz3 na liniji 28
-INFO  21:04:51,780 - Trenutni namespace: Unpacking
-INFO  21:04:51,780 - Deklarisana promenljiva Unpacking::a na liniji 29
-INFO  21:04:51,781 - Trenutni namespace: Unpacking
-INFO  21:04:51,781 - Deklarisana promenljiva Unpacking::b na liniji 29
-INFO  21:04:51,781 - Resetovan namespaceName
-INFO  21:04:51,781 - Trenutni namespace: 
-INFO  21:04:51,781 - Deklarisana promenljiva ::i na liniji 34
-INFO  21:04:51,781 - Trenutni namespace: 
-INFO  21:04:51,781 - Deklarisana promenljiva ::ibool na liniji 35
-INFO  21:04:51,781 - Trenutni namespace: 
-INFO  21:04:51,781 - Deklarisana promenljiva ::niz2 na liniji 37
-INFO  21:04:51,781 - Deklarisana promenljiva ::niz na liniji 39
-INFO  21:04:51,781 - Trenutni namespace: 
-INFO  21:04:51,781 - Deklarisana promenljiva ::a na liniji 40
-INFO  21:04:51,781 - Trenutni namespace: 
-INFO  21:04:51,781 - Deklarisana promenljiva ::curr na liniji 40
-INFO  21:04:51,781 -  Print count calls = 0
-INFO  21:04:51,781 -  Deklarisanih promenljivih ima = 16
-INFO  21:04:51,781 - ===================================
-INFO  21:04:51,782 - Parsiranje uspesno zavrseno!
+INFO  21:13:38,745 - ===================================
+INFO  21:13:38,748 - Postavljen namespace: Addition
+INFO  21:13:38,748 - Obradjuje se funkcija sum na liniji 9
+INFO  21:13:38,748 - Deklarisana promenljiva z na liniji 9
+INFO  21:13:38,748 - Deklarisana promenljiva d na liniji 9
+INFO  21:13:38,748 - Obradjuje se funkcija inkrement na liniji 15
+INFO  21:13:38,749 - Deklarisana promenljiva a na liniji 15
+INFO  21:13:38,749 - Deklarisana promenljiva inc na liniji 15
+INFO  21:13:38,749 - Trenutni namespace: Addition
+INFO  21:13:38,749 - Deklarisana promenljiva pom na liniji 16
+INFO  21:13:38,749 - Usao u assignOperatorClass
+INFO  21:13:38,749 - Usao u assignOperatorClass
+INFO  21:13:38,749 - Pronadjen poziv funkcije 21 : ime Additionsum
+INFO  21:13:38,749 - Resetovan namespaceName
+INFO  21:13:38,749 - Postavljen namespace: Unpacking
+INFO  21:13:38,749 - Deklarisana promenljiva Unpacking::niz na liniji 28
+INFO  21:13:38,749 - Deklarisana promenljiva Unpacking::niz2 na liniji 28
+INFO  21:13:38,749 - Deklarisana promenljiva Unpacking::niz3 na liniji 28
+INFO  21:13:38,749 - Trenutni namespace: Unpacking
+INFO  21:13:38,749 - Deklarisana promenljiva Unpacking::a na liniji 29
+INFO  21:13:38,749 - Trenutni namespace: Unpacking
+INFO  21:13:38,749 - Deklarisana promenljiva Unpacking::b na liniji 29
+INFO  21:13:38,749 - Resetovan namespaceName
+INFO  21:13:38,749 - Trenutni namespace: 
+INFO  21:13:38,750 - Deklarisana promenljiva ::i na liniji 34
+INFO  21:13:38,750 - Trenutni namespace: 
+INFO  21:13:38,750 - Deklarisana promenljiva ::ibool na liniji 35
+INFO  21:13:38,750 - Trenutni namespace: 
+INFO  21:13:38,750 - Deklarisana promenljiva ::niz2 na liniji 37
+INFO  21:13:38,750 - Deklarisana promenljiva ::niz na liniji 39
+INFO  21:13:38,750 - Trenutni namespace: 
+INFO  21:13:38,750 - Deklarisana promenljiva ::a na liniji 40
+INFO  21:13:38,750 - Trenutni namespace: 
+INFO  21:13:38,750 - Deklarisana promenljiva ::curr na liniji 40
+INFO  21:13:38,750 -  Print count calls = 0
+INFO  21:13:38,750 -  Deklarisanih promenljivih ima = 16
+INFO  21:13:38,750 - ===================================
+INFO  21:13:38,750 - Parsiranje uspesno zavrseno!

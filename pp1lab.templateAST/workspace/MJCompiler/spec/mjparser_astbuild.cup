@@ -62,6 +62,8 @@ scan with {:
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST, EQUAL, COMMA, SEMI, STATIC;
 terminal Integer NUMBER ;
+terminal Integer TRUE ;
+terminal Integer FALSE ;
 terminal String IDENT ;
 terminal String BOOLCONST ;
 terminal String LETTER ;
@@ -125,6 +127,7 @@ nonterminal ReturnNoExprClass ReturnNoExprClass;
 nonterminal ConstInit ConstInit;
 nonterminal EndOfNamespace EndOfNamespace;
 nonterminal NamespaceName NamespaceName;
+nonterminal Boolconst Boolconst;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
@@ -178,10 +181,15 @@ ConstTypeList ::=(ConstTypeListClass) ConstTypeList:C1 COMMA ConstInit:C2 {: RES
 				| (NoConstTypeListClass) {: RESULT=new NoConstTypeListClass(); :} /* epsilon */
                 ;
 
-ConstType ::= (BoolConstTypeClass) BOOLCONST:value {: RESULT=new BoolConstTypeClass(value); RESULT.setLine(valueleft); :}
+ConstType ::= (BoolConstTypeClass) Boolconst:B1 {: RESULT=new BoolConstTypeClass(B1); RESULT.setLine(B1left); :}
            | (CharConstTypeClass) LETTER:value {: RESULT=new CharConstTypeClass(value); RESULT.setLine(valueleft); :}
            | (NumConstTypeClass) NUMBER:value {: RESULT=new NumConstTypeClass(value); RESULT.setLine(valueleft); :}
            ;
+           
+Boolconst ::= TRUE:T1 {: RESULT=new BoolconstDerived1(T1); RESULT.setLine(T1left); :}
+			|
+			FALSE:F1 {: RESULT=new BoolconstDerived2(F1); RESULT.setLine(F1left); :}
+			;
            
 Type ::= (TypeClass) IDENT:typeName {: RESULT=new TypeClass(typeName); RESULT.setLine(typeNameleft); :}
 		|

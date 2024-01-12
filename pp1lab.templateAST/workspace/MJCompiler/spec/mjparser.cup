@@ -62,6 +62,8 @@ scan with {:
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST, EQUAL, COMMA, SEMI, STATIC;
 terminal Integer NUMBER ;
+terminal Integer TRUE ;
+terminal Integer FALSE ;
 terminal String IDENT ;
 terminal String BOOLCONST ;
 terminal String LETTER ;
@@ -81,7 +83,7 @@ nonterminal Condition, CondTerm, CondTermList, OptRelop, CondFactList;
 nonterminal AdditionList, MinusOpt, MultiplicationList;
 nonterminal OptParen, ListParams, ListIdent, Label, Relop, Addop, Mulop, ExprFactor, ActPars;
 nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
-nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName;
+nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName, Boolconst;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
@@ -135,10 +137,15 @@ ConstTypeList ::=(ConstTypeListClass) ConstTypeList COMMA ConstInit
 				| (NoConstTypeListClass) /* epsilon */
                 ;
 
-ConstType ::= (BoolConstTypeClass) BOOLCONST:value
+ConstType ::= (BoolConstTypeClass) Boolconst
            | (CharConstTypeClass) LETTER:value
            | (NumConstTypeClass) NUMBER:value
            ;
+           
+Boolconst ::= TRUE
+			|
+			FALSE
+			;
            
 Type ::= (TypeClass) IDENT:typeName
 		|
