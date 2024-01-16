@@ -62,7 +62,7 @@ public class SemanticPass extends VisitorAdaptor {
 	// ConstDecl
 	public void visit(CharConstTypeClass charType) {
 		typeOfValueForConst = Tab.find("char").getType();
-		valueForConst = Integer.parseInt(charType.getValue());
+		valueForConst = charType.getValue();
 	}
 	
 	public void visit(NumConstTypeClass numberType) {
@@ -126,8 +126,14 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	
 	 //ako je pozvan print iz programa
-	public void visit(PrintClass PrintStmt) {
+	public void visit(PrintClass print) {
 		printCallCount++;
+		
+		if (print.getExpr().struct != Tab.intType && print.getExpr().struct != Tab.charType && (print.getExpr().struct.getKind() == Struct.Array && print.getExpr().struct.getElemType().getKind() != Struct.Int && print.getExpr().struct.getElemType().getKind() != Struct.Char)) {
+			report_error("Tip expr: " + print.getExpr().struct.getKind(), null);
+			report_error("Tip u print: " + print.getExpr().struct.getElemType().getKind(), null);
+			report_error("Semanticka greska na liniji " + print.getLine() + ": Operand instrukcije print mora biti int ili char!", null);
+		}
 		//log.info("Prepoznata naredba print!");
 	}
 	
@@ -268,8 +274,13 @@ public class SemanticPass extends VisitorAdaptor {
 		Obj func = Tab.find(funcDes.getName());
 		if (Obj.Meth == func.getKind()) {
 			//report_error("Tip " + func.getKind(), null);
-			report_info("Pronadjen poziv funkcije "+funcCall.getLine()+" : ime " + func.getName(), null);
-			funcCall.struct = func.getType();
+			if (Tab.noType == func.getType()) {
+				report_error("Semanticka greska " + func.getName() + " ne moze se koristiti u izrazima jer nema povratnu vrednost ", funcCall);
+			}
+			else {
+				report_info("Pronadjen poziv funkcije "+funcCall.getLine()+" : ime " + func.getName(), null);
+				funcCall.struct = func.getType();
+			}
 		}
 		else {
 			report_error("Greska u liniji "+funcCall.getLine()+" : ime " + func.getName() + " nije funkcija!", funcCall);
@@ -285,6 +296,7 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(ExprClass expr) {
 		expr.struct = expr.getTerm().struct;
+		
 	}
 	
 	public void visit(AddExprClass addExpr) {
@@ -307,8 +319,6 @@ public class SemanticPass extends VisitorAdaptor {
 		newTypeClass.struct = arrS;
 	}
 	
-	//nisam izgenerisao za BooleanClass
-	
 	
 	public void visit(LetterClass letter) {
 		letter.struct = Tab.charType;
@@ -326,8 +336,30 @@ public class SemanticPass extends VisitorAdaptor {
 		exprFactor.struct = exprFactor.getExpr().struct;
 	}
 	
+	public void visit(BoolConstTypeClass bool) {
+		bool.struct = Tab.find("bool").getType();
+	}
 	
+	public void visit(TrueClass trueClass) {
+		trueClass.struct = Tab.find("bool").getType();
+	}
 	
+	public void visit(FalseClass falseClass) {
+		falseClass.struct = Tab.find("bool").getType();
+	}
+	
+	public void visit(BoolConstClass boolOvr) {
+		boolOvr.struct = Tab.find("bool").getType();
+	}
+	
+	//*******************
+	
+	//for index of arrays
+	public void visit(ExprListIdentClass exprForInd) {
+//		if (exprForInd.getExpr().struct != Tab.find("int").getType()) {
+//			report_error("Index mora biti int tipa veci ili jednak 0!", null);
+//		}
+	}
 	
 	
 	public void visit(AssignOperatorClass assignment) {

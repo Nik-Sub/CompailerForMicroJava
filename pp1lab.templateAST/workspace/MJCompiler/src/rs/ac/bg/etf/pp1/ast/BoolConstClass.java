@@ -1,24 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2024 21:12:53
+// 16/0/2024 10:44:15
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class BoolConstClass extends Factor {
 
-    private String B1;
+    private Boolconst Boolconst;
 
-    public BoolConstClass (String B1) {
-        this.B1=B1;
+    public BoolConstClass (Boolconst Boolconst) {
+        this.Boolconst=Boolconst;
+        if(Boolconst!=null) Boolconst.setParent(this);
     }
 
-    public String getB1() {
-        return B1;
+    public Boolconst getBoolconst() {
+        return Boolconst;
     }
 
-    public void setB1(String B1) {
-        this.B1=B1;
+    public void setBoolconst(Boolconst Boolconst) {
+        this.Boolconst=Boolconst;
     }
 
     public void accept(Visitor visitor) {
@@ -26,13 +27,16 @@ public class BoolConstClass extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Boolconst!=null) Boolconst.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Boolconst!=null) Boolconst.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Boolconst!=null) Boolconst.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -41,7 +45,10 @@ public class BoolConstClass extends Factor {
         buffer.append(tab);
         buffer.append("BoolConstClass(\n");
 
-        buffer.append(" "+tab+B1);
+        if(Boolconst!=null)
+            buffer.append(Boolconst.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

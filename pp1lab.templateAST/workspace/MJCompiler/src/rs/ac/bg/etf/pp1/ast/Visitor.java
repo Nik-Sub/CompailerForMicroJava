@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2024 21:12:53
+// 16/0/2024 10:44:15
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -54,8 +54,8 @@ public interface Visitor {
     public void visit(MethodTypeName MethodTypeName);
     public void visit(VarDeclOpt VarDeclOpt);
     public void visit(DesignatorStatement DesignatorStatement);
-    public void visit(ProgName ProgName);
     public void visit(Boolconst Boolconst);
+    public void visit(ProgName ProgName);
     public void visit(UnmtchStatement UnmtchStatement);
     public void visit(Statement Statement);
     public void visit(VarDecl VarDecl);
@@ -145,9 +145,9 @@ public interface Visitor {
     public void visit(DesignatorWithPrefixClass DesignatorWithPrefixClass);
     public void visit(DesignatorClass DesignatorClass);
     public void visit(DesignatorStatementWithArrayClass DesignatorStatementWithArrayClass);
-    public void visit(IncClass IncClass);
     public void visit(DecClass DecClass);
-    public void visit(ParenOperatorClass ParenOperatorClass);
+    public void visit(IncClass IncClass);
+    public void visit(ProcCallClass ProcCallClass);
     public void visit(AssignOperatorClass AssignOperatorClass);
     public void visit(StatementListClassBranch StatementListClassBranch);
     public void visit(ForClass ForClass);
@@ -189,8 +189,8 @@ public interface Visitor {
     public void visit(IdentOptClass IdentOptClass);
     public void visit(TypeWithPrefixClass TypeWithPrefixClass);
     public void visit(TypeClass TypeClass);
-    public void visit(BoolconstDerived2 BoolconstDerived2);
-    public void visit(BoolconstDerived1 BoolconstDerived1);
+    public void visit(FalseClass FalseClass);
+    public void visit(TrueClass TrueClass);
     public void visit(NumConstTypeClass NumConstTypeClass);
     public void visit(CharConstTypeClass CharConstTypeClass);
     public void visit(BoolConstTypeClass BoolConstTypeClass);

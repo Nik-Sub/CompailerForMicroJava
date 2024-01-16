@@ -62,11 +62,11 @@ scan with {:
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST, EQUAL, COMMA, SEMI, STATIC;
 terminal Integer NUMBER ;
-terminal Integer TRUE ;
-terminal Integer FALSE ;
+terminal String TRUE ;
+terminal String FALSE ;
 terminal String IDENT ;
 terminal String BOOLCONST ;
-terminal String LETTER ;
+terminal char LETTER ;
 terminal LBOXBRAC, RBOXBRAC, LPAREN, RPAREN, COL, IF, BREAK, ELSE, CONTINUE;
 terminal RETURN, FOR, ASTERISK, INC, DEC, OR, AND, NEW, DOT, EQUALEQUAL, DIFF;
 terminal GT, GET, LT, LET, PLUS, MINUS, VOID, PERCENT, DIVISION, PRINT, READ, FOLLOWS, SPACE, IDENTCOLCOL;
@@ -127,11 +127,10 @@ nonterminal ReturnNoExprClass ReturnNoExprClass;
 nonterminal ConstInit ConstInit;
 nonterminal EndOfNamespace EndOfNamespace;
 nonterminal NamespaceName NamespaceName;
-nonterminal Boolconst Boolconst;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType, Boolconst;
 
 
 
@@ -186,9 +185,9 @@ ConstType ::= (BoolConstTypeClass) Boolconst:B1 {: RESULT=new BoolConstTypeClass
            | (NumConstTypeClass) NUMBER:value {: RESULT=new NumConstTypeClass(value); RESULT.setLine(valueleft); :}
            ;
            
-Boolconst ::= TRUE:T1 {: RESULT=new BoolconstDerived1(T1); RESULT.setLine(T1left); :}
+Boolconst ::= (TrueClass) TRUE:valTrue {: RESULT=new TrueClass(valTrue); RESULT.setLine(valTrueleft); :}
 			|
-			FALSE:F1 {: RESULT=new BoolconstDerived2(F1); RESULT.setLine(F1left); :}
+			(FalseClass) FALSE:valFalse {: RESULT=new FalseClass(valFalse); RESULT.setLine(valFalseleft); :}
 			;
            
 Type ::= (TypeClass) IDENT:typeName {: RESULT=new TypeClass(typeName); RESULT.setLine(typeNameleft); :}
@@ -301,11 +300,11 @@ Statement ::= (StatementClass) DesignatorStatement:D1 SEMI {: RESULT=new Stateme
 
 DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop:A1 Expr:e {: RESULT=new AssignOperatorClass(dest, A1, e); RESULT.setLine(destleft); :}
 					|
-					(ParenOperatorClass) Designator:dest LPAREN ActParsOpt:A1 RPAREN {: RESULT=new ParenOperatorClass(dest, A1); RESULT.setLine(destleft); :}
+					(ProcCallClass) Designator:dest LPAREN ActParsOpt:A1 RPAREN {: RESULT=new ProcCallClass(dest, A1); RESULT.setLine(destleft); :}
 					|
-					(DecClass) Designator:dest INC {: RESULT=new DecClass(dest); RESULT.setLine(destleft); :}
+					(IncClass) Designator:dest INC {: RESULT=new IncClass(dest); RESULT.setLine(destleft); :}
 					|
-					(IncClass) Designator:dest DEC {: RESULT=new IncClass(dest); RESULT.setLine(destleft); :} 
+					(DecClass) Designator:dest DEC {: RESULT=new DecClass(dest); RESULT.setLine(destleft); :} 
 					|
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator:L1 ASTERISK Designator:D2 RBOXBRAC EQUAL Designator:D3 {: RESULT=new DesignatorStatementWithArrayClass(L1, D2, D3); RESULT.setLine(L1left); :}
 					;
@@ -352,7 +351,7 @@ AdditionList		::= (AdditionListClass) Addop:A1 Term:T2 AdditionList:A3 {: RESULT
 Term 				::= (TermClass) Factor:F1 MultiplicationList:M2 {: RESULT=new TermClass(F1, M2); RESULT.setLine(F1left); :}
 					;
 
-MultiplicationList	::= (MultiplicationListClass) Mulop:M1 Factor:F2 MultiplicationList:M3 {: RESULT=new MultiplicationListClass(M1, F2, M3); RESULT.setLine(M1left); :}
+MultiplicationList	::= (MultiplicationListClass) Mulop:M1 MultiplicationList:M2 {: RESULT=new MultiplicationListClass(M1, M2); RESULT.setLine(M1left); :}
 					|
 					(NoMultiplicationListClass) {: RESULT=new NoMultiplicationListClass(); :} /* epsilon */
 					;
@@ -361,7 +360,7 @@ Factor				::= (ExprFactorClass) LPAREN Expr:E1 RPAREN {: RESULT=new ExprFactorCl
 					|
 					(NewTypeClass) NEW Type:nameOfType ListParams:L1 {: RESULT=new NewTypeClass(nameOfType, L1); RESULT.setLine(nameOfTypeleft); :}
 					|
-					(BoolConstClass) BOOLCONST:B1 {: RESULT=new BoolConstClass(B1); RESULT.setLine(B1left); :}
+					(BoolConstClass) Boolconst:B1 {: RESULT=new BoolConstClass(B1); RESULT.setLine(B1left); :}
 					|
 					(LetterClass) LETTER:L1 {: RESULT=new LetterClass(L1); RESULT.setLine(L1left); :}
 					|
@@ -507,11 +506,11 @@ Addop				::= (MinusOpClass) MINUS {: RESULT=new MinusOpClass(); :}
 					(AddOpClass) PLUS {: RESULT=new AddOpClass(); :}
 					;
 
-Mulop				::= (PercentClass) PERCENT {: RESULT=new PercentClass(); :}
+Mulop				::= (PercentClass) PERCENT Factor:F1 {: RESULT=new PercentClass(F1); RESULT.setLine(F1left); :}
 					|
-					(DivisionClass) DIVISION {: RESULT=new DivisionClass(); :}
+					(DivisionClass) DIVISION Factor:F1 {: RESULT=new DivisionClass(F1); RESULT.setLine(F1left); :}
 					|
-					(AsteriskClass) ASTERISK {: RESULT=new AsteriskClass(); :}
+					(AsteriskClass) ASTERISK Factor:F1 {: RESULT=new AsteriskClass(F1); RESULT.setLine(F1left); :}
 					;
  
                

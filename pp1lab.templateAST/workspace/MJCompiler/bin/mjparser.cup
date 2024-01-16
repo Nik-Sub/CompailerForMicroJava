@@ -62,11 +62,11 @@ scan with {:
 
 terminal PROG, LBRACE, RBRACE, NAMESPACE, CONST, EQUAL, COMMA, SEMI, STATIC;
 terminal Integer NUMBER ;
-terminal Integer TRUE ;
-terminal Integer FALSE ;
+terminal String TRUE ;
+terminal String FALSE ;
 terminal String IDENT ;
 terminal String BOOLCONST ;
-terminal String LETTER ;
+terminal char LETTER ;
 terminal LBOXBRAC, RBOXBRAC, LPAREN, RPAREN, COL, IF, BREAK, ELSE, CONTINUE;
 terminal RETURN, FOR, ASTERISK, INC, DEC, OR, AND, NEW, DOT, EQUALEQUAL, DIFF;
 terminal GT, GET, LT, LET, PLUS, MINUS, VOID, PERCENT, DIVISION, PRINT, READ, FOLLOWS, SPACE, IDENTCOLCOL;
@@ -83,11 +83,11 @@ nonterminal Condition, CondTerm, CondTermList, OptRelop, CondFactList;
 nonterminal AdditionList, MinusOpt, MultiplicationList;
 nonterminal OptParen, ListParams, ListIdent, Label, Relop, Addop, Mulop, ExprFactor, ActPars;
 nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
-nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName, Boolconst;
+nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName;
 
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType, Boolconst;
 
 
 
@@ -142,9 +142,9 @@ ConstType ::= (BoolConstTypeClass) Boolconst
            | (NumConstTypeClass) NUMBER:value
            ;
            
-Boolconst ::= TRUE
+Boolconst ::= (TrueClass) TRUE:valTrue
 			|
-			FALSE
+			(FalseClass) FALSE:valFalse
 			;
            
 Type ::= (TypeClass) IDENT:typeName
@@ -257,11 +257,11 @@ Statement ::= (StatementClass) DesignatorStatement SEMI
 
 DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop Expr:e
 					|
-					(ParenOperatorClass) Designator:dest LPAREN ActParsOpt RPAREN
+					(ProcCallClass) Designator:dest LPAREN ActParsOpt RPAREN
 					|
-					(DecClass) Designator:dest INC
+					(IncClass) Designator:dest INC
 					|
-					(IncClass) Designator:dest DEC 
+					(DecClass) Designator:dest DEC 
 					|
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator ASTERISK Designator RBOXBRAC EQUAL Designator
 					;
@@ -308,7 +308,7 @@ AdditionList		::= (AdditionListClass) Addop Term AdditionList
 Term 				::= (TermClass) Factor MultiplicationList
 					;
 
-MultiplicationList	::= (MultiplicationListClass) Mulop Factor MultiplicationList
+MultiplicationList	::= (MultiplicationListClass) Mulop MultiplicationList
 					|
 					(NoMultiplicationListClass) /* epsilon */
 					;
@@ -317,7 +317,7 @@ Factor				::= (ExprFactorClass) LPAREN Expr RPAREN
 					|
 					(NewTypeClass) NEW Type:nameOfType ListParams
 					|
-					(BoolConstClass) BOOLCONST
+					(BoolConstClass) Boolconst
 					|
 					(LetterClass) LETTER
 					|
@@ -463,11 +463,11 @@ Addop				::= (MinusOpClass) MINUS
 					(AddOpClass) PLUS
 					;
 
-Mulop				::= (PercentClass) PERCENT
+Mulop				::= (PercentClass) PERCENT Factor
 					|
-					(DivisionClass) DIVISION
+					(DivisionClass) DIVISION Factor
 					|
-					(AsteriskClass) ASTERISK
+					(AsteriskClass) ASTERISK Factor
 					;
  
                

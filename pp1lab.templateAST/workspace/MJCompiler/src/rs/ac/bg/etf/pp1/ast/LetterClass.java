@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2024 21:12:53
+// 16/0/2024 10:44:15
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class LetterClass extends Factor {
 
-    private String L1;
+    private char L1;
 
-    public LetterClass (String L1) {
+    public LetterClass (char L1) {
         this.L1=L1;
     }
 
-    public String getL1() {
+    public char getL1() {
         return L1;
     }
 
-    public void setL1(String L1) {
+    public void setL1(char L1) {
         this.L1=L1;
     }
 

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 12/0/2024 21:12:53
+// 16/0/2024 10:44:15
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -54,8 +54,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodTypeName MethodTypeName) { }
     public void visit(VarDeclOpt VarDeclOpt) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(ProgName ProgName) { }
     public void visit(Boolconst Boolconst) { }
+    public void visit(ProgName ProgName) { }
     public void visit(UnmtchStatement UnmtchStatement) { }
     public void visit(Statement Statement) { }
     public void visit(VarDecl VarDecl) { }
@@ -145,9 +145,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorWithPrefixClass DesignatorWithPrefixClass) { visit(); }
     public void visit(DesignatorClass DesignatorClass) { visit(); }
     public void visit(DesignatorStatementWithArrayClass DesignatorStatementWithArrayClass) { visit(); }
-    public void visit(IncClass IncClass) { visit(); }
     public void visit(DecClass DecClass) { visit(); }
-    public void visit(ParenOperatorClass ParenOperatorClass) { visit(); }
+    public void visit(IncClass IncClass) { visit(); }
+    public void visit(ProcCallClass ProcCallClass) { visit(); }
     public void visit(AssignOperatorClass AssignOperatorClass) { visit(); }
     public void visit(StatementListClassBranch StatementListClassBranch) { visit(); }
     public void visit(ForClass ForClass) { visit(); }
@@ -189,8 +189,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(IdentOptClass IdentOptClass) { visit(); }
     public void visit(TypeWithPrefixClass TypeWithPrefixClass) { visit(); }
     public void visit(TypeClass TypeClass) { visit(); }
-    public void visit(BoolconstDerived2 BoolconstDerived2) { visit(); }
-    public void visit(BoolconstDerived1 BoolconstDerived1) { visit(); }
+    public void visit(FalseClass FalseClass) { visit(); }
+    public void visit(TrueClass TrueClass) { visit(); }
     public void visit(NumConstTypeClass NumConstTypeClass) { visit(); }
     public void visit(CharConstTypeClass CharConstTypeClass) { visit(); }
     public void visit(BoolConstTypeClass BoolConstTypeClass) { visit(); }

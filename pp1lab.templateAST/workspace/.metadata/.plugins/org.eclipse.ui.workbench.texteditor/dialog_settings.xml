@@ -2,36 +2,36 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="VarDeclTypeClass"/>
+		<item key="selection" value="Index mora biti int"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
-			<item value="VarDeclTypeClass"/>
-			<item value="Tip exp"/>
-			<item value="Tip eksp"/>
-			<item value="insert"/>
-			<item value="ListVarDecl"/>
-			<item value="Term"/>
-			<item value="Factor"/>
-			<item value="ListExpressions"/>
-			<item value="EQUAL"/>
-			<item value="ReturnClass"/>
-			<item value="bool"/>
-			<item value="Bool"/>
-			<item value="opsasa"/>
-			<item value="ReturnTypeClass"/>
-			<item value="VarDecl"/>
+			<item value="Index mora biti int"/>
+			<item value="Index mra biti int"/>
+			<item value="pop"/>
+			<item value="DesignatorClass"/>
+			<item value="Designator"/>
+			<item value="con"/>
+			<item value="ExprListIdentClass"/>
+			<item value="ListIdentClass"/>
+			<item value="Assign"/>
+			<item value="aload"/>
+			<item value="ListIdent"/>
+			<item value="VarClass"/>
+			<item value="AssignOperatorClass"/>
+			<item value="putstat"/>
+			<item value="getstatic"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_WIDTH" value="248"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 		<item key="DIALOG_HEIGHT" value="382"/>
-		<item key="DIALOG_X_ORIGIN" value="988"/>
-		<item key="DIALOG_Y_ORIGIN" value="244"/>
+		<item key="DIALOG_X_ORIGIN" value="1601"/>
+		<item key="DIALOG_Y_ORIGIN" value="569"/>
 	</section>
 </section>
