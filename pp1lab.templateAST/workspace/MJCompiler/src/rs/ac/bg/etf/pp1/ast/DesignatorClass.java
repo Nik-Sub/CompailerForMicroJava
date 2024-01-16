@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/0/2024 10:44:15
+// 16/0/2024 12:17:26
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,12 +8,9 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesignatorClass extends Designator {
 
     private String desigName;
-    private ListIdent ListIdent;
 
-    public DesignatorClass (String desigName, ListIdent ListIdent) {
+    public DesignatorClass (String desigName) {
         this.desigName=desigName;
-        this.ListIdent=ListIdent;
-        if(ListIdent!=null) ListIdent.setParent(this);
     }
 
     public String getDesigName() {
@@ -24,29 +21,18 @@ public class DesignatorClass extends Designator {
         this.desigName=desigName;
     }
 
-    public ListIdent getListIdent() {
-        return ListIdent;
-    }
-
-    public void setListIdent(ListIdent ListIdent) {
-        this.ListIdent=ListIdent;
-    }
-
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ListIdent!=null) ListIdent.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ListIdent!=null) ListIdent.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ListIdent!=null) ListIdent.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -56,12 +42,6 @@ public class DesignatorClass extends Designator {
         buffer.append("DesignatorClass(\n");
 
         buffer.append(" "+tab+desigName);
-        buffer.append("\n");
-
-        if(ListIdent!=null)
-            buffer.append(ListIdent.toString("  "+tab));
-        else
-            buffer.append(tab+"  null");
         buffer.append("\n");
 
         buffer.append(tab);

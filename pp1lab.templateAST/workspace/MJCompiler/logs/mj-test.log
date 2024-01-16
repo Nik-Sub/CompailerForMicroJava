@@ -1,201 +1,201 @@
-INFO  11:34:23,375 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  11:34:23,487 - #2 program
-INFO  11:34:23,488 - #14 test301
-INFO  11:34:23,488 - #5 namespace
-INFO  11:34:23,489 - #14 Konstante
-INFO  11:34:23,489 - #3 {
-INFO  11:34:23,489 - #6 const
-INFO  11:34:23,490 - #14 int
-INFO  11:34:23,490 - #14 nula
-INFO  11:34:23,490 - #7 =
-INFO  11:34:23,490 - #11 0
-INFO  11:34:23,490 - #9 ;
-INFO  11:34:23,491 - #6 const
-INFO  11:34:23,492 - #14 int
-INFO  11:34:23,492 - #14 jedan
-INFO  11:34:23,492 - #7 =
-INFO  11:34:23,492 - #11 1
-INFO  11:34:23,492 - #9 ;
-INFO  11:34:23,492 - #6 const
-INFO  11:34:23,492 - #14 int
-INFO  11:34:23,492 - #14 pet
-INFO  11:34:23,492 - #7 =
-INFO  11:34:23,492 - #11 5
-INFO  11:34:23,492 - #9 ;
-INFO  11:34:23,493 - #3 {
-INFO  11:34:23,493 - #4 }
-INFO  11:34:23,494 - #4 }
-INFO  11:34:23,494 - #5 namespace
-INFO  11:34:23,495 - #14 Nizovi
-INFO  11:34:23,495 - #3 {
-INFO  11:34:23,495 - #14 int
-INFO  11:34:23,495 - #14 niz
-INFO  11:34:23,495 - #17 [
-INFO  11:34:23,495 - #18 ]
-INFO  11:34:23,495 - #9 ;
-INFO  11:34:23,496 - #14 char
-INFO  11:34:23,496 - #14 nizch
-INFO  11:34:23,496 - #17 [
-INFO  11:34:23,496 - #18 ]
-INFO  11:34:23,496 - #9 ;
-INFO  11:34:23,496 - #3 {
-INFO  11:34:23,497 - #4 }
-INFO  11:34:23,497 - #4 }
-INFO  11:34:23,497 - #14 int
-INFO  11:34:23,497 - #14 a
-INFO  11:34:23,497 - #9 ;
-INFO  11:34:23,497 - #3 {
-INFO  11:34:23,497 - #43 void
-INFO  11:34:23,497 - #14 main
-INFO  11:34:23,497 - #19 (
-INFO  11:34:23,497 - #20 )
-INFO  11:34:23,498 - #14 int
-INFO  11:34:23,499 - #14 bodovi
-INFO  11:34:23,499 - #9 ;
-INFO  11:34:23,499 - #14 bool
-INFO  11:34:23,499 - #14 bt
-INFO  11:34:23,499 - #9 ;
-INFO  11:34:23,499 - #3 {
-INFO  11:34:23,500 - #14 bodovi
-INFO  11:34:23,500 - #7 =
-INFO  11:34:23,501 - #11 0
-INFO  11:34:23,504 - #9 ;
-INFO  11:34:23,505 - #14 bodovi
-INFO  11:34:23,505 - #29 ++
-INFO  11:34:23,505 - #9 ;
-INFO  11:34:23,506 - #14 bodovi
-INFO  11:34:23,506 - #7 =
-INFO  11:34:23,506 - #14 bodovi
-INFO  11:34:23,506 - #41 +
-INFO  11:34:23,506 - #14 Konstante
-INFO  11:34:23,507 - #21 :
-INFO  11:34:23,507 - #21 :
-INFO  11:34:23,507 - #14 jedan
-INFO  11:34:23,507 - #9 ;
-INFO  11:34:23,508 - #14 bodovi
-INFO  11:34:23,508 - #7 =
-INFO  11:34:23,508 - #14 bodovi
-INFO  11:34:23,508 - #28 *
-INFO  11:34:23,508 - #14 Konstante
-INFO  11:34:23,508 - #21 :
-INFO  11:34:23,508 - #21 :
-INFO  11:34:23,508 - #14 pet
-INFO  11:34:23,508 - #9 ;
-INFO  11:34:23,508 - #14 bodovi
-INFO  11:34:23,508 - #30 --
-INFO  11:34:23,508 - #9 ;
-INFO  11:34:23,508 - #46 print
-INFO  11:34:23,508 - #19 (
-INFO  11:34:23,508 - #14 bodovi
-INFO  11:34:23,508 - #20 )
-INFO  11:34:23,509 - #9 ;
-INFO  11:34:23,510 - #14 Nizovi
-INFO  11:34:23,510 - #21 :
-INFO  11:34:23,510 - #21 :
-INFO  11:34:23,510 - #14 niz
-INFO  11:34:23,510 - #7 =
-INFO  11:34:23,510 - #33 new
-INFO  11:34:23,510 - #14 int
-INFO  11:34:23,510 - #17 [
-INFO  11:34:23,510 - #11 3
-INFO  11:34:23,510 - #18 ]
-INFO  11:34:23,510 - #9 ;
-INFO  11:34:23,511 - #14 Nizovi
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #14 niz
-INFO  11:34:23,511 - #17 [
-INFO  11:34:23,511 - #14 Konstante
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #14 nula
-INFO  11:34:23,511 - #18 ]
-INFO  11:34:23,511 - #7 =
-INFO  11:34:23,511 - #14 Konstante
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #21 :
-INFO  11:34:23,511 - #14 jedan
-INFO  11:34:23,511 - #9 ;
-INFO  11:34:23,511 - #14 Nizovi
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #14 niz
-INFO  11:34:23,512 - #17 [
-INFO  11:34:23,512 - #11 1
-INFO  11:34:23,512 - #18 ]
-INFO  11:34:23,512 - #7 =
-INFO  11:34:23,512 - #11 2
-INFO  11:34:23,512 - #9 ;
-INFO  11:34:23,512 - #14 Nizovi
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #14 niz
-INFO  11:34:23,512 - #17 [
-INFO  11:34:23,512 - #14 Nizovi
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,512 - #14 niz
-INFO  11:34:23,512 - #17 [
-INFO  11:34:23,512 - #14 Konstante
-INFO  11:34:23,512 - #21 :
-INFO  11:34:23,513 - #21 :
-INFO  11:34:23,513 - #14 jedan
-INFO  11:34:23,513 - #18 ]
-INFO  11:34:23,513 - #18 ]
-INFO  11:34:23,513 - #7 =
-INFO  11:34:23,513 - #14 Nizovi
-INFO  11:34:23,513 - #21 :
-INFO  11:34:23,513 - #21 :
-INFO  11:34:23,513 - #14 niz
-INFO  11:34:23,513 - #17 [
-INFO  11:34:23,513 - #14 Nizovi
-INFO  11:34:23,513 - #21 :
-INFO  11:34:23,513 - #21 :
-INFO  11:34:23,513 - #14 niz
-INFO  11:34:23,513 - #17 [
-INFO  11:34:23,513 - #11 0
-INFO  11:34:23,513 - #18 ]
-INFO  11:34:23,513 - #18 ]
-INFO  11:34:23,513 - #28 *
-INFO  11:34:23,513 - #11 3
-INFO  11:34:23,513 - #9 ;
-INFO  11:34:23,514 - #14 bodovi
-INFO  11:34:23,514 - #7 =
-INFO  11:34:23,514 - #14 Nizovi
-INFO  11:34:23,514 - #21 :
-INFO  11:34:23,514 - #21 :
-INFO  11:34:23,514 - #14 niz
-INFO  11:34:23,514 - #17 [
-INFO  11:34:23,514 - #11 2
-INFO  11:34:23,514 - #18 ]
-INFO  11:34:23,514 - #45 /
-INFO  11:34:23,514 - #14 Nizovi
-INFO  11:34:23,514 - #21 :
-INFO  11:34:23,514 - #21 :
-INFO  11:34:23,514 - #14 niz
-INFO  11:34:23,514 - #17 [
-INFO  11:34:23,514 - #11 0
-INFO  11:34:23,514 - #18 ]
-INFO  11:34:23,514 - #9 ;
-INFO  11:34:23,514 - #46 print
-INFO  11:34:23,514 - #19 (
-INFO  11:34:23,514 - #14 bodovi
-INFO  11:34:23,514 - #20 )
-INFO  11:34:23,514 - #9 ;
-INFO  11:34:23,515 - #46 print
-INFO  11:34:23,515 - #19 (
-INFO  11:34:23,515 - #14 Nizovi
-INFO  11:34:23,515 - #21 :
-INFO  11:34:23,515 - #21 :
-INFO  11:34:23,515 - #14 niz
-INFO  11:34:23,515 - #17 [
-INFO  11:34:23,515 - #11 2
-INFO  11:34:23,515 - #18 ]
-INFO  11:34:23,515 - #20 )
-INFO  11:34:23,515 - #9 ;
-INFO  11:34:23,515 - #4 }
-INFO  11:34:23,515 - #4 }
-INFO  11:34:23,520 - ProgramClass(
+INFO  12:22:38,174 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  12:22:38,369 - #2 program
+INFO  12:22:38,369 - #14 test301
+INFO  12:22:38,369 - #5 namespace
+INFO  12:22:38,371 - #14 Konstante
+INFO  12:22:38,371 - #3 {
+INFO  12:22:38,371 - #6 const
+INFO  12:22:38,373 - #14 int
+INFO  12:22:38,373 - #14 nula
+INFO  12:22:38,373 - #7 =
+INFO  12:22:38,374 - #11 0
+INFO  12:22:38,374 - #9 ;
+INFO  12:22:38,376 - #6 const
+INFO  12:22:38,376 - #14 int
+INFO  12:22:38,377 - #14 jedan
+INFO  12:22:38,377 - #7 =
+INFO  12:22:38,377 - #11 1
+INFO  12:22:38,377 - #9 ;
+INFO  12:22:38,377 - #6 const
+INFO  12:22:38,377 - #14 int
+INFO  12:22:38,378 - #14 pet
+INFO  12:22:38,378 - #7 =
+INFO  12:22:38,378 - #11 5
+INFO  12:22:38,378 - #9 ;
+INFO  12:22:38,378 - #3 {
+INFO  12:22:38,378 - #4 }
+INFO  12:22:38,380 - #4 }
+INFO  12:22:38,380 - #5 namespace
+INFO  12:22:38,382 - #14 Nizovi
+INFO  12:22:38,382 - #3 {
+INFO  12:22:38,382 - #14 int
+INFO  12:22:38,382 - #14 niz
+INFO  12:22:38,382 - #17 [
+INFO  12:22:38,383 - #18 ]
+INFO  12:22:38,383 - #9 ;
+INFO  12:22:38,384 - #14 char
+INFO  12:22:38,385 - #14 nizch
+INFO  12:22:38,385 - #17 [
+INFO  12:22:38,385 - #18 ]
+INFO  12:22:38,385 - #9 ;
+INFO  12:22:38,385 - #3 {
+INFO  12:22:38,386 - #4 }
+INFO  12:22:38,386 - #4 }
+INFO  12:22:38,386 - #14 int
+INFO  12:22:38,386 - #14 a
+INFO  12:22:38,386 - #9 ;
+INFO  12:22:38,386 - #3 {
+INFO  12:22:38,386 - #43 void
+INFO  12:22:38,387 - #14 main
+INFO  12:22:38,387 - #19 (
+INFO  12:22:38,387 - #20 )
+INFO  12:22:38,389 - #14 int
+INFO  12:22:38,390 - #14 bodovi
+INFO  12:22:38,390 - #9 ;
+INFO  12:22:38,390 - #14 bool
+INFO  12:22:38,391 - #14 bt
+INFO  12:22:38,391 - #9 ;
+INFO  12:22:38,391 - #3 {
+INFO  12:22:38,391 - #14 bodovi
+INFO  12:22:38,392 - #7 =
+INFO  12:22:38,393 - #11 0
+INFO  12:22:38,397 - #9 ;
+INFO  12:22:38,399 - #14 bodovi
+INFO  12:22:38,400 - #29 ++
+INFO  12:22:38,400 - #9 ;
+INFO  12:22:38,400 - #14 bodovi
+INFO  12:22:38,401 - #7 =
+INFO  12:22:38,401 - #14 bodovi
+INFO  12:22:38,401 - #41 +
+INFO  12:22:38,401 - #14 Konstante
+INFO  12:22:38,404 - #21 :
+INFO  12:22:38,404 - #21 :
+INFO  12:22:38,404 - #14 jedan
+INFO  12:22:38,404 - #9 ;
+INFO  12:22:38,404 - #14 bodovi
+INFO  12:22:38,405 - #7 =
+INFO  12:22:38,405 - #14 bodovi
+INFO  12:22:38,405 - #28 *
+INFO  12:22:38,405 - #14 Konstante
+INFO  12:22:38,405 - #21 :
+INFO  12:22:38,405 - #21 :
+INFO  12:22:38,405 - #14 pet
+INFO  12:22:38,405 - #9 ;
+INFO  12:22:38,406 - #14 bodovi
+INFO  12:22:38,406 - #30 --
+INFO  12:22:38,406 - #9 ;
+INFO  12:22:38,406 - #46 print
+INFO  12:22:38,406 - #19 (
+INFO  12:22:38,406 - #14 bodovi
+INFO  12:22:38,407 - #20 )
+INFO  12:22:38,408 - #9 ;
+INFO  12:22:38,408 - #14 Nizovi
+INFO  12:22:38,409 - #21 :
+INFO  12:22:38,409 - #21 :
+INFO  12:22:38,409 - #14 niz
+INFO  12:22:38,409 - #7 =
+INFO  12:22:38,409 - #33 new
+INFO  12:22:38,409 - #14 int
+INFO  12:22:38,410 - #17 [
+INFO  12:22:38,410 - #11 3
+INFO  12:22:38,410 - #18 ]
+INFO  12:22:38,410 - #9 ;
+INFO  12:22:38,410 - #14 Nizovi
+INFO  12:22:38,411 - #21 :
+INFO  12:22:38,411 - #21 :
+INFO  12:22:38,411 - #14 niz
+INFO  12:22:38,411 - #17 [
+INFO  12:22:38,411 - #14 Konstante
+INFO  12:22:38,411 - #21 :
+INFO  12:22:38,411 - #21 :
+INFO  12:22:38,412 - #14 nula
+INFO  12:22:38,412 - #18 ]
+INFO  12:22:38,412 - #7 =
+INFO  12:22:38,412 - #14 Konstante
+INFO  12:22:38,412 - #21 :
+INFO  12:22:38,412 - #21 :
+INFO  12:22:38,412 - #14 jedan
+INFO  12:22:38,412 - #9 ;
+INFO  12:22:38,413 - #14 Nizovi
+INFO  12:22:38,413 - #21 :
+INFO  12:22:38,413 - #21 :
+INFO  12:22:38,413 - #14 niz
+INFO  12:22:38,413 - #17 [
+INFO  12:22:38,413 - #11 1
+INFO  12:22:38,413 - #18 ]
+INFO  12:22:38,414 - #7 =
+INFO  12:22:38,414 - #11 2
+INFO  12:22:38,414 - #9 ;
+INFO  12:22:38,414 - #14 Nizovi
+INFO  12:22:38,414 - #21 :
+INFO  12:22:38,414 - #21 :
+INFO  12:22:38,414 - #14 niz
+INFO  12:22:38,414 - #17 [
+INFO  12:22:38,414 - #14 Nizovi
+INFO  12:22:38,415 - #21 :
+INFO  12:22:38,415 - #21 :
+INFO  12:22:38,415 - #14 niz
+INFO  12:22:38,415 - #17 [
+INFO  12:22:38,415 - #14 Konstante
+INFO  12:22:38,415 - #21 :
+INFO  12:22:38,415 - #21 :
+INFO  12:22:38,415 - #14 jedan
+INFO  12:22:38,415 - #18 ]
+INFO  12:22:38,415 - #18 ]
+INFO  12:22:38,416 - #7 =
+INFO  12:22:38,416 - #14 Nizovi
+INFO  12:22:38,416 - #21 :
+INFO  12:22:38,416 - #21 :
+INFO  12:22:38,416 - #14 niz
+INFO  12:22:38,416 - #17 [
+INFO  12:22:38,416 - #14 Nizovi
+INFO  12:22:38,416 - #21 :
+INFO  12:22:38,416 - #21 :
+INFO  12:22:38,416 - #14 niz
+INFO  12:22:38,416 - #17 [
+INFO  12:22:38,417 - #11 0
+INFO  12:22:38,418 - #18 ]
+INFO  12:22:38,418 - #18 ]
+INFO  12:22:38,418 - #28 *
+INFO  12:22:38,418 - #11 3
+INFO  12:22:38,418 - #9 ;
+INFO  12:22:38,418 - #14 bodovi
+INFO  12:22:38,418 - #7 =
+INFO  12:22:38,418 - #14 Nizovi
+INFO  12:22:38,418 - #21 :
+INFO  12:22:38,419 - #21 :
+INFO  12:22:38,419 - #14 niz
+INFO  12:22:38,419 - #17 [
+INFO  12:22:38,419 - #11 2
+INFO  12:22:38,419 - #18 ]
+INFO  12:22:38,419 - #45 /
+INFO  12:22:38,419 - #14 Nizovi
+INFO  12:22:38,419 - #21 :
+INFO  12:22:38,419 - #21 :
+INFO  12:22:38,419 - #14 niz
+INFO  12:22:38,419 - #17 [
+INFO  12:22:38,420 - #11 0
+INFO  12:22:38,420 - #18 ]
+INFO  12:22:38,420 - #9 ;
+INFO  12:22:38,420 - #46 print
+INFO  12:22:38,420 - #19 (
+INFO  12:22:38,420 - #14 bodovi
+INFO  12:22:38,420 - #20 )
+INFO  12:22:38,421 - #9 ;
+INFO  12:22:38,421 - #46 print
+INFO  12:22:38,421 - #19 (
+INFO  12:22:38,421 - #14 Nizovi
+INFO  12:22:38,421 - #21 :
+INFO  12:22:38,421 - #21 :
+INFO  12:22:38,421 - #14 niz
+INFO  12:22:38,421 - #17 [
+INFO  12:22:38,421 - #11 2
+INFO  12:22:38,422 - #18 ]
+INFO  12:22:38,422 - #20 )
+INFO  12:22:38,422 - #9 ;
+INFO  12:22:38,422 - #4 }
+INFO  12:22:38,422 - #4 }
+INFO  12:22:38,432 - ProgramClass(
   ProgNameClass(
    test301
   ) [ProgNameClass]
@@ -376,8 +376,6 @@ INFO  11:34:23,520 - ProgramClass(
                                   AssignOperatorClass(
                                     DesignatorClass(
                                      bodovi
-                                      NoListIdentClass(
-                                      ) [NoListIdentClass]
                                     ) [DesignatorClass]
                                     AssignopClass(
                                     ) [AssignopClass]
@@ -399,8 +397,6 @@ INFO  11:34:23,520 - ProgramClass(
                                 IncClass(
                                   DesignatorClass(
                                    bodovi
-                                    NoListIdentClass(
-                                    ) [NoListIdentClass]
                                   ) [DesignatorClass]
                                 ) [IncClass]
                               ) [StatementClass]
@@ -409,8 +405,6 @@ INFO  11:34:23,520 - ProgramClass(
                               AssignOperatorClass(
                                 DesignatorClass(
                                  bodovi
-                                  NoListIdentClass(
-                                  ) [NoListIdentClass]
                                 ) [DesignatorClass]
                                 AssignopClass(
                                 ) [AssignopClass]
@@ -422,8 +416,6 @@ INFO  11:34:23,520 - ProgramClass(
                                       VarClass(
                                         DesignatorClass(
                                          bodovi
-                                          NoListIdentClass(
-                                          ) [NoListIdentClass]
                                         ) [DesignatorClass]
                                       ) [VarClass]
                                       NoMultiplicationListClass(
@@ -437,8 +429,6 @@ INFO  11:34:23,520 - ProgramClass(
                                       DesignatorWithPrefixClass(
                                        Konstante
                                        jedan
-                                        NoListIdentClass(
-                                        ) [NoListIdentClass]
                                       ) [DesignatorWithPrefixClass]
                                     ) [VarClass]
                                     NoMultiplicationListClass(
@@ -452,8 +442,6 @@ INFO  11:34:23,520 - ProgramClass(
                             AssignOperatorClass(
                               DesignatorClass(
                                bodovi
-                                NoListIdentClass(
-                                ) [NoListIdentClass]
                               ) [DesignatorClass]
                               AssignopClass(
                               ) [AssignopClass]
@@ -464,8 +452,6 @@ INFO  11:34:23,520 - ProgramClass(
                                   VarClass(
                                     DesignatorClass(
                                      bodovi
-                                      NoListIdentClass(
-                                      ) [NoListIdentClass]
                                     ) [DesignatorClass]
                                   ) [VarClass]
                                   MultiplicationListClass(
@@ -474,8 +460,6 @@ INFO  11:34:23,520 - ProgramClass(
                                         DesignatorWithPrefixClass(
                                          Konstante
                                          pet
-                                          NoListIdentClass(
-                                          ) [NoListIdentClass]
                                         ) [DesignatorWithPrefixClass]
                                       ) [VarClass]
                                     ) [AsteriskClass]
@@ -491,8 +475,6 @@ INFO  11:34:23,520 - ProgramClass(
                           DecClass(
                             DesignatorClass(
                              bodovi
-                              NoListIdentClass(
-                              ) [NoListIdentClass]
                             ) [DesignatorClass]
                           ) [DecClass]
                         ) [StatementClass]
@@ -505,8 +487,6 @@ INFO  11:34:23,520 - ProgramClass(
                             VarClass(
                               DesignatorClass(
                                bodovi
-                                NoListIdentClass(
-                                ) [NoListIdentClass]
                               ) [DesignatorClass]
                             ) [VarClass]
                             NoMultiplicationListClass(
@@ -522,8 +502,6 @@ INFO  11:34:23,520 - ProgramClass(
                         DesignatorWithPrefixClass(
                          Nizovi
                          niz
-                          NoListIdentClass(
-                          ) [NoListIdentClass]
                         ) [DesignatorWithPrefixClass]
                         AssignopClass(
                         ) [AssignopClass]
@@ -558,32 +536,26 @@ INFO  11:34:23,520 - ProgramClass(
                   ) [StatementListClass]
                   StatementClass(
                     AssignOperatorClass(
-                      DesignatorWithPrefixClass(
-                       Nizovi
-                       niz
-                        ListIdentClass(
-                          NoListIdentClass(
-                          ) [NoListIdentClass]
-                          ExprListIdentClass(
-                            ExprClass(
-                              NoMinusOptClass(
-                              ) [NoMinusOptClass]
-                              TermClass(
-                                VarClass(
-                                  DesignatorWithPrefixClass(
-                                   Konstante
-                                   nula
-                                    NoListIdentClass(
-                                    ) [NoListIdentClass]
-                                  ) [DesignatorWithPrefixClass]
-                                ) [VarClass]
-                                NoMultiplicationListClass(
-                                ) [NoMultiplicationListClass]
-                              ) [TermClass]
-                            ) [ExprClass]
-                          ) [ExprListIdentClass]
-                        ) [ListIdentClass]
-                      ) [DesignatorWithPrefixClass]
+                      DesignatorWithPrefixArrayClass(
+                        NameOfArrayWithPrefixClass(
+                         Nizovi
+                         niz
+                        ) [NameOfArrayWithPrefixClass]
+                        ExprClass(
+                          NoMinusOptClass(
+                          ) [NoMinusOptClass]
+                          TermClass(
+                            VarClass(
+                              DesignatorWithPrefixClass(
+                               Konstante
+                               nula
+                              ) [DesignatorWithPrefixClass]
+                            ) [VarClass]
+                            NoMultiplicationListClass(
+                            ) [NoMultiplicationListClass]
+                          ) [TermClass]
+                        ) [ExprClass]
+                      ) [DesignatorWithPrefixArrayClass]
                       AssignopClass(
                       ) [AssignopClass]
                       ExprClass(
@@ -594,8 +566,6 @@ INFO  11:34:23,520 - ProgramClass(
                             DesignatorWithPrefixClass(
                              Konstante
                              jedan
-                              NoListIdentClass(
-                              ) [NoListIdentClass]
                             ) [DesignatorWithPrefixClass]
                           ) [VarClass]
                           NoMultiplicationListClass(
@@ -607,27 +577,23 @@ INFO  11:34:23,520 - ProgramClass(
                 ) [StatementListClass]
                 StatementClass(
                   AssignOperatorClass(
-                    DesignatorWithPrefixClass(
-                     Nizovi
-                     niz
-                      ListIdentClass(
-                        NoListIdentClass(
-                        ) [NoListIdentClass]
-                        ExprListIdentClass(
-                          ExprClass(
-                            NoMinusOptClass(
-                            ) [NoMinusOptClass]
-                            TermClass(
-                              NumberClass(
-                               1
-                              ) [NumberClass]
-                              NoMultiplicationListClass(
-                              ) [NoMultiplicationListClass]
-                            ) [TermClass]
-                          ) [ExprClass]
-                        ) [ExprListIdentClass]
-                      ) [ListIdentClass]
-                    ) [DesignatorWithPrefixClass]
+                    DesignatorWithPrefixArrayClass(
+                      NameOfArrayWithPrefixClass(
+                       Nizovi
+                       niz
+                      ) [NameOfArrayWithPrefixClass]
+                      ExprClass(
+                        NoMinusOptClass(
+                        ) [NoMinusOptClass]
+                        TermClass(
+                          NumberClass(
+                           1
+                          ) [NumberClass]
+                          NoMultiplicationListClass(
+                          ) [NoMultiplicationListClass]
+                        ) [TermClass]
+                      ) [ExprClass]
+                    ) [DesignatorWithPrefixArrayClass]
                     AssignopClass(
                     ) [AssignopClass]
                     ExprClass(
@@ -646,52 +612,42 @@ INFO  11:34:23,520 - ProgramClass(
               ) [StatementListClass]
               StatementClass(
                 AssignOperatorClass(
-                  DesignatorWithPrefixClass(
-                   Nizovi
-                   niz
-                    ListIdentClass(
-                      NoListIdentClass(
-                      ) [NoListIdentClass]
-                      ExprListIdentClass(
-                        ExprClass(
-                          NoMinusOptClass(
-                          ) [NoMinusOptClass]
-                          TermClass(
-                            VarClass(
-                              DesignatorWithPrefixClass(
-                               Nizovi
-                               niz
-                                ListIdentClass(
-                                  NoListIdentClass(
-                                  ) [NoListIdentClass]
-                                  ExprListIdentClass(
-                                    ExprClass(
-                                      NoMinusOptClass(
-                                      ) [NoMinusOptClass]
-                                      TermClass(
-                                        VarClass(
-                                          DesignatorWithPrefixClass(
-                                           Konstante
-                                           jedan
-                                            NoListIdentClass(
-                                            ) [NoListIdentClass]
-                                          ) [DesignatorWithPrefixClass]
-                                        ) [VarClass]
-                                        NoMultiplicationListClass(
-                                        ) [NoMultiplicationListClass]
-                                      ) [TermClass]
-                                    ) [ExprClass]
-                                  ) [ExprListIdentClass]
-                                ) [ListIdentClass]
-                              ) [DesignatorWithPrefixClass]
-                            ) [VarClass]
-                            NoMultiplicationListClass(
-                            ) [NoMultiplicationListClass]
-                          ) [TermClass]
-                        ) [ExprClass]
-                      ) [ExprListIdentClass]
-                    ) [ListIdentClass]
-                  ) [DesignatorWithPrefixClass]
+                  DesignatorWithPrefixArrayClass(
+                    NameOfArrayWithPrefixClass(
+                     Nizovi
+                     niz
+                    ) [NameOfArrayWithPrefixClass]
+                    ExprClass(
+                      NoMinusOptClass(
+                      ) [NoMinusOptClass]
+                      TermClass(
+                        VarClass(
+                          DesignatorWithPrefixArrayClass(
+                            NameOfArrayWithPrefixClass(
+                             Nizovi
+                             niz
+                            ) [NameOfArrayWithPrefixClass]
+                            ExprClass(
+                              NoMinusOptClass(
+                              ) [NoMinusOptClass]
+                              TermClass(
+                                VarClass(
+                                  DesignatorWithPrefixClass(
+                                   Konstante
+                                   jedan
+                                  ) [DesignatorWithPrefixClass]
+                                ) [VarClass]
+                                NoMultiplicationListClass(
+                                ) [NoMultiplicationListClass]
+                              ) [TermClass]
+                            ) [ExprClass]
+                          ) [DesignatorWithPrefixArrayClass]
+                        ) [VarClass]
+                        NoMultiplicationListClass(
+                        ) [NoMultiplicationListClass]
+                      ) [TermClass]
+                    ) [ExprClass]
+                  ) [DesignatorWithPrefixArrayClass]
                   AssignopClass(
                   ) [AssignopClass]
                   ExprClass(
@@ -699,47 +655,39 @@ INFO  11:34:23,520 - ProgramClass(
                     ) [NoMinusOptClass]
                     TermClass(
                       VarClass(
-                        DesignatorWithPrefixClass(
-                         Nizovi
-                         niz
-                          ListIdentClass(
-                            NoListIdentClass(
-                            ) [NoListIdentClass]
-                            ExprListIdentClass(
-                              ExprClass(
-                                NoMinusOptClass(
-                                ) [NoMinusOptClass]
-                                TermClass(
-                                  VarClass(
-                                    DesignatorWithPrefixClass(
-                                     Nizovi
-                                     niz
-                                      ListIdentClass(
-                                        NoListIdentClass(
-                                        ) [NoListIdentClass]
-                                        ExprListIdentClass(
-                                          ExprClass(
-                                            NoMinusOptClass(
-                                            ) [NoMinusOptClass]
-                                            TermClass(
-                                              NumberClass(
-                                               0
-                                              ) [NumberClass]
-                                              NoMultiplicationListClass(
-                                              ) [NoMultiplicationListClass]
-                                            ) [TermClass]
-                                          ) [ExprClass]
-                                        ) [ExprListIdentClass]
-                                      ) [ListIdentClass]
-                                    ) [DesignatorWithPrefixClass]
-                                  ) [VarClass]
-                                  NoMultiplicationListClass(
-                                  ) [NoMultiplicationListClass]
-                                ) [TermClass]
-                              ) [ExprClass]
-                            ) [ExprListIdentClass]
-                          ) [ListIdentClass]
-                        ) [DesignatorWithPrefixClass]
+                        DesignatorWithPrefixArrayClass(
+                          NameOfArrayWithPrefixClass(
+                           Nizovi
+                           niz
+                          ) [NameOfArrayWithPrefixClass]
+                          ExprClass(
+                            NoMinusOptClass(
+                            ) [NoMinusOptClass]
+                            TermClass(
+                              VarClass(
+                                DesignatorWithPrefixArrayClass(
+                                  NameOfArrayWithPrefixClass(
+                                   Nizovi
+                                   niz
+                                  ) [NameOfArrayWithPrefixClass]
+                                  ExprClass(
+                                    NoMinusOptClass(
+                                    ) [NoMinusOptClass]
+                                    TermClass(
+                                      NumberClass(
+                                       0
+                                      ) [NumberClass]
+                                      NoMultiplicationListClass(
+                                      ) [NoMultiplicationListClass]
+                                    ) [TermClass]
+                                  ) [ExprClass]
+                                ) [DesignatorWithPrefixArrayClass]
+                              ) [VarClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [TermClass]
+                          ) [ExprClass]
+                        ) [DesignatorWithPrefixArrayClass]
                       ) [VarClass]
                       MultiplicationListClass(
                         AsteriskClass(
@@ -759,8 +707,6 @@ INFO  11:34:23,520 - ProgramClass(
               AssignOperatorClass(
                 DesignatorClass(
                  bodovi
-                  NoListIdentClass(
-                  ) [NoListIdentClass]
                 ) [DesignatorClass]
                 AssignopClass(
                 ) [AssignopClass]
@@ -769,52 +715,44 @@ INFO  11:34:23,520 - ProgramClass(
                   ) [NoMinusOptClass]
                   TermClass(
                     VarClass(
-                      DesignatorWithPrefixClass(
-                       Nizovi
-                       niz
-                        ListIdentClass(
-                          NoListIdentClass(
-                          ) [NoListIdentClass]
-                          ExprListIdentClass(
+                      DesignatorWithPrefixArrayClass(
+                        NameOfArrayWithPrefixClass(
+                         Nizovi
+                         niz
+                        ) [NameOfArrayWithPrefixClass]
+                        ExprClass(
+                          NoMinusOptClass(
+                          ) [NoMinusOptClass]
+                          TermClass(
+                            NumberClass(
+                             2
+                            ) [NumberClass]
+                            NoMultiplicationListClass(
+                            ) [NoMultiplicationListClass]
+                          ) [TermClass]
+                        ) [ExprClass]
+                      ) [DesignatorWithPrefixArrayClass]
+                    ) [VarClass]
+                    MultiplicationListClass(
+                      DivisionClass(
+                        VarClass(
+                          DesignatorWithPrefixArrayClass(
+                            NameOfArrayWithPrefixClass(
+                             Nizovi
+                             niz
+                            ) [NameOfArrayWithPrefixClass]
                             ExprClass(
                               NoMinusOptClass(
                               ) [NoMinusOptClass]
                               TermClass(
                                 NumberClass(
-                                 2
+                                 0
                                 ) [NumberClass]
                                 NoMultiplicationListClass(
                                 ) [NoMultiplicationListClass]
                               ) [TermClass]
                             ) [ExprClass]
-                          ) [ExprListIdentClass]
-                        ) [ListIdentClass]
-                      ) [DesignatorWithPrefixClass]
-                    ) [VarClass]
-                    MultiplicationListClass(
-                      DivisionClass(
-                        VarClass(
-                          DesignatorWithPrefixClass(
-                           Nizovi
-                           niz
-                            ListIdentClass(
-                              NoListIdentClass(
-                              ) [NoListIdentClass]
-                              ExprListIdentClass(
-                                ExprClass(
-                                  NoMinusOptClass(
-                                  ) [NoMinusOptClass]
-                                  TermClass(
-                                    NumberClass(
-                                     0
-                                    ) [NumberClass]
-                                    NoMultiplicationListClass(
-                                    ) [NoMultiplicationListClass]
-                                  ) [TermClass]
-                                ) [ExprClass]
-                              ) [ExprListIdentClass]
-                            ) [ListIdentClass]
-                          ) [DesignatorWithPrefixClass]
+                          ) [DesignatorWithPrefixArrayClass]
                         ) [VarClass]
                       ) [DivisionClass]
                       NoMultiplicationListClass(
@@ -833,8 +771,6 @@ INFO  11:34:23,520 - ProgramClass(
                 VarClass(
                   DesignatorClass(
                    bodovi
-                    NoListIdentClass(
-                    ) [NoListIdentClass]
                   ) [DesignatorClass]
                 ) [VarClass]
                 NoMultiplicationListClass(
@@ -851,27 +787,23 @@ INFO  11:34:23,520 - ProgramClass(
             ) [NoMinusOptClass]
             TermClass(
               VarClass(
-                DesignatorWithPrefixClass(
-                 Nizovi
-                 niz
-                  ListIdentClass(
-                    NoListIdentClass(
-                    ) [NoListIdentClass]
-                    ExprListIdentClass(
-                      ExprClass(
-                        NoMinusOptClass(
-                        ) [NoMinusOptClass]
-                        TermClass(
-                          NumberClass(
-                           2
-                          ) [NumberClass]
-                          NoMultiplicationListClass(
-                          ) [NoMultiplicationListClass]
-                        ) [TermClass]
-                      ) [ExprClass]
-                    ) [ExprListIdentClass]
-                  ) [ListIdentClass]
-                ) [DesignatorWithPrefixClass]
+                DesignatorWithPrefixArrayClass(
+                  NameOfArrayWithPrefixClass(
+                   Nizovi
+                   niz
+                  ) [NameOfArrayWithPrefixClass]
+                  ExprClass(
+                    NoMinusOptClass(
+                    ) [NoMinusOptClass]
+                    TermClass(
+                      NumberClass(
+                       2
+                      ) [NumberClass]
+                      NoMultiplicationListClass(
+                      ) [NoMultiplicationListClass]
+                    ) [TermClass]
+                  ) [ExprClass]
+                ) [DesignatorWithPrefixArrayClass]
               ) [VarClass]
               NoMultiplicationListClass(
               ) [NoMultiplicationListClass]
@@ -884,32 +816,32 @@ INFO  11:34:23,520 - ProgramClass(
     ) [MethodDeclClass]
   ) [MethodDeclListClass]
 ) [ProgramClass]
-INFO  11:34:23,521 - ===================================
-INFO  11:34:23,524 - Postavljen namespace: Konstante
-INFO  11:34:23,525 - Deklarisana konstanta Konstante::nula na liniji 6
-INFO  11:34:23,525 - Deklarisana konstanta Konstante::jedan na liniji 7
-INFO  11:34:23,525 - Deklarisana konstanta Konstante::pet na liniji 8
-INFO  11:34:23,525 - Resetovan namespaceName
-INFO  11:34:23,525 - Postavljen namespace: Nizovi
-INFO  11:34:23,525 - Deklarisana promenljiva Nizovi::niz na liniji 14
-INFO  11:34:23,525 - Deklarisana promenljiva Nizovi::nizch na liniji 15
-INFO  11:34:23,525 - Resetovan namespaceName
-INFO  11:34:23,525 - Trenutni namespace: 
-INFO  11:34:23,525 - Deklarisana promenljiva ::a na liniji 20
-INFO  11:34:23,525 - Obradjuje se funkcija main na liniji 23
-INFO  11:34:23,525 - Trenutni namespace: 
-INFO  11:34:23,525 - Deklarisana promenljiva bodovi na liniji 24
-INFO  11:34:23,525 - Trenutni namespace: 
-INFO  11:34:23,525 - Deklarisana promenljiva bt na liniji 25
-INFO  11:34:23,525 - Usao u assignOperatorClass
-INFO  11:34:23,525 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 - Usao u assignOperatorClass
-INFO  11:34:23,526 -  Print count calls = 3
-INFO  11:34:23,526 -  Deklarisanih promenljivih ima = 5
-INFO  11:34:23,526 - ===================================
-INFO  11:34:23,532 - Parsiranje uspesno zavrseno!
+INFO  12:22:38,434 - ===================================
+INFO  12:22:38,441 - Postavljen namespace: Konstante
+INFO  12:22:38,441 - Deklarisana konstanta Konstante::nula na liniji 6
+INFO  12:22:38,441 - Deklarisana konstanta Konstante::jedan na liniji 7
+INFO  12:22:38,441 - Deklarisana konstanta Konstante::pet na liniji 8
+INFO  12:22:38,441 - Resetovan namespaceName
+INFO  12:22:38,441 - Postavljen namespace: Nizovi
+INFO  12:22:38,441 - Deklarisana promenljiva Nizovi::niz na liniji 14
+INFO  12:22:38,441 - Deklarisana promenljiva Nizovi::nizch na liniji 15
+INFO  12:22:38,442 - Resetovan namespaceName
+INFO  12:22:38,442 - Trenutni namespace: 
+INFO  12:22:38,442 - Deklarisana promenljiva ::a na liniji 20
+INFO  12:22:38,442 - Obradjuje se funkcija main na liniji 23
+INFO  12:22:38,442 - Trenutni namespace: 
+INFO  12:22:38,442 - Deklarisana promenljiva bodovi na liniji 24
+INFO  12:22:38,442 - Trenutni namespace: 
+INFO  12:22:38,442 - Deklarisana promenljiva bt na liniji 25
+INFO  12:22:38,442 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 - Usao u assignOperatorClass
+INFO  12:22:38,443 -  Print count calls = 3
+INFO  12:22:38,443 -  Deklarisanih promenljivih ima = 5
+INFO  12:22:38,444 - ===================================
+INFO  12:22:38,454 - Parsiranje uspesno zavrseno!

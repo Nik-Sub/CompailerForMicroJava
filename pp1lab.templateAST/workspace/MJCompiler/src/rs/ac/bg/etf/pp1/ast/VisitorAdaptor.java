@@ -1,81 +1,84 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/0/2024 10:44:15
+// 16/0/2024 12:17:26
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
-    public void visit(ListIdent ListIdent) { }
-    public void visit(MethodDecl MethodDecl) { }
-    public void visit(Mulop Mulop) { }
-    public void visit(ListFormPars ListFormPars) { }
-    public void visit(FormParsOpt FormParsOpt) { }
-    public void visit(ListDesignator ListDesignator) { }
-    public void visit(Relop Relop) { }
     public void visit(ActParsOpt ActParsOpt) { }
-    public void visit(NamespaceName NamespaceName) { }
-    public void visit(Namespace Namespace) { }
-    public void visit(Assignop Assignop) { }
-    public void visit(ListExpressions ListExpressions) { }
-    public void visit(CondTermList CondTermList) { }
-    public void visit(MtchStatement MtchStatement) { }
-    public void visit(KindOfPar KindOfPar) { }
-    public void visit(ReturnNoExprClass ReturnNoExprClass) { }
-    public void visit(DesignatorOpt DesignatorOpt) { }
-    public void visit(StatementList StatementList) { }
-    public void visit(NamespaceList NamespaceList) { }
-    public void visit(Addop Addop) { }
-    public void visit(TypeList TypeList) { }
-    public void visit(MinusOpt MinusOpt) { }
-    public void visit(NumConstOpt NumConstOpt) { }
-    public void visit(Factor Factor) { }
-    public void visit(ListParams ListParams) { }
-    public void visit(ExprOpt ExprOpt) { }
-    public void visit(CondTerm CondTerm) { }
-    public void visit(CondFactList CondFactList) { }
-    public void visit(DeclList DeclList) { }
-    public void visit(Designator Designator) { }
-    public void visit(OptRelop OptRelop) { }
-    public void visit(Term Term) { }
-    public void visit(ConstTypeList ConstTypeList) { }
-    public void visit(Condition Condition) { }
-    public void visit(BracketForArray BracketForArray) { }
-    public void visit(KindOfVar KindOfVar) { }
-    public void visit(ListExpr ListExpr) { }
-    public void visit(DesignatorStatementOpt DesignatorStatementOpt) { }
-    public void visit(MultiplicationList MultiplicationList) { }
-    public void visit(SufixForIdent SufixForIdent) { }
-    public void visit(Label Label) { }
-    public void visit(IdentOpt IdentOpt) { }
-    public void visit(Expr Expr) { }
-    public void visit(ActPars ActPars) { }
-    public void visit(MethodTypeName MethodTypeName) { }
-    public void visit(VarDeclOpt VarDeclOpt) { }
-    public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(Boolconst Boolconst) { }
-    public void visit(ProgName ProgName) { }
-    public void visit(UnmtchStatement UnmtchStatement) { }
-    public void visit(Statement Statement) { }
-    public void visit(VarDecl VarDecl) { }
-    public void visit(CondFactOpt CondFactOpt) { }
-    public void visit(ConstInit ConstInit) { }
-    public void visit(Type Type) { }
-    public void visit(ExprFactor ExprFactor) { }
-    public void visit(ConstDecl ConstDecl) { }
-    public void visit(StaticInitializer StaticInitializer) { }
-    public void visit(CondFact CondFact) { }
-    public void visit(MethodDeclVarList MethodDeclVarList) { }
-    public void visit(MethodDeclList MethodDeclList) { }
-    public void visit(OptParen OptParen) { }
-    public void visit(ListVarDecl ListVarDecl) { }
-    public void visit(Program Program) { }
-    public void visit(ConstType ConstType) { }
     public void visit(FormPars FormPars) { }
-    public void visit(DeclType DeclType) { }
-    public void visit(AdditionList AdditionList) { }
+    public void visit(ListExpressions ListExpressions) { }
+    public void visit(MultiplicationList MultiplicationList) { }
+    public void visit(MinusOpt MinusOpt) { }
+    public void visit(Factor Factor) { }
+    public void visit(Statement Statement) { }
+    public void visit(IdentOpt IdentOpt) { }
+    public void visit(ListExpr ListExpr) { }
+    public void visit(MethodDecl MethodDecl) { }
+    public void visit(KindOfPar KindOfPar) { }
+    public void visit(ListDesignator ListDesignator) { }
+    public void visit(DesignatorStatementOpt DesignatorStatementOpt) { }
+    public void visit(StaticInitializer StaticInitializer) { }
+    public void visit(CondFactOpt CondFactOpt) { }
     public void visit(ElseOpt ElseOpt) { }
+    public void visit(Label Label) { }
+    public void visit(ListParams ListParams) { }
+    public void visit(Relop Relop) { }
+    public void visit(DeclList DeclList) { }
+    public void visit(CondFactList CondFactList) { }
+    public void visit(OptRelop OptRelop) { }
+    public void visit(Expr Expr) { }
+    public void visit(SufixForIdent SufixForIdent) { }
+    public void visit(ConstTypeList ConstTypeList) { }
+    public void visit(VarDecl VarDecl) { }
+    public void visit(MethodTypeName MethodTypeName) { }
+    public void visit(Boolconst Boolconst) { }
+    public void visit(ConstType ConstType) { }
+    public void visit(DesignatorWithPrefixArray DesignatorWithPrefixArray) { }
+    public void visit(DesignatorOpt DesignatorOpt) { }
+    public void visit(Program Program) { }
+    public void visit(ListIdent ListIdent) { }
+    public void visit(NumConstOpt NumConstOpt) { }
+    public void visit(DeclType DeclType) { }
+    public void visit(ConstInit ConstInit) { }
+    public void visit(TypeList TypeList) { }
+    public void visit(Condition Condition) { }
+    public void visit(AdditionList AdditionList) { }
+    public void visit(Mulop Mulop) { }
+    public void visit(DesignatorStatement DesignatorStatement) { }
+    public void visit(NamespaceList NamespaceList) { }
+    public void visit(MethodDeclVarList MethodDeclVarList) { }
+    public void visit(Addop Addop) { }
+    public void visit(StatementList StatementList) { }
+    public void visit(MtchStatement MtchStatement) { }
+    public void visit(Assignop Assignop) { }
+    public void visit(ConstDecl ConstDecl) { }
+    public void visit(ExprFactor ExprFactor) { }
+    public void visit(ProgName ProgName) { }
+    public void visit(VarDeclOpt VarDeclOpt) { }
+    public void visit(Type Type) { }
+    public void visit(BracketForArray BracketForArray) { }
+    public void visit(CondTermList CondTermList) { }
+    public void visit(FormParsOpt FormParsOpt) { }
+    public void visit(Namespace Namespace) { }
+    public void visit(CondTerm CondTerm) { }
+    public void visit(ListVarDecl ListVarDecl) { }
+    public void visit(MethodDeclList MethodDeclList) { }
+    public void visit(NameOfArrayWithPrefix NameOfArrayWithPrefix) { }
+    public void visit(UnmtchStatement UnmtchStatement) { }
+    public void visit(NameOfArray NameOfArray) { }
+    public void visit(ReturnNoExprClass ReturnNoExprClass) { }
+    public void visit(ListFormPars ListFormPars) { }
+    public void visit(ActPars ActPars) { }
+    public void visit(Designator Designator) { }
+    public void visit(CondFact CondFact) { }
+    public void visit(KindOfVar KindOfVar) { }
+    public void visit(NamespaceName NamespaceName) { }
+    public void visit(OptParen OptParen) { }
+    public void visit(Term Term) { }
+    public void visit(ExprOpt ExprOpt) { }
     public void visit(AsteriskClass AsteriskClass) { visit(); }
     public void visit(DivisionClass DivisionClass) { visit(); }
     public void visit(PercentClass PercentClass) { visit(); }
@@ -142,7 +145,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(IdentListIdentClass IdentListIdentClass) { visit(); }
     public void visit(NoListIdentClass NoListIdentClass) { visit(); }
     public void visit(ListIdentClass ListIdentClass) { visit(); }
+    public void visit(NameOfArrayWithPrefixClass NameOfArrayWithPrefixClass) { visit(); }
+    public void visit(NameOfArrayClass NameOfArrayClass) { visit(); }
+    public void visit(DesignatorWithPrefixArrayClass DesignatorWithPrefixArrayClass) { visit(); }
     public void visit(DesignatorWithPrefixClass DesignatorWithPrefixClass) { visit(); }
+    public void visit(DesignatorArrayClass DesignatorArrayClass) { visit(); }
     public void visit(DesignatorClass DesignatorClass) { visit(); }
     public void visit(DesignatorStatementWithArrayClass DesignatorStatementWithArrayClass) { visit(); }
     public void visit(DecClass DecClass) { visit(); }

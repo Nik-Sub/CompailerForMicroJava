@@ -86,7 +86,7 @@ nonterminal MtchStatement, UnmtchStatement, MethodDeclVarList, SufixForIdent;
 nonterminal ReturnNoExprClass, ConstInit, EndOfNamespace, NamespaceName;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar, NameOfArray, NameOfArrayWithPrefix, DesignatorWithPrefixArray;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType, Boolconst;
 
 
@@ -266,11 +266,20 @@ DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop Expr:e
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator ASTERISK Designator RBOXBRAC EQUAL Designator
 					;
 
-Designator			::= (DesignatorClass) IDENT:desigName ListIdent
+Designator			::= (DesignatorClass) IDENT:desigName
 					|
-					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName ListIdent
+					(DesignatorArrayClass) NameOfArray LBOXBRAC Expr RBOXBRAC
+					|
+					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName
+					|
+					(DesignatorWithPrefixArrayClass) NameOfArrayWithPrefix LBOXBRAC Expr RBOXBRAC
 					;
 					
+NameOfArray			::= (NameOfArrayClass) IDENT:desigName
+					;
+					
+NameOfArrayWithPrefix ::= (NameOfArrayWithPrefixClass) IDENT:prefix COL COL IDENT:desigName
+						;
 					
 ListIdent			::= (ListIdentClass) ListIdent SufixForIdent
 					|

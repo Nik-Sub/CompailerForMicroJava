@@ -129,7 +129,7 @@ nonterminal EndOfNamespace EndOfNamespace;
 nonterminal NamespaceName NamespaceName;
 
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodTypeName, Designator, KindOfVar, KindOfPar, NameOfArray, NameOfArrayWithPrefix, DesignatorWithPrefixArray;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Term, Factor, Expr, ListVarDecl, ConstType, Boolconst;
 
 
@@ -309,11 +309,20 @@ DesignatorStatement	::= (AssignOperatorClass) Designator:dest Assignop:A1 Expr:e
 					(DesignatorStatementWithArrayClass) LBOXBRAC ListDesignator:L1 ASTERISK Designator:D2 RBOXBRAC EQUAL Designator:D3 {: RESULT=new DesignatorStatementWithArrayClass(L1, D2, D3); RESULT.setLine(L1left); :}
 					;
 
-Designator			::= (DesignatorClass) IDENT:desigName ListIdent:L1 {: RESULT=new DesignatorClass(desigName, L1); RESULT.setLine(desigNameleft); :}
+Designator			::= (DesignatorClass) IDENT:desigName {: RESULT=new DesignatorClass(desigName); RESULT.setLine(desigNameleft); :}
 					|
-					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName ListIdent:L1 {: RESULT=new DesignatorWithPrefixClass(prefix, desigName, L1); RESULT.setLine(prefixleft); :}
+					(DesignatorArrayClass) NameOfArray:N1 LBOXBRAC Expr:E2 RBOXBRAC {: RESULT=new DesignatorArrayClass(N1, E2); RESULT.setLine(N1left); :}
+					|
+					(DesignatorWithPrefixClass) IDENT:prefix COL COL IDENT:desigName {: RESULT=new DesignatorWithPrefixClass(prefix, desigName); RESULT.setLine(prefixleft); :}
+					|
+					(DesignatorWithPrefixArrayClass) NameOfArrayWithPrefix:N1 LBOXBRAC Expr:E2 RBOXBRAC {: RESULT=new DesignatorWithPrefixArrayClass(N1, E2); RESULT.setLine(N1left); :}
 					;
 					
+NameOfArray			::= (NameOfArrayClass) IDENT:desigName {: RESULT=new NameOfArrayClass(desigName); RESULT.setLine(desigNameleft); :}
+					;
+					
+NameOfArrayWithPrefix ::= (NameOfArrayWithPrefixClass) IDENT:prefix COL COL IDENT:desigName {: RESULT=new NameOfArrayWithPrefixClass(prefix, desigName); RESULT.setLine(prefixleft); :}
+						;
 					
 ListIdent			::= (ListIdentClass) ListIdent:L1 SufixForIdent:S2 {: RESULT=new ListIdentClass(L1, S2); RESULT.setLine(L1left); :}
 					|

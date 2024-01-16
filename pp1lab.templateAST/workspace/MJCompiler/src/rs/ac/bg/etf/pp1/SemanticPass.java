@@ -246,6 +246,19 @@ public class SemanticPass extends VisitorAdaptor {
 		designatorWithPrefix.obj = obj;
 	}
 	
+	public void visit(DesignatorWithPrefixArrayClass desWithPref) {
+		desWithPref.obj = desWithPref.getNameOfArrayWithPrefix().obj;
+	}
+	
+	public void visit(NameOfArrayWithPrefixClass designatorWithPrefix) {
+		Obj obj = Tab.find(designatorWithPrefix.getPrefix() + designatorWithPrefix.getDesigName());
+		if (obj == Tab.noObj) {
+			report_error("Greska u liniji "+designatorWithPrefix.getLine()+" : ime " +designatorWithPrefix.getPrefix() + "::" + designatorWithPrefix.getDesigName() + " nije deklarisano!", designatorWithPrefix);
+		}
+		
+		designatorWithPrefix.obj = obj;
+	}
+	
 	public void visit(DesignatorClass designator) {
 		if (namespaceName != "") {
 			Obj obj = Tab.find(designator.getDesigName());
@@ -266,6 +279,32 @@ public class SemanticPass extends VisitorAdaptor {
 			
 			designator.obj = obj;
 		}
+	}
+	
+	public void visit(NameOfArrayClass designator) {
+		if (namespaceName != "") {
+			Obj obj = Tab.find(designator.getDesigName());
+			if (obj == Tab.noObj) {
+				obj = Tab.find(namespaceName + designator.getDesigName());
+				if (obj == Tab.noObj) {
+					report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
+				}
+			}
+			
+			designator.obj = obj;
+		}
+		else {
+			Obj obj = Tab.find(designator.getDesigName());
+			if (obj == Tab.noObj) {
+				report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
+			}
+			
+			designator.obj = obj;
+		}
+	}
+	
+	public void visit(DesignatorArrayClass designator) {
+		designator.obj = designator.getNameOfArray().obj;
 	}
 	
 	
