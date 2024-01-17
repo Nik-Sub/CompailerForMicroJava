@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Program"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodTypeName"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VarDeclList"/>
@@ -20,7 +19,9 @@
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
     <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
-    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.VarCounter"/>
     <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter"/>
+    <fullyQualifiedTypeName name="java.sql.Struct"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Struct"/>
+    <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.concepts.Obj"/>
 </qualifiedTypeNameHistroy>

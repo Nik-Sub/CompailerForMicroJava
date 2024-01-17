@@ -1,7 +1,0 @@
-INFO  10:11:05,090 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  10:11:05,106 - #2 program
-INFO  10:11:05,106 - #12 test301
-INFO  10:11:05,106 - #5 namespace
-ERROR 10:11:05,106 - 
-Sintaksna greska na liniji 5
-ERROR 10:11:05,106 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

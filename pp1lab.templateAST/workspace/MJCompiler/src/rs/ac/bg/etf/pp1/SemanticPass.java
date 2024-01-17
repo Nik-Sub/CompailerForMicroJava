@@ -61,12 +61,12 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	// ConstDecl
 	public void visit(CharConstTypeClass charType) {
-		typeOfValueForConst = Tab.find("char").getType();
+		typeOfValueForConst = nTab.find("char").getType();
 		valueForConst = charType.getValue();
 	}
 	
 	public void visit(NumConstTypeClass numberType) {
-		typeOfValueForConst = Tab.find("int").getType();
+		typeOfValueForConst = nTab.find("int").getType();
 		valueForConst = numberType.getValue();
 		
 	}
@@ -77,7 +77,7 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Greska na liniji " + constInit.getLine() + " : nekompatiblni tipovi u dodeli vrednosti" , null);
 		}
 		report_info("Deklarisana konstanta " + namespaceName + "::" + constInit.getName(), constInit);
-		Obj newObj = Tab.insert(Obj.Con, namespaceName + constInit.getName(), typeOfVarDecl);
+		Obj newObj = nTab.insert(Obj.Con, namespaceName + constInit.getName(), typeOfVarDecl);
 		newObj.setAdr(valueForConst);
 	}
 	
@@ -91,11 +91,11 @@ public class SemanticPass extends VisitorAdaptor {
 		report_info("Trenutni namespace: " + namespaceName, null);
 		if (currentMethod == null) {
 			report_info("Deklarisana promenljiva " + namespaceName + "::" + noArray.getName(), noArray);
-			Obj varNode = Tab.insert(Obj.Var, namespaceName + noArray.getName(), typeOfVarDecl);
+			Obj varNode = nTab.insert(Obj.Var, namespaceName + noArray.getName(), typeOfVarDecl);
 		}
 		else {
 			report_info("Deklarisana promenljiva " + noArray.getName(), noArray);
-			Obj varNode = Tab.insert(Obj.Var, noArray.getName(), typeOfVarDecl);
+			Obj varNode = nTab.insert(Obj.Var, noArray.getName(), typeOfVarDecl);
 		}
 		
 	}
@@ -104,7 +104,7 @@ public class SemanticPass extends VisitorAdaptor {
 		varDeclCount++;
 		report_info("Deklarisana promenljiva " + namespaceName + "::" + array.getName(), array);
 		Struct arrS = new Struct(Struct.Array, typeOfVarDecl);
-		Obj varNode = Tab.insert(Obj.Var, namespaceName + array.getName(), arrS);
+		Obj varNode = nTab.insert(Obj.Var, namespaceName + array.getName(), arrS);
 		
 	}
 	
@@ -112,14 +112,14 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(ParNoArrayClass noArray) {
 		varDeclCount++;
 		report_info("Deklarisana promenljiva " + noArray.getName(), noArray);
-		Obj varNode = Tab.insert(Obj.Var, noArray.getName(), typeOfVarDecl);
+		Obj varNode = nTab.insert(Obj.Var, noArray.getName(), typeOfVarDecl);
 		
 	}
 	
 	public void visit(ParArrayClass array) {
 		varDeclCount++;
 		Struct arrS = new Struct(Struct.Array, typeOfVarDecl);
-		Obj varNode = Tab.insert(Obj.Var, array.getName(), arrS);
+		Obj varNode = nTab.insert(Obj.Var, array.getName(), arrS);
 	}
 	
 	
@@ -129,7 +129,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(PrintClass print) {
 		printCallCount++;
 		
-		if (print.getExpr().struct != Tab.intType && print.getExpr().struct != Tab.charType && (print.getExpr().struct.getKind() == Struct.Array && print.getExpr().struct.getElemType().getKind() != Struct.Int && print.getExpr().struct.getElemType().getKind() != Struct.Char)) {
+		if (print.getExpr().struct != nTab.intType && print.getExpr().struct != nTab.charType && (print.getExpr().struct.getKind() == Struct.Array && print.getExpr().struct.getElemType().getKind() != Struct.Int && print.getExpr().struct.getElemType().getKind() != Struct.Char)) {
 			report_error("Tip expr: " + print.getExpr().struct.getKind(), null);
 			report_error("Tip u print: " + print.getExpr().struct.getElemType().getKind(), null);
 			report_error("Semanticka greska na liniji " + print.getLine() + ": Operand instrukcije print mora biti int ili char!", null);
@@ -139,23 +139,22 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	// za program
 	public void visit(ProgNameClass progName) {
-		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
-		Tab.openScope();
-		Tab.insert(Obj.Type, "bool", Tab.find("int").getType());
+		progName.obj = nTab.insert(Obj.Prog, progName.getProgName(), nTab.noType);
+		nTab.openScope();
 	}
 	
 	public void visit(ProgramClass program) {
-		nVars = Tab.currentScope.getnVars();
-		Tab.chainLocalSymbols(program.getProgName().obj);
-		Tab.closeScope();
+		nVars = nTab.currentScope.getnVars();
+		nTab.chainLocalSymbols(program.getProgName().obj);
+		nTab.closeScope();
 	}
 	//***************
 	
 	// za tip
 	public void visit(TypeClass type) {
-		Obj typeNode = Tab.find(type.getTypeName());
-		if (typeNode == Tab.noObj) {
-			report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola! ", null);
+		Obj typeNode = nTab.find(type.getTypeName());
+		if (typeNode == nTab.noObj) {
+			report_error("Nije pronadjen tip " + type.getTypeName() + " u nTabeli simbola! ", null);
 		}
 		else {
 			if (Obj.Type == typeNode.getKind()) {
@@ -164,7 +163,7 @@ public class SemanticPass extends VisitorAdaptor {
 			}
 			else {
 				report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip!", type);
-				type.struct = Tab.noType;
+				type.struct = nTab.noType;
 			}
 		}
 	}
@@ -174,18 +173,18 @@ public class SemanticPass extends VisitorAdaptor {
 	// za metode
 	public void visit(ReturnTypeClass returnType) {
 		Struct t = returnType.getType().struct; 
-		isVoid = (t == Tab.noType );
-		returnType.obj = Tab.insert( Obj.Meth, namespaceName + returnType.getMethName(), t);
+		isVoid = (t == nTab.noType );
+		returnType.obj = nTab.insert( Obj.Meth, namespaceName + returnType.getMethName(), t);
 		currentMethod = returnType.obj;
-        Tab.openScope(); 
+        nTab.openScope(); 
         report_info("Obradjuje se funkcija " + returnType.getMethName(), returnType);
 	}
 
 	public void visit(VoidRetTypeClass voidRetType) {
 		isVoid=true; 
-		voidRetType.obj = Tab.insert( Obj.Meth, namespaceName + voidRetType.getMethName(), Tab.noType); 
+		voidRetType.obj = nTab.insert( Obj.Meth, namespaceName + voidRetType.getMethName(), nTab.noType); 
 		currentMethod = voidRetType.obj;
-		Tab.openScope();
+		nTab.openScope();
 		report_info("Obradjuje se funkcija " + voidRetType.getMethName(), voidRetType);
 	}
 	
@@ -201,8 +200,8 @@ public class SemanticPass extends VisitorAdaptor {
         returnExists=false;
 		//Obj o = methodDec.getMethodTypeName().obj;
         //o.setLevel(0);
-        Tab.chainLocalSymbols(currentMethod);
-        Tab.closeScope();
+        nTab.chainLocalSymbols(currentMethod);
+        nTab.closeScope();
         
         currentMethod = null;
 
@@ -238,8 +237,8 @@ public class SemanticPass extends VisitorAdaptor {
 	// u sustini designator predstavlja promenljivu koja je vec deklarisana
 	
 	public void visit(DesignatorWithPrefixClass designatorWithPrefix) {
-		Obj obj = Tab.find(designatorWithPrefix.getPrefix() + designatorWithPrefix.getDesigName());
-		if (obj == Tab.noObj) {
+		Obj obj = nTab.find(designatorWithPrefix.getPrefix() + designatorWithPrefix.getDesigName());
+		if (obj == nTab.noObj) {
 			report_error("Greska u liniji "+designatorWithPrefix.getLine()+" : ime " +designatorWithPrefix.getPrefix() + "::" + designatorWithPrefix.getDesigName() + " nije deklarisano!", designatorWithPrefix);
 		}
 		
@@ -251,8 +250,8 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(NameOfArrayWithPrefixClass designatorWithPrefix) {
-		Obj obj = Tab.find(designatorWithPrefix.getPrefix() + designatorWithPrefix.getDesigName());
-		if (obj == Tab.noObj) {
+		Obj obj = nTab.find(designatorWithPrefix.getPrefix() + designatorWithPrefix.getDesigName());
+		if (obj == nTab.noObj) {
 			report_error("Greska u liniji "+designatorWithPrefix.getLine()+" : ime " +designatorWithPrefix.getPrefix() + "::" + designatorWithPrefix.getDesigName() + " nije deklarisano!", designatorWithPrefix);
 		}
 		
@@ -261,10 +260,10 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(DesignatorClass designator) {
 		if (namespaceName != "") {
-			Obj obj = Tab.find(designator.getDesigName());
-			if (obj == Tab.noObj) {
-				obj = Tab.find(namespaceName + designator.getDesigName());
-				if (obj == Tab.noObj) {
+			Obj obj = nTab.find(designator.getDesigName());
+			if (obj == nTab.noObj) {
+				obj = nTab.find(namespaceName + designator.getDesigName());
+				if (obj == nTab.noObj) {
 					report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
 				}
 			}
@@ -272,8 +271,8 @@ public class SemanticPass extends VisitorAdaptor {
 			designator.obj = obj;
 		}
 		else {
-			Obj obj = Tab.find(designator.getDesigName());
-			if (obj == Tab.noObj) {
+			Obj obj = nTab.find(designator.getDesigName());
+			if (obj == nTab.noObj) {
 				report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
 			}
 			
@@ -283,10 +282,10 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(NameOfArrayClass designator) {
 		if (namespaceName != "") {
-			Obj obj = Tab.find(designator.getDesigName());
-			if (obj == Tab.noObj) {
-				obj = Tab.find(namespaceName + designator.getDesigName());
-				if (obj == Tab.noObj) {
+			Obj obj = nTab.find(designator.getDesigName());
+			if (obj == nTab.noObj) {
+				obj = nTab.find(namespaceName + designator.getDesigName());
+				if (obj == nTab.noObj) {
 					report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
 				}
 			}
@@ -294,8 +293,8 @@ public class SemanticPass extends VisitorAdaptor {
 			designator.obj = obj;
 		}
 		else {
-			Obj obj = Tab.find(designator.getDesigName());
-			if (obj == Tab.noObj) {
+			Obj obj = nTab.find(designator.getDesigName());
+			if (obj == nTab.noObj) {
 				report_error("Greska u liniji "+designator.getLine()+" : ime " + designator.getDesigName() + " nije deklarisano!", designator);
 			}
 			
@@ -310,10 +309,10 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	public void visit(FunCallClass funcCall) {
 		Obj funcDes = funcCall.getDesignator().obj;
-		Obj func = Tab.find(funcDes.getName());
+		Obj func = nTab.find(funcDes.getName());
 		if (Obj.Meth == func.getKind()) {
 			//report_error("Tip " + func.getKind(), null);
-			if (Tab.noType == func.getType()) {
+			if (nTab.noType == func.getType()) {
 				report_error("Semanticka greska " + func.getName() + " ne moze se koristiti u izrazima jer nema povratnu vrednost ", funcCall);
 			}
 			else {
@@ -323,7 +322,7 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 		else {
 			report_error("Greska u liniji "+funcCall.getLine()+" : ime " + func.getName() + " nije funkcija!", funcCall);
-			funcCall.struct = Tab.noType;
+			funcCall.struct = nTab.noType;
 		}
 	}
 	
@@ -341,7 +340,7 @@ public class SemanticPass extends VisitorAdaptor {
 	public void visit(AddExprClass addExpr) {
 		Struct te = addExpr.getExpr().struct;
 		Struct t = addExpr.getTerm().struct;
-		if (te.equals(t) && te == Tab.intType ||te.getKind() == Struct.Int && t.getKind() == Struct.Array && t.getElemType().getKind() == Struct.Int) {
+		if (te.equals(t) && te == nTab.intType ||te.getKind() == Struct.Int && t.getKind() == Struct.Array && t.getElemType().getKind() == Struct.Int) {
 			addExpr.struct = te;
 		}
 		else {
@@ -360,11 +359,11 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	
 	public void visit(LetterClass letter) {
-		letter.struct = Tab.charType;
+		letter.struct = nTab.charType;
 	}
 	
 	public void visit(NumberClass number) {
-		number.struct = Tab.intType;
+		number.struct = nTab.intType;
 	}
 	
 	public void visit(VarClass var) {
@@ -376,26 +375,26 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(BoolConstTypeClass bool) {
-		bool.struct = Tab.find("bool").getType();
+		bool.struct = nTab.find("bool").getType();
 	}
 	
 	public void visit(TrueClass trueClass) {
-		trueClass.struct = Tab.find("bool").getType();
+		trueClass.struct = nTab.find("bool").getType();
 	}
 	
 	public void visit(FalseClass falseClass) {
-		falseClass.struct = Tab.find("bool").getType();
+		falseClass.struct = nTab.find("bool").getType();
 	}
 	
 	public void visit(BoolConstClass boolOvr) {
-		boolOvr.struct = Tab.find("bool").getType();
+		boolOvr.struct = nTab.find("bool").getType();
 	}
 	
 	//*******************
 	
 	//for index of arrays
 	public void visit(ExprListIdentClass exprForInd) {
-//		if (exprForInd.getExpr().struct != Tab.find("int").getType()) {
+//		if (exprForInd.getExpr().struct != nTab.find("int").getType()) {
 //			report_error("Index mora biti int tipa veci ili jednak 0!", null);
 //		}
 	}

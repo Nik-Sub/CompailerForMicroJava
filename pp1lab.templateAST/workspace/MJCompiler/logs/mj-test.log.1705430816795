@@ -1,0 +1,1522 @@
+INFO  19:44:44,925 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:44:45,091 - #2 program
+INFO  19:44:45,092 - #14 test301
+INFO  19:44:45,092 - #5 namespace
+INFO  19:44:45,093 - #14 Konstante
+INFO  19:44:45,093 - #3 {
+INFO  19:44:45,093 - #6 const
+INFO  19:44:45,094 - #14 int
+INFO  19:44:45,094 - #14 nula
+INFO  19:44:45,094 - #7 =
+INFO  19:44:45,094 - #11 0
+INFO  19:44:45,094 - #9 ;
+INFO  19:44:45,096 - #6 const
+INFO  19:44:45,096 - #14 int
+INFO  19:44:45,096 - #14 jedan
+INFO  19:44:45,096 - #7 =
+INFO  19:44:45,096 - #11 1
+INFO  19:44:45,096 - #9 ;
+INFO  19:44:45,096 - #6 const
+INFO  19:44:45,097 - #14 int
+INFO  19:44:45,097 - #14 pet
+INFO  19:44:45,097 - #7 =
+INFO  19:44:45,097 - #11 5
+INFO  19:44:45,097 - #9 ;
+INFO  19:44:45,097 - #3 {
+INFO  19:44:45,097 - #4 }
+INFO  19:44:45,098 - #4 }
+INFO  19:44:45,098 - #5 namespace
+INFO  19:44:45,100 - #14 Nizovi
+INFO  19:44:45,100 - #3 {
+INFO  19:44:45,100 - #14 int
+INFO  19:44:45,100 - #14 niz
+INFO  19:44:45,100 - #17 [
+INFO  19:44:45,100 - #18 ]
+INFO  19:44:45,100 - #9 ;
+INFO  19:44:45,101 - #14 char
+INFO  19:44:45,101 - #14 nizch
+INFO  19:44:45,101 - #17 [
+INFO  19:44:45,101 - #18 ]
+INFO  19:44:45,101 - #9 ;
+INFO  19:44:45,102 - #3 {
+INFO  19:44:45,102 - #4 }
+INFO  19:44:45,102 - #4 }
+INFO  19:44:45,102 - #14 int
+INFO  19:44:45,102 - #14 a
+INFO  19:44:45,102 - #9 ;
+INFO  19:44:45,102 - #3 {
+INFO  19:44:45,102 - #43 void
+INFO  19:44:45,102 - #14 main
+INFO  19:44:45,102 - #19 (
+INFO  19:44:45,102 - #20 )
+INFO  19:44:45,103 - #14 int
+INFO  19:44:45,104 - #14 bodovi
+INFO  19:44:45,104 - #9 ;
+INFO  19:44:45,104 - #14 bool
+INFO  19:44:45,104 - #14 bt
+INFO  19:44:45,104 - #9 ;
+INFO  19:44:45,105 - #14 char
+INFO  19:44:45,105 - #14 c
+INFO  19:44:45,105 - #9 ;
+INFO  19:44:45,105 - #3 {
+INFO  19:44:45,105 - #14 bodovi
+INFO  19:44:45,106 - #7 =
+INFO  19:44:45,106 - #11 0
+INFO  19:44:45,109 - #9 ;
+INFO  19:44:45,110 - #14 bodovi
+INFO  19:44:45,110 - #29 ++
+INFO  19:44:45,111 - #9 ;
+INFO  19:44:45,111 - #14 bodovi
+INFO  19:44:45,111 - #7 =
+INFO  19:44:45,111 - #14 bodovi
+INFO  19:44:45,111 - #41 +
+INFO  19:44:45,111 - #14 Konstante
+INFO  19:44:45,113 - #21 :
+INFO  19:44:45,113 - #21 :
+INFO  19:44:45,113 - #14 jedan
+INFO  19:44:45,113 - #9 ;
+INFO  19:44:45,113 - #14 bodovi
+INFO  19:44:45,113 - #7 =
+INFO  19:44:45,114 - #14 bodovi
+INFO  19:44:45,114 - #28 *
+INFO  19:44:45,114 - #14 Konstante
+INFO  19:44:45,114 - #21 :
+INFO  19:44:45,114 - #21 :
+INFO  19:44:45,114 - #14 pet
+INFO  19:44:45,114 - #9 ;
+INFO  19:44:45,114 - #14 bodovi
+INFO  19:44:45,114 - #30 --
+INFO  19:44:45,114 - #9 ;
+INFO  19:44:45,114 - #46 print
+INFO  19:44:45,114 - #19 (
+INFO  19:44:45,115 - #14 bodovi
+INFO  19:44:45,115 - #20 )
+INFO  19:44:45,116 - #9 ;
+INFO  19:44:45,116 - #14 Nizovi
+INFO  19:44:45,116 - #21 :
+INFO  19:44:45,117 - #21 :
+INFO  19:44:45,117 - #14 niz
+INFO  19:44:45,117 - #7 =
+INFO  19:44:45,117 - #33 new
+INFO  19:44:45,117 - #14 int
+INFO  19:44:45,117 - #17 [
+INFO  19:44:45,117 - #11 3
+INFO  19:44:45,117 - #18 ]
+INFO  19:44:45,117 - #9 ;
+INFO  19:44:45,117 - #14 Nizovi
+INFO  19:44:45,117 - #21 :
+INFO  19:44:45,118 - #21 :
+INFO  19:44:45,118 - #14 niz
+INFO  19:44:45,118 - #17 [
+INFO  19:44:45,118 - #14 Konstante
+INFO  19:44:45,118 - #21 :
+INFO  19:44:45,118 - #21 :
+INFO  19:44:45,118 - #14 nula
+INFO  19:44:45,118 - #18 ]
+INFO  19:44:45,118 - #7 =
+INFO  19:44:45,118 - #14 Konstante
+INFO  19:44:45,118 - #21 :
+INFO  19:44:45,118 - #21 :
+INFO  19:44:45,118 - #14 jedan
+INFO  19:44:45,118 - #9 ;
+INFO  19:44:45,119 - #14 Nizovi
+INFO  19:44:45,119 - #21 :
+INFO  19:44:45,119 - #21 :
+INFO  19:44:45,119 - #14 niz
+INFO  19:44:45,119 - #17 [
+INFO  19:44:45,119 - #11 1
+INFO  19:44:45,119 - #18 ]
+INFO  19:44:45,119 - #7 =
+INFO  19:44:45,119 - #11 2
+INFO  19:44:45,119 - #9 ;
+INFO  19:44:45,119 - #14 Nizovi
+INFO  19:44:45,119 - #21 :
+INFO  19:44:45,119 - #21 :
+INFO  19:44:45,119 - #14 niz
+INFO  19:44:45,119 - #17 [
+INFO  19:44:45,119 - #14 Nizovi
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #14 niz
+INFO  19:44:45,120 - #17 [
+INFO  19:44:45,120 - #14 Konstante
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #14 jedan
+INFO  19:44:45,120 - #18 ]
+INFO  19:44:45,120 - #18 ]
+INFO  19:44:45,120 - #7 =
+INFO  19:44:45,120 - #14 Nizovi
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #14 niz
+INFO  19:44:45,120 - #17 [
+INFO  19:44:45,120 - #14 Nizovi
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #21 :
+INFO  19:44:45,120 - #14 niz
+INFO  19:44:45,120 - #17 [
+INFO  19:44:45,120 - #11 0
+INFO  19:44:45,120 - #18 ]
+INFO  19:44:45,121 - #18 ]
+INFO  19:44:45,121 - #28 *
+INFO  19:44:45,121 - #11 3
+INFO  19:44:45,121 - #9 ;
+INFO  19:44:45,121 - #14 bodovi
+INFO  19:44:45,121 - #7 =
+INFO  19:44:45,121 - #14 Nizovi
+INFO  19:44:45,121 - #21 :
+INFO  19:44:45,121 - #21 :
+INFO  19:44:45,121 - #14 niz
+INFO  19:44:45,121 - #17 [
+INFO  19:44:45,121 - #11 2
+INFO  19:44:45,121 - #18 ]
+INFO  19:44:45,121 - #45 /
+INFO  19:44:45,121 - #14 Nizovi
+INFO  19:44:45,122 - #21 :
+INFO  19:44:45,122 - #21 :
+INFO  19:44:45,122 - #14 niz
+INFO  19:44:45,122 - #17 [
+INFO  19:44:45,122 - #11 0
+INFO  19:44:45,122 - #18 ]
+INFO  19:44:45,122 - #9 ;
+INFO  19:44:45,122 - #46 print
+INFO  19:44:45,122 - #19 (
+INFO  19:44:45,122 - #14 bodovi
+INFO  19:44:45,122 - #20 )
+INFO  19:44:45,122 - #9 ;
+INFO  19:44:45,122 - #46 print
+INFO  19:44:45,122 - #19 (
+INFO  19:44:45,122 - #14 Nizovi
+INFO  19:44:45,122 - #21 :
+INFO  19:44:45,122 - #21 :
+INFO  19:44:45,122 - #14 niz
+INFO  19:44:45,122 - #17 [
+INFO  19:44:45,123 - #11 2
+INFO  19:44:45,123 - #18 ]
+INFO  19:44:45,123 - #20 )
+INFO  19:44:45,123 - #9 ;
+INFO  19:44:45,123 - #14 Nizovi
+INFO  19:44:45,123 - #21 :
+INFO  19:44:45,123 - #21 :
+INFO  19:44:45,123 - #14 nizch
+INFO  19:44:45,123 - #7 =
+INFO  19:44:45,123 - #33 new
+INFO  19:44:45,123 - #14 char
+INFO  19:44:45,123 - #17 [
+INFO  19:44:45,123 - #11 3
+INFO  19:44:45,123 - #18 ]
+INFO  19:44:45,123 - #9 ;
+INFO  19:44:45,123 - #14 Nizovi
+INFO  19:44:45,123 - #21 :
+INFO  19:44:45,123 - #21 :
+INFO  19:44:45,124 - #14 nizch
+INFO  19:44:45,124 - #17 [
+INFO  19:44:45,124 - #11 0
+INFO  19:44:45,124 - #18 ]
+INFO  19:44:45,124 - #7 =
+INFO  19:44:45,124 - #16 a
+INFO  19:44:45,124 - #9 ;
+INFO  19:44:45,124 - #14 Nizovi
+INFO  19:44:45,124 - #21 :
+INFO  19:44:45,124 - #21 :
+INFO  19:44:45,124 - #14 nizch
+INFO  19:44:45,124 - #17 [
+INFO  19:44:45,124 - #14 Konstante
+INFO  19:44:45,124 - #21 :
+INFO  19:44:45,124 - #21 :
+INFO  19:44:45,125 - #14 jedan
+INFO  19:44:45,125 - #18 ]
+INFO  19:44:45,125 - #7 =
+INFO  19:44:45,125 - #16 b
+INFO  19:44:45,125 - #9 ;
+INFO  19:44:45,125 - #14 Nizovi
+INFO  19:44:45,125 - #21 :
+INFO  19:44:45,125 - #21 :
+INFO  19:44:45,125 - #14 nizch
+INFO  19:44:45,125 - #17 [
+INFO  19:44:45,125 - #14 Konstante
+INFO  19:44:45,125 - #21 :
+INFO  19:44:45,125 - #21 :
+INFO  19:44:45,125 - #14 pet
+INFO  19:44:45,125 - #42 -
+INFO  19:44:45,125 - #11 3
+INFO  19:44:45,126 - #18 ]
+INFO  19:44:45,126 - #7 =
+INFO  19:44:45,126 - #16 c
+INFO  19:44:45,126 - #9 ;
+INFO  19:44:45,127 - #46 print
+INFO  19:44:45,127 - #19 (
+INFO  19:44:45,127 - #14 Nizovi
+INFO  19:44:45,127 - #21 :
+INFO  19:44:45,127 - #21 :
+INFO  19:44:45,127 - #14 nizch
+INFO  19:44:45,127 - #17 [
+INFO  19:44:45,127 - #11 1
+INFO  19:44:45,127 - #18 ]
+INFO  19:44:45,127 - #20 )
+INFO  19:44:45,127 - #9 ;
+INFO  19:44:45,127 - #46 print
+INFO  19:44:45,127 - #19 (
+INFO  19:44:45,127 - #14 Nizovi
+INFO  19:44:45,127 - #21 :
+INFO  19:44:45,127 - #21 :
+INFO  19:44:45,128 - #14 nizch
+INFO  19:44:45,128 - #17 [
+INFO  19:44:45,128 - #14 Konstante
+INFO  19:44:45,128 - #21 :
+INFO  19:44:45,128 - #21 :
+INFO  19:44:45,128 - #14 jedan
+INFO  19:44:45,128 - #28 *
+INFO  19:44:45,128 - #11 2
+INFO  19:44:45,128 - #18 ]
+INFO  19:44:45,128 - #20 )
+INFO  19:44:45,128 - #9 ;
+INFO  19:44:45,128 - #14 a
+INFO  19:44:45,128 - #7 =
+INFO  19:44:45,128 - #11 1
+INFO  19:44:45,128 - #9 ;
+INFO  19:44:45,128 - #47 read
+INFO  19:44:45,128 - #19 (
+INFO  19:44:45,128 - #14 bodovi
+INFO  19:44:45,128 - #20 )
+INFO  19:44:45,128 - #9 ;
+INFO  19:44:45,128 - #46 print
+INFO  19:44:45,129 - #19 (
+INFO  19:44:45,129 - #14 bodovi
+INFO  19:44:45,129 - #20 )
+INFO  19:44:45,129 - #9 ;
+INFO  19:44:45,129 - #14 bodovi
+INFO  19:44:45,129 - #7 =
+INFO  19:44:45,129 - #42 -
+INFO  19:44:45,129 - #14 bodovi
+INFO  19:44:45,130 - #41 +
+INFO  19:44:45,130 - #19 (
+INFO  19:44:45,130 - #14 Konstante
+INFO  19:44:45,130 - #21 :
+INFO  19:44:45,130 - #21 :
+INFO  19:44:45,130 - #14 pet
+INFO  19:44:45,130 - #28 *
+INFO  19:44:45,130 - #14 a
+INFO  19:44:45,130 - #45 /
+INFO  19:44:45,130 - #11 2
+INFO  19:44:45,130 - #42 -
+INFO  19:44:45,130 - #14 Konstante
+INFO  19:44:45,131 - #21 :
+INFO  19:44:45,131 - #21 :
+INFO  19:44:45,131 - #14 jedan
+INFO  19:44:45,131 - #20 )
+INFO  19:44:45,131 - #28 *
+INFO  19:44:45,131 - #14 bodovi
+INFO  19:44:45,131 - #42 -
+INFO  19:44:45,131 - #19 (
+INFO  19:44:45,131 - #11 3
+INFO  19:44:45,131 - #44 %
+INFO  19:44:45,131 - #11 2
+INFO  19:44:45,131 - #41 +
+INFO  19:44:45,131 - #11 3
+INFO  19:44:45,131 - #28 *
+INFO  19:44:45,131 - #11 2
+INFO  19:44:45,132 - #42 -
+INFO  19:44:45,132 - #11 3
+INFO  19:44:45,132 - #20 )
+INFO  19:44:45,132 - #9 ;
+INFO  19:44:45,132 - #46 print
+INFO  19:44:45,132 - #19 (
+INFO  19:44:45,132 - #14 bodovi
+INFO  19:44:45,132 - #20 )
+INFO  19:44:45,132 - #9 ;
+INFO  19:44:45,132 - #47 read
+INFO  19:44:45,132 - #19 (
+INFO  19:44:45,132 - #14 bodovi
+INFO  19:44:45,132 - #20 )
+INFO  19:44:45,132 - #9 ;
+INFO  19:44:45,132 - #46 print
+INFO  19:44:45,132 - #19 (
+INFO  19:44:45,132 - #14 bodovi
+INFO  19:44:45,132 - #20 )
+INFO  19:44:45,133 - #9 ;
+INFO  19:44:45,133 - #47 read
+INFO  19:44:45,133 - #19 (
+INFO  19:44:45,133 - #14 c
+INFO  19:44:45,133 - #20 )
+INFO  19:44:45,133 - #9 ;
+INFO  19:44:45,133 - #46 print
+INFO  19:44:45,133 - #19 (
+INFO  19:44:45,133 - #14 c
+INFO  19:44:45,133 - #20 )
+INFO  19:44:45,133 - #9 ;
+INFO  19:44:45,133 - #4 }
+INFO  19:44:45,133 - #4 }
+INFO  19:44:45,142 - ProgramClass(
+  ProgNameClass(
+   test301
+  ) [ProgNameClass]
+  NamespaceListClass(
+    NamespaceListClass(
+      NoNamespaceClass(
+      ) [NoNamespaceClass]
+      NamespaceClass(
+        NamespaceNameClass(
+         Konstante
+        ) [NamespaceNameClass]
+        DeclListClass(
+          DeclListClass(
+            DeclListClass(
+              NoDeclClass(
+              ) [NoDeclClass]
+              ConstDeclTypeClass(
+                ConstDeclClass(
+                  TypeClass(
+                   int
+                  ) [TypeClass]
+                  ConstInitClass(
+                   nula
+                    NumConstTypeClass(
+                     0
+                    ) [NumConstTypeClass]
+                  ) [ConstInitClass]
+                  NoConstTypeListClass(
+                  ) [NoConstTypeListClass]
+                ) [ConstDeclClass]
+              ) [ConstDeclTypeClass]
+            ) [DeclListClass]
+            ConstDeclTypeClass(
+              ConstDeclClass(
+                TypeClass(
+                 int
+                ) [TypeClass]
+                ConstInitClass(
+                 jedan
+                  NumConstTypeClass(
+                   1
+                  ) [NumConstTypeClass]
+                ) [ConstInitClass]
+                NoConstTypeListClass(
+                ) [NoConstTypeListClass]
+              ) [ConstDeclClass]
+            ) [ConstDeclTypeClass]
+          ) [DeclListClass]
+          ConstDeclTypeClass(
+            ConstDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              ConstInitClass(
+               pet
+                NumConstTypeClass(
+                 5
+                ) [NumConstTypeClass]
+              ) [ConstInitClass]
+              NoConstTypeListClass(
+              ) [NoConstTypeListClass]
+            ) [ConstDeclClass]
+          ) [ConstDeclTypeClass]
+        ) [DeclListClass]
+        NoMethodDeclListClass(
+        ) [NoMethodDeclListClass]
+        EndOfNamespace(
+        ) [EndOfNamespace]
+      ) [NamespaceClass]
+    ) [NamespaceListClass]
+    NamespaceClass(
+      NamespaceNameClass(
+       Nizovi
+      ) [NamespaceNameClass]
+      DeclListClass(
+        DeclListClass(
+          NoDeclClass(
+          ) [NoDeclClass]
+          VarDeclTypeClass(
+            VarDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              VarArrayClass(
+               niz
+              ) [VarArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [VarDeclClass]
+          ) [VarDeclTypeClass]
+        ) [DeclListClass]
+        VarDeclTypeClass(
+          VarDeclClass(
+            TypeClass(
+             char
+            ) [TypeClass]
+            VarArrayClass(
+             nizch
+            ) [VarArrayClass]
+            NoListVarDeclClass(
+            ) [NoListVarDeclClass]
+          ) [VarDeclClass]
+        ) [VarDeclTypeClass]
+      ) [DeclListClass]
+      NoMethodDeclListClass(
+      ) [NoMethodDeclListClass]
+      EndOfNamespace(
+      ) [EndOfNamespace]
+    ) [NamespaceClass]
+  ) [NamespaceListClass]
+  DeclListClass(
+    NoDeclClass(
+    ) [NoDeclClass]
+    VarDeclTypeClass(
+      VarDeclClass(
+        TypeClass(
+         int
+        ) [TypeClass]
+        VarNoArrayClass(
+         a
+        ) [VarNoArrayClass]
+        NoListVarDeclClass(
+        ) [NoListVarDeclClass]
+      ) [VarDeclClass]
+    ) [VarDeclTypeClass]
+  ) [DeclListClass]
+  MethodDeclListClass(
+    NoMethodDeclListClass(
+    ) [NoMethodDeclListClass]
+    MethodDeclClass(
+      VoidRetTypeClass(
+       main
+      ) [VoidRetTypeClass]
+      NoFormParsOptClass(
+      ) [NoFormParsOptClass]
+      MethodDeclVarListClass(
+        MethodDeclVarListClass(
+          MethodDeclVarListClass(
+            NoMethodDeclVarListClass(
+            ) [NoMethodDeclVarListClass]
+            VarDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              VarNoArrayClass(
+               bodovi
+              ) [VarNoArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [VarDeclClass]
+          ) [MethodDeclVarListClass]
+          VarDeclClass(
+            TypeClass(
+             bool
+            ) [TypeClass]
+            VarNoArrayClass(
+             bt
+            ) [VarNoArrayClass]
+            NoListVarDeclClass(
+            ) [NoListVarDeclClass]
+          ) [VarDeclClass]
+        ) [MethodDeclVarListClass]
+        VarDeclClass(
+          TypeClass(
+           char
+          ) [TypeClass]
+          VarNoArrayClass(
+           c
+          ) [VarNoArrayClass]
+          NoListVarDeclClass(
+          ) [NoListVarDeclClass]
+        ) [VarDeclClass]
+      ) [MethodDeclVarListClass]
+      StatementListClass(
+        StatementListClass(
+          StatementListClass(
+            StatementListClass(
+              StatementListClass(
+                StatementListClass(
+                  StatementListClass(
+                    StatementListClass(
+                      StatementListClass(
+                        StatementListClass(
+                          StatementListClass(
+                            StatementListClass(
+                              StatementListClass(
+                                StatementListClass(
+                                  StatementListClass(
+                                    StatementListClass(
+                                      StatementListClass(
+                                        StatementListClass(
+                                          StatementListClass(
+                                            StatementListClass(
+                                              StatementListClass(
+                                                StatementListClass(
+                                                  StatementListClass(
+                                                    StatementListClass(
+                                                      StatementListClass(
+                                                        StatementListClass(
+                                                          StatementListClass(
+                                                            StatementListClass(
+                                                              NoStatementListClass(
+                                                              ) [NoStatementListClass]
+                                                              StatementClass(
+                                                                AssignOperatorClass(
+                                                                  DesignatorClass(
+                                                                   bodovi
+                                                                  ) [DesignatorClass]
+                                                                  AssignopClass(
+                                                                  ) [AssignopClass]
+                                                                  ExprClass(
+                                                                    NoMinusOptClass(
+                                                                    ) [NoMinusOptClass]
+                                                                    TermClass(
+                                                                      NumberClass(
+                                                                       0
+                                                                      ) [NumberClass]
+                                                                      NoMultiplicationListClass(
+                                                                      ) [NoMultiplicationListClass]
+                                                                    ) [TermClass]
+                                                                  ) [ExprClass]
+                                                                ) [AssignOperatorClass]
+                                                              ) [StatementClass]
+                                                            ) [StatementListClass]
+                                                            StatementClass(
+                                                              IncClass(
+                                                                DesignatorClass(
+                                                                 bodovi
+                                                                ) [DesignatorClass]
+                                                              ) [IncClass]
+                                                            ) [StatementClass]
+                                                          ) [StatementListClass]
+                                                          StatementClass(
+                                                            AssignOperatorClass(
+                                                              DesignatorClass(
+                                                               bodovi
+                                                              ) [DesignatorClass]
+                                                              AssignopClass(
+                                                              ) [AssignopClass]
+                                                              AddExprClass(
+                                                                ExprClass(
+                                                                  NoMinusOptClass(
+                                                                  ) [NoMinusOptClass]
+                                                                  TermClass(
+                                                                    VarClass(
+                                                                      DesignatorClass(
+                                                                       bodovi
+                                                                      ) [DesignatorClass]
+                                                                    ) [VarClass]
+                                                                    NoMultiplicationListClass(
+                                                                    ) [NoMultiplicationListClass]
+                                                                  ) [TermClass]
+                                                                ) [ExprClass]
+                                                                AddOpClass(
+                                                                ) [AddOpClass]
+                                                                TermClass(
+                                                                  VarClass(
+                                                                    DesignatorWithPrefixClass(
+                                                                     Konstante
+                                                                     jedan
+                                                                    ) [DesignatorWithPrefixClass]
+                                                                  ) [VarClass]
+                                                                  NoMultiplicationListClass(
+                                                                  ) [NoMultiplicationListClass]
+                                                                ) [TermClass]
+                                                              ) [AddExprClass]
+                                                            ) [AssignOperatorClass]
+                                                          ) [StatementClass]
+                                                        ) [StatementListClass]
+                                                        StatementClass(
+                                                          AssignOperatorClass(
+                                                            DesignatorClass(
+                                                             bodovi
+                                                            ) [DesignatorClass]
+                                                            AssignopClass(
+                                                            ) [AssignopClass]
+                                                            ExprClass(
+                                                              NoMinusOptClass(
+                                                              ) [NoMinusOptClass]
+                                                              TermClass(
+                                                                VarClass(
+                                                                  DesignatorClass(
+                                                                   bodovi
+                                                                  ) [DesignatorClass]
+                                                                ) [VarClass]
+                                                                MultiplicationListClass(
+                                                                  AsteriskClass(
+                                                                    VarClass(
+                                                                      DesignatorWithPrefixClass(
+                                                                       Konstante
+                                                                       pet
+                                                                      ) [DesignatorWithPrefixClass]
+                                                                    ) [VarClass]
+                                                                  ) [AsteriskClass]
+                                                                  NoMultiplicationListClass(
+                                                                  ) [NoMultiplicationListClass]
+                                                                ) [MultiplicationListClass]
+                                                              ) [TermClass]
+                                                            ) [ExprClass]
+                                                          ) [AssignOperatorClass]
+                                                        ) [StatementClass]
+                                                      ) [StatementListClass]
+                                                      StatementClass(
+                                                        DecClass(
+                                                          DesignatorClass(
+                                                           bodovi
+                                                          ) [DesignatorClass]
+                                                        ) [DecClass]
+                                                      ) [StatementClass]
+                                                    ) [StatementListClass]
+                                                    PrintClass(
+                                                      ExprClass(
+                                                        NoMinusOptClass(
+                                                        ) [NoMinusOptClass]
+                                                        TermClass(
+                                                          VarClass(
+                                                            DesignatorClass(
+                                                             bodovi
+                                                            ) [DesignatorClass]
+                                                          ) [VarClass]
+                                                          NoMultiplicationListClass(
+                                                          ) [NoMultiplicationListClass]
+                                                        ) [TermClass]
+                                                      ) [ExprClass]
+                                                      NoNumConstClass(
+                                                      ) [NoNumConstClass]
+                                                    ) [PrintClass]
+                                                  ) [StatementListClass]
+                                                  StatementClass(
+                                                    AssignOperatorClass(
+                                                      DesignatorWithPrefixClass(
+                                                       Nizovi
+                                                       niz
+                                                      ) [DesignatorWithPrefixClass]
+                                                      AssignopClass(
+                                                      ) [AssignopClass]
+                                                      ExprClass(
+                                                        NoMinusOptClass(
+                                                        ) [NoMinusOptClass]
+                                                        TermClass(
+                                                          NewTypeClass(
+                                                            TypeClass(
+                                                             int
+                                                            ) [TypeClass]
+                                                            ListParamsExprExprClass(
+                                                              ExprClass(
+                                                                NoMinusOptClass(
+                                                                ) [NoMinusOptClass]
+                                                                TermClass(
+                                                                  NumberClass(
+                                                                   3
+                                                                  ) [NumberClass]
+                                                                  NoMultiplicationListClass(
+                                                                  ) [NoMultiplicationListClass]
+                                                                ) [TermClass]
+                                                              ) [ExprClass]
+                                                            ) [ListParamsExprExprClass]
+                                                          ) [NewTypeClass]
+                                                          NoMultiplicationListClass(
+                                                          ) [NoMultiplicationListClass]
+                                                        ) [TermClass]
+                                                      ) [ExprClass]
+                                                    ) [AssignOperatorClass]
+                                                  ) [StatementClass]
+                                                ) [StatementListClass]
+                                                StatementClass(
+                                                  AssignOperatorClass(
+                                                    DesignatorWithPrefixArrayClass(
+                                                      NameOfArrayWithPrefixClass(
+                                                       Nizovi
+                                                       niz
+                                                      ) [NameOfArrayWithPrefixClass]
+                                                      ExprClass(
+                                                        NoMinusOptClass(
+                                                        ) [NoMinusOptClass]
+                                                        TermClass(
+                                                          VarClass(
+                                                            DesignatorWithPrefixClass(
+                                                             Konstante
+                                                             nula
+                                                            ) [DesignatorWithPrefixClass]
+                                                          ) [VarClass]
+                                                          NoMultiplicationListClass(
+                                                          ) [NoMultiplicationListClass]
+                                                        ) [TermClass]
+                                                      ) [ExprClass]
+                                                    ) [DesignatorWithPrefixArrayClass]
+                                                    AssignopClass(
+                                                    ) [AssignopClass]
+                                                    ExprClass(
+                                                      NoMinusOptClass(
+                                                      ) [NoMinusOptClass]
+                                                      TermClass(
+                                                        VarClass(
+                                                          DesignatorWithPrefixClass(
+                                                           Konstante
+                                                           jedan
+                                                          ) [DesignatorWithPrefixClass]
+                                                        ) [VarClass]
+                                                        NoMultiplicationListClass(
+                                                        ) [NoMultiplicationListClass]
+                                                      ) [TermClass]
+                                                    ) [ExprClass]
+                                                  ) [AssignOperatorClass]
+                                                ) [StatementClass]
+                                              ) [StatementListClass]
+                                              StatementClass(
+                                                AssignOperatorClass(
+                                                  DesignatorWithPrefixArrayClass(
+                                                    NameOfArrayWithPrefixClass(
+                                                     Nizovi
+                                                     niz
+                                                    ) [NameOfArrayWithPrefixClass]
+                                                    ExprClass(
+                                                      NoMinusOptClass(
+                                                      ) [NoMinusOptClass]
+                                                      TermClass(
+                                                        NumberClass(
+                                                         1
+                                                        ) [NumberClass]
+                                                        NoMultiplicationListClass(
+                                                        ) [NoMultiplicationListClass]
+                                                      ) [TermClass]
+                                                    ) [ExprClass]
+                                                  ) [DesignatorWithPrefixArrayClass]
+                                                  AssignopClass(
+                                                  ) [AssignopClass]
+                                                  ExprClass(
+                                                    NoMinusOptClass(
+                                                    ) [NoMinusOptClass]
+                                                    TermClass(
+                                                      NumberClass(
+                                                       2
+                                                      ) [NumberClass]
+                                                      NoMultiplicationListClass(
+                                                      ) [NoMultiplicationListClass]
+                                                    ) [TermClass]
+                                                  ) [ExprClass]
+                                                ) [AssignOperatorClass]
+                                              ) [StatementClass]
+                                            ) [StatementListClass]
+                                            StatementClass(
+                                              AssignOperatorClass(
+                                                DesignatorWithPrefixArrayClass(
+                                                  NameOfArrayWithPrefixClass(
+                                                   Nizovi
+                                                   niz
+                                                  ) [NameOfArrayWithPrefixClass]
+                                                  ExprClass(
+                                                    NoMinusOptClass(
+                                                    ) [NoMinusOptClass]
+                                                    TermClass(
+                                                      VarClass(
+                                                        DesignatorWithPrefixArrayClass(
+                                                          NameOfArrayWithPrefixClass(
+                                                           Nizovi
+                                                           niz
+                                                          ) [NameOfArrayWithPrefixClass]
+                                                          ExprClass(
+                                                            NoMinusOptClass(
+                                                            ) [NoMinusOptClass]
+                                                            TermClass(
+                                                              VarClass(
+                                                                DesignatorWithPrefixClass(
+                                                                 Konstante
+                                                                 jedan
+                                                                ) [DesignatorWithPrefixClass]
+                                                              ) [VarClass]
+                                                              NoMultiplicationListClass(
+                                                              ) [NoMultiplicationListClass]
+                                                            ) [TermClass]
+                                                          ) [ExprClass]
+                                                        ) [DesignatorWithPrefixArrayClass]
+                                                      ) [VarClass]
+                                                      NoMultiplicationListClass(
+                                                      ) [NoMultiplicationListClass]
+                                                    ) [TermClass]
+                                                  ) [ExprClass]
+                                                ) [DesignatorWithPrefixArrayClass]
+                                                AssignopClass(
+                                                ) [AssignopClass]
+                                                ExprClass(
+                                                  NoMinusOptClass(
+                                                  ) [NoMinusOptClass]
+                                                  TermClass(
+                                                    VarClass(
+                                                      DesignatorWithPrefixArrayClass(
+                                                        NameOfArrayWithPrefixClass(
+                                                         Nizovi
+                                                         niz
+                                                        ) [NameOfArrayWithPrefixClass]
+                                                        ExprClass(
+                                                          NoMinusOptClass(
+                                                          ) [NoMinusOptClass]
+                                                          TermClass(
+                                                            VarClass(
+                                                              DesignatorWithPrefixArrayClass(
+                                                                NameOfArrayWithPrefixClass(
+                                                                 Nizovi
+                                                                 niz
+                                                                ) [NameOfArrayWithPrefixClass]
+                                                                ExprClass(
+                                                                  NoMinusOptClass(
+                                                                  ) [NoMinusOptClass]
+                                                                  TermClass(
+                                                                    NumberClass(
+                                                                     0
+                                                                    ) [NumberClass]
+                                                                    NoMultiplicationListClass(
+                                                                    ) [NoMultiplicationListClass]
+                                                                  ) [TermClass]
+                                                                ) [ExprClass]
+                                                              ) [DesignatorWithPrefixArrayClass]
+                                                            ) [VarClass]
+                                                            NoMultiplicationListClass(
+                                                            ) [NoMultiplicationListClass]
+                                                          ) [TermClass]
+                                                        ) [ExprClass]
+                                                      ) [DesignatorWithPrefixArrayClass]
+                                                    ) [VarClass]
+                                                    MultiplicationListClass(
+                                                      AsteriskClass(
+                                                        NumberClass(
+                                                         3
+                                                        ) [NumberClass]
+                                                      ) [AsteriskClass]
+                                                      NoMultiplicationListClass(
+                                                      ) [NoMultiplicationListClass]
+                                                    ) [MultiplicationListClass]
+                                                  ) [TermClass]
+                                                ) [ExprClass]
+                                              ) [AssignOperatorClass]
+                                            ) [StatementClass]
+                                          ) [StatementListClass]
+                                          StatementClass(
+                                            AssignOperatorClass(
+                                              DesignatorClass(
+                                               bodovi
+                                              ) [DesignatorClass]
+                                              AssignopClass(
+                                              ) [AssignopClass]
+                                              ExprClass(
+                                                NoMinusOptClass(
+                                                ) [NoMinusOptClass]
+                                                TermClass(
+                                                  VarClass(
+                                                    DesignatorWithPrefixArrayClass(
+                                                      NameOfArrayWithPrefixClass(
+                                                       Nizovi
+                                                       niz
+                                                      ) [NameOfArrayWithPrefixClass]
+                                                      ExprClass(
+                                                        NoMinusOptClass(
+                                                        ) [NoMinusOptClass]
+                                                        TermClass(
+                                                          NumberClass(
+                                                           2
+                                                          ) [NumberClass]
+                                                          NoMultiplicationListClass(
+                                                          ) [NoMultiplicationListClass]
+                                                        ) [TermClass]
+                                                      ) [ExprClass]
+                                                    ) [DesignatorWithPrefixArrayClass]
+                                                  ) [VarClass]
+                                                  MultiplicationListClass(
+                                                    DivisionClass(
+                                                      VarClass(
+                                                        DesignatorWithPrefixArrayClass(
+                                                          NameOfArrayWithPrefixClass(
+                                                           Nizovi
+                                                           niz
+                                                          ) [NameOfArrayWithPrefixClass]
+                                                          ExprClass(
+                                                            NoMinusOptClass(
+                                                            ) [NoMinusOptClass]
+                                                            TermClass(
+                                                              NumberClass(
+                                                               0
+                                                              ) [NumberClass]
+                                                              NoMultiplicationListClass(
+                                                              ) [NoMultiplicationListClass]
+                                                            ) [TermClass]
+                                                          ) [ExprClass]
+                                                        ) [DesignatorWithPrefixArrayClass]
+                                                      ) [VarClass]
+                                                    ) [DivisionClass]
+                                                    NoMultiplicationListClass(
+                                                    ) [NoMultiplicationListClass]
+                                                  ) [MultiplicationListClass]
+                                                ) [TermClass]
+                                              ) [ExprClass]
+                                            ) [AssignOperatorClass]
+                                          ) [StatementClass]
+                                        ) [StatementListClass]
+                                        PrintClass(
+                                          ExprClass(
+                                            NoMinusOptClass(
+                                            ) [NoMinusOptClass]
+                                            TermClass(
+                                              VarClass(
+                                                DesignatorClass(
+                                                 bodovi
+                                                ) [DesignatorClass]
+                                              ) [VarClass]
+                                              NoMultiplicationListClass(
+                                              ) [NoMultiplicationListClass]
+                                            ) [TermClass]
+                                          ) [ExprClass]
+                                          NoNumConstClass(
+                                          ) [NoNumConstClass]
+                                        ) [PrintClass]
+                                      ) [StatementListClass]
+                                      PrintClass(
+                                        ExprClass(
+                                          NoMinusOptClass(
+                                          ) [NoMinusOptClass]
+                                          TermClass(
+                                            VarClass(
+                                              DesignatorWithPrefixArrayClass(
+                                                NameOfArrayWithPrefixClass(
+                                                 Nizovi
+                                                 niz
+                                                ) [NameOfArrayWithPrefixClass]
+                                                ExprClass(
+                                                  NoMinusOptClass(
+                                                  ) [NoMinusOptClass]
+                                                  TermClass(
+                                                    NumberClass(
+                                                     2
+                                                    ) [NumberClass]
+                                                    NoMultiplicationListClass(
+                                                    ) [NoMultiplicationListClass]
+                                                  ) [TermClass]
+                                                ) [ExprClass]
+                                              ) [DesignatorWithPrefixArrayClass]
+                                            ) [VarClass]
+                                            NoMultiplicationListClass(
+                                            ) [NoMultiplicationListClass]
+                                          ) [TermClass]
+                                        ) [ExprClass]
+                                        NoNumConstClass(
+                                        ) [NoNumConstClass]
+                                      ) [PrintClass]
+                                    ) [StatementListClass]
+                                    StatementClass(
+                                      AssignOperatorClass(
+                                        DesignatorWithPrefixClass(
+                                         Nizovi
+                                         nizch
+                                        ) [DesignatorWithPrefixClass]
+                                        AssignopClass(
+                                        ) [AssignopClass]
+                                        ExprClass(
+                                          NoMinusOptClass(
+                                          ) [NoMinusOptClass]
+                                          TermClass(
+                                            NewTypeClass(
+                                              TypeClass(
+                                               char
+                                              ) [TypeClass]
+                                              ListParamsExprExprClass(
+                                                ExprClass(
+                                                  NoMinusOptClass(
+                                                  ) [NoMinusOptClass]
+                                                  TermClass(
+                                                    NumberClass(
+                                                     3
+                                                    ) [NumberClass]
+                                                    NoMultiplicationListClass(
+                                                    ) [NoMultiplicationListClass]
+                                                  ) [TermClass]
+                                                ) [ExprClass]
+                                              ) [ListParamsExprExprClass]
+                                            ) [NewTypeClass]
+                                            NoMultiplicationListClass(
+                                            ) [NoMultiplicationListClass]
+                                          ) [TermClass]
+                                        ) [ExprClass]
+                                      ) [AssignOperatorClass]
+                                    ) [StatementClass]
+                                  ) [StatementListClass]
+                                  StatementClass(
+                                    AssignOperatorClass(
+                                      DesignatorWithPrefixArrayClass(
+                                        NameOfArrayWithPrefixClass(
+                                         Nizovi
+                                         nizch
+                                        ) [NameOfArrayWithPrefixClass]
+                                        ExprClass(
+                                          NoMinusOptClass(
+                                          ) [NoMinusOptClass]
+                                          TermClass(
+                                            NumberClass(
+                                             0
+                                            ) [NumberClass]
+                                            NoMultiplicationListClass(
+                                            ) [NoMultiplicationListClass]
+                                          ) [TermClass]
+                                        ) [ExprClass]
+                                      ) [DesignatorWithPrefixArrayClass]
+                                      AssignopClass(
+                                      ) [AssignopClass]
+                                      ExprClass(
+                                        NoMinusOptClass(
+                                        ) [NoMinusOptClass]
+                                        TermClass(
+                                          LetterClass(
+                                           a
+                                          ) [LetterClass]
+                                          NoMultiplicationListClass(
+                                          ) [NoMultiplicationListClass]
+                                        ) [TermClass]
+                                      ) [ExprClass]
+                                    ) [AssignOperatorClass]
+                                  ) [StatementClass]
+                                ) [StatementListClass]
+                                StatementClass(
+                                  AssignOperatorClass(
+                                    DesignatorWithPrefixArrayClass(
+                                      NameOfArrayWithPrefixClass(
+                                       Nizovi
+                                       nizch
+                                      ) [NameOfArrayWithPrefixClass]
+                                      ExprClass(
+                                        NoMinusOptClass(
+                                        ) [NoMinusOptClass]
+                                        TermClass(
+                                          VarClass(
+                                            DesignatorWithPrefixClass(
+                                             Konstante
+                                             jedan
+                                            ) [DesignatorWithPrefixClass]
+                                          ) [VarClass]
+                                          NoMultiplicationListClass(
+                                          ) [NoMultiplicationListClass]
+                                        ) [TermClass]
+                                      ) [ExprClass]
+                                    ) [DesignatorWithPrefixArrayClass]
+                                    AssignopClass(
+                                    ) [AssignopClass]
+                                    ExprClass(
+                                      NoMinusOptClass(
+                                      ) [NoMinusOptClass]
+                                      TermClass(
+                                        LetterClass(
+                                         b
+                                        ) [LetterClass]
+                                        NoMultiplicationListClass(
+                                        ) [NoMultiplicationListClass]
+                                      ) [TermClass]
+                                    ) [ExprClass]
+                                  ) [AssignOperatorClass]
+                                ) [StatementClass]
+                              ) [StatementListClass]
+                              StatementClass(
+                                AssignOperatorClass(
+                                  DesignatorWithPrefixArrayClass(
+                                    NameOfArrayWithPrefixClass(
+                                     Nizovi
+                                     nizch
+                                    ) [NameOfArrayWithPrefixClass]
+                                    AddExprClass(
+                                      ExprClass(
+                                        NoMinusOptClass(
+                                        ) [NoMinusOptClass]
+                                        TermClass(
+                                          VarClass(
+                                            DesignatorWithPrefixClass(
+                                             Konstante
+                                             pet
+                                            ) [DesignatorWithPrefixClass]
+                                          ) [VarClass]
+                                          NoMultiplicationListClass(
+                                          ) [NoMultiplicationListClass]
+                                        ) [TermClass]
+                                      ) [ExprClass]
+                                      MinusOpClass(
+                                      ) [MinusOpClass]
+                                      TermClass(
+                                        NumberClass(
+                                         3
+                                        ) [NumberClass]
+                                        NoMultiplicationListClass(
+                                        ) [NoMultiplicationListClass]
+                                      ) [TermClass]
+                                    ) [AddExprClass]
+                                  ) [DesignatorWithPrefixArrayClass]
+                                  AssignopClass(
+                                  ) [AssignopClass]
+                                  ExprClass(
+                                    NoMinusOptClass(
+                                    ) [NoMinusOptClass]
+                                    TermClass(
+                                      LetterClass(
+                                       c
+                                      ) [LetterClass]
+                                      NoMultiplicationListClass(
+                                      ) [NoMultiplicationListClass]
+                                    ) [TermClass]
+                                  ) [ExprClass]
+                                ) [AssignOperatorClass]
+                              ) [StatementClass]
+                            ) [StatementListClass]
+                            PrintClass(
+                              ExprClass(
+                                NoMinusOptClass(
+                                ) [NoMinusOptClass]
+                                TermClass(
+                                  VarClass(
+                                    DesignatorWithPrefixArrayClass(
+                                      NameOfArrayWithPrefixClass(
+                                       Nizovi
+                                       nizch
+                                      ) [NameOfArrayWithPrefixClass]
+                                      ExprClass(
+                                        NoMinusOptClass(
+                                        ) [NoMinusOptClass]
+                                        TermClass(
+                                          NumberClass(
+                                           1
+                                          ) [NumberClass]
+                                          NoMultiplicationListClass(
+                                          ) [NoMultiplicationListClass]
+                                        ) [TermClass]
+                                      ) [ExprClass]
+                                    ) [DesignatorWithPrefixArrayClass]
+                                  ) [VarClass]
+                                  NoMultiplicationListClass(
+                                  ) [NoMultiplicationListClass]
+                                ) [TermClass]
+                              ) [ExprClass]
+                              NoNumConstClass(
+                              ) [NoNumConstClass]
+                            ) [PrintClass]
+                          ) [StatementListClass]
+                          PrintClass(
+                            ExprClass(
+                              NoMinusOptClass(
+                              ) [NoMinusOptClass]
+                              TermClass(
+                                VarClass(
+                                  DesignatorWithPrefixArrayClass(
+                                    NameOfArrayWithPrefixClass(
+                                     Nizovi
+                                     nizch
+                                    ) [NameOfArrayWithPrefixClass]
+                                    ExprClass(
+                                      NoMinusOptClass(
+                                      ) [NoMinusOptClass]
+                                      TermClass(
+                                        VarClass(
+                                          DesignatorWithPrefixClass(
+                                           Konstante
+                                           jedan
+                                          ) [DesignatorWithPrefixClass]
+                                        ) [VarClass]
+                                        MultiplicationListClass(
+                                          AsteriskClass(
+                                            NumberClass(
+                                             2
+                                            ) [NumberClass]
+                                          ) [AsteriskClass]
+                                          NoMultiplicationListClass(
+                                          ) [NoMultiplicationListClass]
+                                        ) [MultiplicationListClass]
+                                      ) [TermClass]
+                                    ) [ExprClass]
+                                  ) [DesignatorWithPrefixArrayClass]
+                                ) [VarClass]
+                                NoMultiplicationListClass(
+                                ) [NoMultiplicationListClass]
+                              ) [TermClass]
+                            ) [ExprClass]
+                            NoNumConstClass(
+                            ) [NoNumConstClass]
+                          ) [PrintClass]
+                        ) [StatementListClass]
+                        StatementClass(
+                          AssignOperatorClass(
+                            DesignatorClass(
+                             a
+                            ) [DesignatorClass]
+                            AssignopClass(
+                            ) [AssignopClass]
+                            ExprClass(
+                              NoMinusOptClass(
+                              ) [NoMinusOptClass]
+                              TermClass(
+                                NumberClass(
+                                 1
+                                ) [NumberClass]
+                                NoMultiplicationListClass(
+                                ) [NoMultiplicationListClass]
+                              ) [TermClass]
+                            ) [ExprClass]
+                          ) [AssignOperatorClass]
+                        ) [StatementClass]
+                      ) [StatementListClass]
+                      ReadClass(
+                        DesignatorClass(
+                         bodovi
+                        ) [DesignatorClass]
+                      ) [ReadClass]
+                    ) [StatementListClass]
+                    PrintClass(
+                      ExprClass(
+                        NoMinusOptClass(
+                        ) [NoMinusOptClass]
+                        TermClass(
+                          VarClass(
+                            DesignatorClass(
+                             bodovi
+                            ) [DesignatorClass]
+                          ) [VarClass]
+                          NoMultiplicationListClass(
+                          ) [NoMultiplicationListClass]
+                        ) [TermClass]
+                      ) [ExprClass]
+                      NoNumConstClass(
+                      ) [NoNumConstClass]
+                    ) [PrintClass]
+                  ) [StatementListClass]
+                  StatementClass(
+                    AssignOperatorClass(
+                      DesignatorClass(
+                       bodovi
+                      ) [DesignatorClass]
+                      AssignopClass(
+                      ) [AssignopClass]
+                      AddExprClass(
+                        AddExprClass(
+                          ExprClass(
+                            MinusOptClass(
+                            ) [MinusOptClass]
+                            TermClass(
+                              VarClass(
+                                DesignatorClass(
+                                 bodovi
+                                ) [DesignatorClass]
+                              ) [VarClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [TermClass]
+                          ) [ExprClass]
+                          AddOpClass(
+                          ) [AddOpClass]
+                          TermClass(
+                            ExprFactorClass(
+                              AddExprClass(
+                                ExprClass(
+                                  NoMinusOptClass(
+                                  ) [NoMinusOptClass]
+                                  TermClass(
+                                    VarClass(
+                                      DesignatorWithPrefixClass(
+                                       Konstante
+                                       pet
+                                      ) [DesignatorWithPrefixClass]
+                                    ) [VarClass]
+                                    MultiplicationListClass(
+                                      AsteriskClass(
+                                        VarClass(
+                                          DesignatorClass(
+                                           a
+                                          ) [DesignatorClass]
+                                        ) [VarClass]
+                                      ) [AsteriskClass]
+                                      MultiplicationListClass(
+                                        DivisionClass(
+                                          NumberClass(
+                                           2
+                                          ) [NumberClass]
+                                        ) [DivisionClass]
+                                        NoMultiplicationListClass(
+                                        ) [NoMultiplicationListClass]
+                                      ) [MultiplicationListClass]
+                                    ) [MultiplicationListClass]
+                                  ) [TermClass]
+                                ) [ExprClass]
+                                MinusOpClass(
+                                ) [MinusOpClass]
+                                TermClass(
+                                  VarClass(
+                                    DesignatorWithPrefixClass(
+                                     Konstante
+                                     jedan
+                                    ) [DesignatorWithPrefixClass]
+                                  ) [VarClass]
+                                  NoMultiplicationListClass(
+                                  ) [NoMultiplicationListClass]
+                                ) [TermClass]
+                              ) [AddExprClass]
+                            ) [ExprFactorClass]
+                            MultiplicationListClass(
+                              AsteriskClass(
+                                VarClass(
+                                  DesignatorClass(
+                                   bodovi
+                                  ) [DesignatorClass]
+                                ) [VarClass]
+                              ) [AsteriskClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [MultiplicationListClass]
+                          ) [TermClass]
+                        ) [AddExprClass]
+                        MinusOpClass(
+                        ) [MinusOpClass]
+                        TermClass(
+                          ExprFactorClass(
+                            AddExprClass(
+                              AddExprClass(
+                                ExprClass(
+                                  NoMinusOptClass(
+                                  ) [NoMinusOptClass]
+                                  TermClass(
+                                    NumberClass(
+                                     3
+                                    ) [NumberClass]
+                                    MultiplicationListClass(
+                                      PercentClass(
+                                        NumberClass(
+                                         2
+                                        ) [NumberClass]
+                                      ) [PercentClass]
+                                      NoMultiplicationListClass(
+                                      ) [NoMultiplicationListClass]
+                                    ) [MultiplicationListClass]
+                                  ) [TermClass]
+                                ) [ExprClass]
+                                AddOpClass(
+                                ) [AddOpClass]
+                                TermClass(
+                                  NumberClass(
+                                   3
+                                  ) [NumberClass]
+                                  MultiplicationListClass(
+                                    AsteriskClass(
+                                      NumberClass(
+                                       2
+                                      ) [NumberClass]
+                                    ) [AsteriskClass]
+                                    NoMultiplicationListClass(
+                                    ) [NoMultiplicationListClass]
+                                  ) [MultiplicationListClass]
+                                ) [TermClass]
+                              ) [AddExprClass]
+                              MinusOpClass(
+                              ) [MinusOpClass]
+                              TermClass(
+                                NumberClass(
+                                 3
+                                ) [NumberClass]
+                                NoMultiplicationListClass(
+                                ) [NoMultiplicationListClass]
+                              ) [TermClass]
+                            ) [AddExprClass]
+                          ) [ExprFactorClass]
+                          NoMultiplicationListClass(
+                          ) [NoMultiplicationListClass]
+                        ) [TermClass]
+                      ) [AddExprClass]
+                    ) [AssignOperatorClass]
+                  ) [StatementClass]
+                ) [StatementListClass]
+                PrintClass(
+                  ExprClass(
+                    NoMinusOptClass(
+                    ) [NoMinusOptClass]
+                    TermClass(
+                      VarClass(
+                        DesignatorClass(
+                         bodovi
+                        ) [DesignatorClass]
+                      ) [VarClass]
+                      NoMultiplicationListClass(
+                      ) [NoMultiplicationListClass]
+                    ) [TermClass]
+                  ) [ExprClass]
+                  NoNumConstClass(
+                  ) [NoNumConstClass]
+                ) [PrintClass]
+              ) [StatementListClass]
+              ReadClass(
+                DesignatorClass(
+                 bodovi
+                ) [DesignatorClass]
+              ) [ReadClass]
+            ) [StatementListClass]
+            PrintClass(
+              ExprClass(
+                NoMinusOptClass(
+                ) [NoMinusOptClass]
+                TermClass(
+                  VarClass(
+                    DesignatorClass(
+                     bodovi
+                    ) [DesignatorClass]
+                  ) [VarClass]
+                  NoMultiplicationListClass(
+                  ) [NoMultiplicationListClass]
+                ) [TermClass]
+              ) [ExprClass]
+              NoNumConstClass(
+              ) [NoNumConstClass]
+            ) [PrintClass]
+          ) [StatementListClass]
+          ReadClass(
+            DesignatorClass(
+             c
+            ) [DesignatorClass]
+          ) [ReadClass]
+        ) [StatementListClass]
+        PrintClass(
+          ExprClass(
+            NoMinusOptClass(
+            ) [NoMinusOptClass]
+            TermClass(
+              VarClass(
+                DesignatorClass(
+                 c
+                ) [DesignatorClass]
+              ) [VarClass]
+              NoMultiplicationListClass(
+              ) [NoMultiplicationListClass]
+            ) [TermClass]
+          ) [ExprClass]
+          NoNumConstClass(
+          ) [NoNumConstClass]
+        ) [PrintClass]
+      ) [StatementListClass]
+    ) [MethodDeclClass]
+  ) [MethodDeclListClass]
+) [ProgramClass]
+INFO  19:44:45,144 - ===================================
+INFO  19:44:45,148 - Postavljen namespace: Konstante
+INFO  19:44:45,148 - Deklarisana konstanta Konstante::nula na liniji 6
+INFO  19:44:45,148 - Deklarisana konstanta Konstante::jedan na liniji 7
+INFO  19:44:45,148 - Deklarisana konstanta Konstante::pet na liniji 8
+INFO  19:44:45,148 - Resetovan namespaceName
+INFO  19:44:45,148 - Postavljen namespace: Nizovi
+INFO  19:44:45,148 - Deklarisana promenljiva Nizovi::niz na liniji 14
+INFO  19:44:45,148 - Deklarisana promenljiva Nizovi::nizch na liniji 15
+INFO  19:44:45,148 - Resetovan namespaceName
+INFO  19:44:45,148 - Trenutni namespace: 
+INFO  19:44:45,148 - Deklarisana promenljiva ::a na liniji 20
+INFO  19:44:45,148 - Obradjuje se funkcija main na liniji 23
+INFO  19:44:45,148 - Trenutni namespace: 
+INFO  19:44:45,148 - Deklarisana promenljiva bodovi na liniji 24
+INFO  19:44:45,148 - Trenutni namespace: 
+INFO  19:44:45,149 - Deklarisana promenljiva bt na liniji 25
+INFO  19:44:45,149 - Trenutni namespace: 
+INFO  19:44:45,149 - Deklarisana promenljiva c na liniji 26
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,149 - Usao u assignOperatorClass
+INFO  19:44:45,150 -  Print count calls = 9
+INFO  19:44:45,150 -  Deklarisanih promenljivih ima = 6
+INFO  19:44:45,150 - ===================================
+INFO  19:44:45,155 - Parsiranje uspesno zavrseno!

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 16/0/2024 12:17:26
+// 16/0/2024 17:6:58
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -165,6 +165,7 @@ public interface Visitor {
     public void visit(ContinueClass ContinueClass);
     public void visit(BreakClass BreakClass);
     public void visit(IfClass IfClass);
+    public void visit(ClassSemiError2 ClassSemiError2);
     public void visit(StatementClass StatementClass);
     public void visit(StaticInitializerClass StaticInitializerClass);
     public void visit(NoStatementListClass NoStatementListClass);
@@ -184,11 +185,13 @@ public interface Visitor {
     public void visit(NoBracketForArrayClass NoBracketForArrayClass);
     public void visit(BracketsForArrayClass BracketsForArrayClass);
     public void visit(NoListVarDeclClass NoListVarDeclClass);
+    public void visit(ClassCommaError ClassCommaError);
     public void visit(ListVarDeclClass ListVarDeclClass);
     public void visit(NoVarDeclOptClass NoVarDeclOptClass);
     public void visit(VarDeclOptClass VarDeclOptClass);
     public void visit(VarArrayClass VarArrayClass);
     public void visit(VarNoArrayClass VarNoArrayClass);
+    public void visit(ClassSemiError ClassSemiError);
     public void visit(VarDeclClass VarDeclClass);
     public void visit(TypeMethodClass TypeMethodClass);
     public void visit(VoidTypeClass VoidTypeClass);

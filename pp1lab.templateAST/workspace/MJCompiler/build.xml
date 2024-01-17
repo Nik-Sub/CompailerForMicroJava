@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="MJCompiler" default="compile" basedir=".">
 
+	
+	
 	<target name="delete">
 		<delete>
 			<fileset dir="src/rs/ac/bg/etf/pp1">
@@ -12,6 +14,7 @@
 				<exclude name="SemanticPass.java"/>
 				<exclude name="CodeGenerator.java"/>
 				<exclude name="CounterVisitor.java"/>
+				<exclude name="nTab.java"/>
 			</fileset>
 		</delete>
 		<delete>
@@ -74,11 +77,12 @@
 		</target>
 	
 	<target name="runObj" depends="disasm" >
-			<java classname="rs.etf.pp1.mj.runtime.Run">
-				<arg value="test/program.obj"/>
-				<classpath>
-					<pathelement location="lib/mj-runtime.jar"/>
-				</classpath>
-			</java>
-		</target>
+		<java classname="rs.etf.pp1.mj.runtime.Run">
+			<redirector input="test/input.txt" />
+			<arg value="test/program.obj"/>
+			<classpath>
+				<pathelement location="lib/mj-runtime.jar"/>
+			</classpath>
+		</java>
+	</target>
 </project>

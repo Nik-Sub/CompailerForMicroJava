@@ -206,6 +206,9 @@ TypeList ::= (VoidTypeClass) VOID {: RESULT=new VoidTypeClass(); :}
           
 
 VarDecl ::= (VarDeclClass) Type:varType KindOfVar:K1 ListVarDecl:L2 SEMI {: RESULT=new VarDeclClass(varType, K1, L2); RESULT.setLine(varTypeleft); :}
+			|
+			(ClassSemiError) error SEMI:l
+			{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ClassSemiError(); :}
           	;
           	
           	
@@ -220,6 +223,10 @@ VarDeclOpt ::= (VarDeclOptClass) VarDecl:V1 {: RESULT=new VarDeclOptClass(V1); R
             ;
             
 ListVarDecl ::= (ListVarDeclClass) COMMA KindOfVar:K1 ListVarDecl:L2 {: RESULT=new ListVarDeclClass(K1, L2); RESULT.setLine(K1left); :} 
+				|
+				(ClassCommaError) COMMA:l error
+				{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ClassCommaError(); :}
+				
 				|
 				(NoListVarDeclClass) {: RESULT=new NoListVarDeclClass(); :} /* epsilon */
                 ;
@@ -275,6 +282,9 @@ StaticInitializer ::= (StaticInitializerClass) STATIC LBRACE StatementList:S1 RB
 
 
 Statement ::= (StatementClass) DesignatorStatement:D1 SEMI {: RESULT=new StatementClass(D1); RESULT.setLine(D1left); :}
+			|
+			(ClassSemiError2) error SEMI:l
+			{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ClassSemiError2(); :}
            |
            (IfClass) IF LPAREN Condition:C1 RPAREN Statement:S2 ElseOpt:E3 {: RESULT=new IfClass(C1, S2, E3); RESULT.setLine(C1left); :}
            |
@@ -392,7 +402,7 @@ ListParams			::= (ListParamsActParsOptClass) LPAREN ActParsOpt:A1 RPAREN {: RESU
 				
 					
 NumConstOpt			::=
-					(NumConstOptClass) COMMA NUMBER:N1 {: RESULT=new NumConstOptClass(N1); RESULT.setLine(N1left); :}
+					(NumConstOptClass) COMMA NUMBER:width {: RESULT=new NumConstOptClass(width); RESULT.setLine(widthleft); :}
 					|
 					(NoNumConstClass) {: RESULT=new NoNumConstClass(); :} /* epsilon */
 					;			

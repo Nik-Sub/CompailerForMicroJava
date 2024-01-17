@@ -1,0 +1,445 @@
+INFO  20:01:48,117 - Compiling source file: E:\ETF\7.semestar\PP\Project\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  20:01:48,217 - #2 program
+INFO  20:01:48,217 - #14 test301
+INFO  20:01:48,217 - #5 namespace
+INFO  20:01:48,218 - #14 Konstante
+INFO  20:01:48,218 - #3 {
+INFO  20:01:48,218 - #6 const
+INFO  20:01:48,219 - #14 int
+INFO  20:01:48,219 - #14 nula
+INFO  20:01:48,220 - #7 =
+INFO  20:01:48,220 - #11 0
+INFO  20:01:48,220 - #9 ;
+INFO  20:01:48,221 - #6 const
+INFO  20:01:48,221 - #14 int
+INFO  20:01:48,221 - #14 jedan
+INFO  20:01:48,221 - #7 =
+INFO  20:01:48,221 - #11 1
+INFO  20:01:48,222 - #9 ;
+INFO  20:01:48,222 - #6 const
+INFO  20:01:48,222 - #14 int
+INFO  20:01:48,222 - #14 pet
+INFO  20:01:48,222 - #7 =
+INFO  20:01:48,222 - #11 5
+INFO  20:01:48,222 - #9 ;
+INFO  20:01:48,222 - #3 {
+INFO  20:01:48,222 - #4 }
+INFO  20:01:48,223 - #4 }
+INFO  20:01:48,223 - #5 namespace
+INFO  20:01:48,224 - #14 Nizovi
+INFO  20:01:48,224 - #3 {
+INFO  20:01:48,225 - #14 int
+INFO  20:01:48,225 - #14 niz
+INFO  20:01:48,225 - #17 [
+INFO  20:01:48,225 - #18 ]
+INFO  20:01:48,225 - #9 ;
+INFO  20:01:48,226 - #14 char
+INFO  20:01:48,226 - #14 nizch
+INFO  20:01:48,226 - #17 [
+INFO  20:01:48,226 - #18 ]
+INFO  20:01:48,226 - #9 ;
+INFO  20:01:48,226 - #3 {
+INFO  20:01:48,226 - #4 }
+INFO  20:01:48,226 - #4 }
+INFO  20:01:48,226 - #14 int
+INFO  20:01:48,226 - #14 a
+INFO  20:01:48,227 - #9 ;
+INFO  20:01:48,227 - #3 {
+INFO  20:01:48,227 - #43 void
+INFO  20:01:48,227 - #14 main
+INFO  20:01:48,227 - #19 (
+INFO  20:01:48,227 - #20 )
+INFO  20:01:48,228 - #14 int
+INFO  20:01:48,229 - #14 bodovi
+INFO  20:01:48,229 - #9 ;
+INFO  20:01:48,229 - #14 bool
+INFO  20:01:48,229 - #14 bt
+INFO  20:01:48,229 - #9 ;
+INFO  20:01:48,229 - #14 char
+INFO  20:01:48,229 - #14 c
+INFO  20:01:48,229 - #9 ;
+INFO  20:01:48,229 - #3 {
+INFO  20:01:48,229 - #47 read
+INFO  20:01:48,230 - #19 (
+INFO  20:01:48,230 - #14 bodovi
+INFO  20:01:48,230 - #20 )
+INFO  20:01:48,231 - #9 ;
+INFO  20:01:48,231 - #46 print
+INFO  20:01:48,231 - #19 (
+INFO  20:01:48,231 - #14 bodovi
+INFO  20:01:48,232 - #20 )
+INFO  20:01:48,234 - #9 ;
+INFO  20:01:48,234 - #47 read
+INFO  20:01:48,234 - #19 (
+INFO  20:01:48,234 - #14 bodovi
+INFO  20:01:48,234 - #20 )
+INFO  20:01:48,234 - #9 ;
+INFO  20:01:48,234 - #46 print
+INFO  20:01:48,234 - #19 (
+INFO  20:01:48,234 - #14 bodovi
+INFO  20:01:48,234 - #20 )
+INFO  20:01:48,234 - #9 ;
+INFO  20:01:48,234 - #47 read
+INFO  20:01:48,235 - #19 (
+INFO  20:01:48,235 - #14 bodovi
+INFO  20:01:48,235 - #20 )
+INFO  20:01:48,235 - #9 ;
+INFO  20:01:48,235 - #46 print
+INFO  20:01:48,235 - #19 (
+INFO  20:01:48,235 - #14 bodovi
+INFO  20:01:48,235 - #20 )
+INFO  20:01:48,235 - #9 ;
+INFO  20:01:48,236 - #47 read
+INFO  20:01:48,236 - #19 (
+INFO  20:01:48,236 - #14 bodovi
+INFO  20:01:48,236 - #20 )
+INFO  20:01:48,236 - #9 ;
+INFO  20:01:48,236 - #46 print
+INFO  20:01:48,236 - #19 (
+INFO  20:01:48,236 - #14 bodovi
+INFO  20:01:48,236 - #20 )
+INFO  20:01:48,236 - #9 ;
+INFO  20:01:48,236 - #47 read
+INFO  20:01:48,236 - #19 (
+INFO  20:01:48,237 - #14 bodovi
+INFO  20:01:48,237 - #20 )
+INFO  20:01:48,237 - #9 ;
+INFO  20:01:48,237 - #46 print
+INFO  20:01:48,237 - #19 (
+INFO  20:01:48,237 - #14 bodovi
+INFO  20:01:48,237 - #20 )
+INFO  20:01:48,237 - #9 ;
+INFO  20:01:48,237 - #4 }
+INFO  20:01:48,237 - #4 }
+INFO  20:01:48,243 - ProgramClass(
+  ProgNameClass(
+   test301
+  ) [ProgNameClass]
+  NamespaceListClass(
+    NamespaceListClass(
+      NoNamespaceClass(
+      ) [NoNamespaceClass]
+      NamespaceClass(
+        NamespaceNameClass(
+         Konstante
+        ) [NamespaceNameClass]
+        DeclListClass(
+          DeclListClass(
+            DeclListClass(
+              NoDeclClass(
+              ) [NoDeclClass]
+              ConstDeclTypeClass(
+                ConstDeclClass(
+                  TypeClass(
+                   int
+                  ) [TypeClass]
+                  ConstInitClass(
+                   nula
+                    NumConstTypeClass(
+                     0
+                    ) [NumConstTypeClass]
+                  ) [ConstInitClass]
+                  NoConstTypeListClass(
+                  ) [NoConstTypeListClass]
+                ) [ConstDeclClass]
+              ) [ConstDeclTypeClass]
+            ) [DeclListClass]
+            ConstDeclTypeClass(
+              ConstDeclClass(
+                TypeClass(
+                 int
+                ) [TypeClass]
+                ConstInitClass(
+                 jedan
+                  NumConstTypeClass(
+                   1
+                  ) [NumConstTypeClass]
+                ) [ConstInitClass]
+                NoConstTypeListClass(
+                ) [NoConstTypeListClass]
+              ) [ConstDeclClass]
+            ) [ConstDeclTypeClass]
+          ) [DeclListClass]
+          ConstDeclTypeClass(
+            ConstDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              ConstInitClass(
+               pet
+                NumConstTypeClass(
+                 5
+                ) [NumConstTypeClass]
+              ) [ConstInitClass]
+              NoConstTypeListClass(
+              ) [NoConstTypeListClass]
+            ) [ConstDeclClass]
+          ) [ConstDeclTypeClass]
+        ) [DeclListClass]
+        NoMethodDeclListClass(
+        ) [NoMethodDeclListClass]
+        EndOfNamespace(
+        ) [EndOfNamespace]
+      ) [NamespaceClass]
+    ) [NamespaceListClass]
+    NamespaceClass(
+      NamespaceNameClass(
+       Nizovi
+      ) [NamespaceNameClass]
+      DeclListClass(
+        DeclListClass(
+          NoDeclClass(
+          ) [NoDeclClass]
+          VarDeclTypeClass(
+            VarDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              VarArrayClass(
+               niz
+              ) [VarArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [VarDeclClass]
+          ) [VarDeclTypeClass]
+        ) [DeclListClass]
+        VarDeclTypeClass(
+          VarDeclClass(
+            TypeClass(
+             char
+            ) [TypeClass]
+            VarArrayClass(
+             nizch
+            ) [VarArrayClass]
+            NoListVarDeclClass(
+            ) [NoListVarDeclClass]
+          ) [VarDeclClass]
+        ) [VarDeclTypeClass]
+      ) [DeclListClass]
+      NoMethodDeclListClass(
+      ) [NoMethodDeclListClass]
+      EndOfNamespace(
+      ) [EndOfNamespace]
+    ) [NamespaceClass]
+  ) [NamespaceListClass]
+  DeclListClass(
+    NoDeclClass(
+    ) [NoDeclClass]
+    VarDeclTypeClass(
+      VarDeclClass(
+        TypeClass(
+         int
+        ) [TypeClass]
+        VarNoArrayClass(
+         a
+        ) [VarNoArrayClass]
+        NoListVarDeclClass(
+        ) [NoListVarDeclClass]
+      ) [VarDeclClass]
+    ) [VarDeclTypeClass]
+  ) [DeclListClass]
+  MethodDeclListClass(
+    NoMethodDeclListClass(
+    ) [NoMethodDeclListClass]
+    MethodDeclClass(
+      VoidRetTypeClass(
+       main
+      ) [VoidRetTypeClass]
+      NoFormParsOptClass(
+      ) [NoFormParsOptClass]
+      MethodDeclVarListClass(
+        MethodDeclVarListClass(
+          MethodDeclVarListClass(
+            NoMethodDeclVarListClass(
+            ) [NoMethodDeclVarListClass]
+            VarDeclClass(
+              TypeClass(
+               int
+              ) [TypeClass]
+              VarNoArrayClass(
+               bodovi
+              ) [VarNoArrayClass]
+              NoListVarDeclClass(
+              ) [NoListVarDeclClass]
+            ) [VarDeclClass]
+          ) [MethodDeclVarListClass]
+          VarDeclClass(
+            TypeClass(
+             bool
+            ) [TypeClass]
+            VarNoArrayClass(
+             bt
+            ) [VarNoArrayClass]
+            NoListVarDeclClass(
+            ) [NoListVarDeclClass]
+          ) [VarDeclClass]
+        ) [MethodDeclVarListClass]
+        VarDeclClass(
+          TypeClass(
+           char
+          ) [TypeClass]
+          VarNoArrayClass(
+           c
+          ) [VarNoArrayClass]
+          NoListVarDeclClass(
+          ) [NoListVarDeclClass]
+        ) [VarDeclClass]
+      ) [MethodDeclVarListClass]
+      StatementListClass(
+        StatementListClass(
+          StatementListClass(
+            StatementListClass(
+              StatementListClass(
+                StatementListClass(
+                  StatementListClass(
+                    StatementListClass(
+                      StatementListClass(
+                        StatementListClass(
+                          NoStatementListClass(
+                          ) [NoStatementListClass]
+                          ReadClass(
+                            DesignatorClass(
+                             bodovi
+                            ) [DesignatorClass]
+                          ) [ReadClass]
+                        ) [StatementListClass]
+                        PrintClass(
+                          ExprClass(
+                            NoMinusOptClass(
+                            ) [NoMinusOptClass]
+                            TermClass(
+                              VarClass(
+                                DesignatorClass(
+                                 bodovi
+                                ) [DesignatorClass]
+                              ) [VarClass]
+                              NoMultiplicationListClass(
+                              ) [NoMultiplicationListClass]
+                            ) [TermClass]
+                          ) [ExprClass]
+                          NoNumConstClass(
+                          ) [NoNumConstClass]
+                        ) [PrintClass]
+                      ) [StatementListClass]
+                      ReadClass(
+                        DesignatorClass(
+                         bodovi
+                        ) [DesignatorClass]
+                      ) [ReadClass]
+                    ) [StatementListClass]
+                    PrintClass(
+                      ExprClass(
+                        NoMinusOptClass(
+                        ) [NoMinusOptClass]
+                        TermClass(
+                          VarClass(
+                            DesignatorClass(
+                             bodovi
+                            ) [DesignatorClass]
+                          ) [VarClass]
+                          NoMultiplicationListClass(
+                          ) [NoMultiplicationListClass]
+                        ) [TermClass]
+                      ) [ExprClass]
+                      NoNumConstClass(
+                      ) [NoNumConstClass]
+                    ) [PrintClass]
+                  ) [StatementListClass]
+                  ReadClass(
+                    DesignatorClass(
+                     bodovi
+                    ) [DesignatorClass]
+                  ) [ReadClass]
+                ) [StatementListClass]
+                PrintClass(
+                  ExprClass(
+                    NoMinusOptClass(
+                    ) [NoMinusOptClass]
+                    TermClass(
+                      VarClass(
+                        DesignatorClass(
+                         bodovi
+                        ) [DesignatorClass]
+                      ) [VarClass]
+                      NoMultiplicationListClass(
+                      ) [NoMultiplicationListClass]
+                    ) [TermClass]
+                  ) [ExprClass]
+                  NoNumConstClass(
+                  ) [NoNumConstClass]
+                ) [PrintClass]
+              ) [StatementListClass]
+              ReadClass(
+                DesignatorClass(
+                 bodovi
+                ) [DesignatorClass]
+              ) [ReadClass]
+            ) [StatementListClass]
+            PrintClass(
+              ExprClass(
+                NoMinusOptClass(
+                ) [NoMinusOptClass]
+                TermClass(
+                  VarClass(
+                    DesignatorClass(
+                     bodovi
+                    ) [DesignatorClass]
+                  ) [VarClass]
+                  NoMultiplicationListClass(
+                  ) [NoMultiplicationListClass]
+                ) [TermClass]
+              ) [ExprClass]
+              NoNumConstClass(
+              ) [NoNumConstClass]
+            ) [PrintClass]
+          ) [StatementListClass]
+          ReadClass(
+            DesignatorClass(
+             bodovi
+            ) [DesignatorClass]
+          ) [ReadClass]
+        ) [StatementListClass]
+        PrintClass(
+          ExprClass(
+            NoMinusOptClass(
+            ) [NoMinusOptClass]
+            TermClass(
+              VarClass(
+                DesignatorClass(
+                 bodovi
+                ) [DesignatorClass]
+              ) [VarClass]
+              NoMultiplicationListClass(
+              ) [NoMultiplicationListClass]
+            ) [TermClass]
+          ) [ExprClass]
+          NoNumConstClass(
+          ) [NoNumConstClass]
+        ) [PrintClass]
+      ) [StatementListClass]
+    ) [MethodDeclClass]
+  ) [MethodDeclListClass]
+) [ProgramClass]
+INFO  20:01:48,243 - ===================================
+INFO  20:01:48,246 - Postavljen namespace: Konstante
+INFO  20:01:48,247 - Deklarisana konstanta Konstante::nula na liniji 6
+INFO  20:01:48,247 - Deklarisana konstanta Konstante::jedan na liniji 7
+INFO  20:01:48,247 - Deklarisana konstanta Konstante::pet na liniji 8
+INFO  20:01:48,247 - Resetovan namespaceName
+INFO  20:01:48,247 - Postavljen namespace: Nizovi
+INFO  20:01:48,247 - Deklarisana promenljiva Nizovi::niz na liniji 14
+INFO  20:01:48,247 - Deklarisana promenljiva Nizovi::nizch na liniji 15
+INFO  20:01:48,247 - Resetovan namespaceName
+INFO  20:01:48,247 - Trenutni namespace: 
+INFO  20:01:48,247 - Deklarisana promenljiva ::a na liniji 20
+INFO  20:01:48,247 - Obradjuje se funkcija main na liniji 23
+INFO  20:01:48,247 - Trenutni namespace: 
+INFO  20:01:48,247 - Deklarisana promenljiva bodovi na liniji 24
+INFO  20:01:48,247 - Trenutni namespace: 
+INFO  20:01:48,248 - Deklarisana promenljiva bt na liniji 25
+INFO  20:01:48,248 - Trenutni namespace: 
+INFO  20:01:48,248 - Deklarisana promenljiva c na liniji 26
+INFO  20:01:48,248 -  Print count calls = 5
+INFO  20:01:48,248 -  Deklarisanih promenljivih ima = 6
+INFO  20:01:48,248 - ===================================
+INFO  20:01:48,253 - Parsiranje uspesno zavrseno!

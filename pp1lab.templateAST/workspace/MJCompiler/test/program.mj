@@ -22,27 +22,32 @@ namespace Nizovi{
 {
 	void main()	
 		int bodovi;
-		bool bt;
+		bool bt[];
+		char c;
 	{
-		bodovi = 0;
-		bodovi++;
-		bodovi = bodovi + Konstante::jedan;
-		bodovi = bodovi * Konstante::pet;
-		bodovi--;
-		print(bodovi);
 		
+		Nizovi::nizch = new char[3];
 		Nizovi::niz = new int[3];
-		Nizovi::niz[Konstante::nula] = Konstante::jedan;
-		//print(Nizovi::niz[Konstante::nula]);
-		Nizovi::niz[1] = 2;
-		Nizovi::niz[Nizovi::niz[Konstante::jedan]] = Nizovi::niz[Nizovi::niz[0]] * 3;
-		bodovi = Nizovi::niz[2]/Nizovi::niz[0];
+		bt = new bool[4];
+		
+		Nizovi::nizch[1] = 'a';
+		print(Nizovi::nizch[1], 4);
+		
+		read(Nizovi::niz[1]);
+		print(Nizovi::niz[1]);
+		
+		read(bodovi);
 		print(bodovi);
-		print(Nizovi::niz[2]);
-			
 		
+		read(Nizovi::nizch[1]);
+		print(Nizovi::nizch[1], 4);
 		
-			
+		read(bt[1]);
+		print(bt[1]);
+		
+		read(bt[2]);
+		print(bt[2]);
+		
 	}
 }
 

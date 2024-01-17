@@ -2,7 +2,7 @@ package rs.ac.bg.etf.pp1;
 
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
-import rs.etf.pp1.symboltable.Tab;
+//import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.ac.bg.etf.pp1.CounterVisitor.FormParamCounter;
 import rs.ac.bg.etf.pp1.CounterVisitor.VarCounter;
@@ -15,35 +15,74 @@ public class CodeGenerator extends VisitorAdaptor {
 	private boolean newOperator = false;
 	private Obj indForArray = null;
 	private boolean arrayWithIndexOnTheLeftSideOfEqual;
+	private boolean defaultWidth = true;;
 	
 	public int getMainPc() {
 		return mainPc;
 	}
 	
+	public void visit(ReadClass readStmt) {
+		if (readStmt.getDesignator().obj.getType() == nTab.intType || readStmt.getDesignator().obj.getType() == nTab.find("bool").getType() || readStmt.getDesignator().obj.getType().getKind() == Struct.Array && readStmt.getDesignator().obj.getType().getElemType().getKind() == Struct.Int) {
+			Code.put(Code.read);
+		}
+		else {
+			Code.put(Code.bread);
+		}
+		if (readStmt.getDesignator().obj.getType().getKind() == Struct.Array) {
+			Code.put(Code.astore);
+		}
+		else {
+			Code.store(readStmt.getDesignator().obj);
+		}
+		
+	}
+	
 	public void visit(PrintClass printStmt) {
-		if (printStmt.getExpr().struct == Tab.intType || printStmt.getExpr().struct.getKind() == Struct.Array && printStmt.getExpr().struct.getElemType().getKind() == Struct.Int) {
-			Code.loadConst(5);
+		if (printStmt.getExpr().struct == nTab.intType || printStmt.getExpr().struct.getKind() == Struct.Array && printStmt.getExpr().struct.getElemType().getKind() == Struct.Int) {
+			if (defaultWidth) {
+				Code.loadConst(5);
+			}
 			Code.put(Code.print);
 		}
 		else {
-			Code.loadConst(1);
+			if (defaultWidth) {
+				Code.loadConst(1);
+			}
 			Code.put(Code.bprint);
 		}
+		defaultWidth = true;
 	}
 	
-	// constants are not in Table of symbols, we are pushing them on the stack directly
+	public void visit(NumConstOptClass width) {
+		defaultWidth = false;
+		Code.loadConst(width.getWidth());
+	}
 	
-//	public void visit(BoolConstClass boolConst) {
-//		Obj con = Tab.insert(Obj.Con, "$", boolConst.struct);
-//		con.setLevel(0);
-//		con.setAdr(Integer.parseInt(boolConst.getB1()));
-//		
-//		Code.load(con);
-//	}
+	
+	
+	// constants are not in nTable of symbols, we are pushing them on the stack directly
+	
+	public void visit(TrueClass trueExpr) {
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
+		con.setLevel(0);
+		con.setAdr(1);
+		indForArray = con;
+		
+		Code.load(con);
+	}
+	
+	public void visit(FalseClass falseExpr) {
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
+		con.setLevel(0);
+		con.setAdr(0);
+		indForArray = con;
+		
+		Code.load(con);
+	}
 	
 	
 	public void visit(NumberClass number) {
-		Obj con = Tab.insert(Obj.Con, "$", number.struct);
+		Obj con = nTab.insert(Obj.Con, "$", number.struct);
 		con.setLevel(0);
 		con.setAdr(number.getN1());
 		indForArray = con;
@@ -52,7 +91,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(LetterClass letter) {
-		Obj con = Tab.insert(Obj.Con, "$", letter.struct);
+		Obj con = nTab.insert(Obj.Con, "$", letter.struct);
 		con.setLevel(0);
 		con.setAdr(letter.getL1());
 		
@@ -125,39 +164,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	public void visit(DesignatorClass designator) {
 		SyntaxNode parent = designator.getParent();
-		
 		// if we are using designator inside expression, we will put it on the stack
-		if (AssignOperatorClass.class != parent.getClass() && FunCallClass.class != parent.getClass()) {
-			// ... + niz[1] + ... situation
-			if (arrayWithIndexOnTheLeftSideOfEqual) {
-				arrayWithIndexOnTheLeftSideOfEqual = false;
-				// pop index
-				Code.put(Code.pop);
-				// add adr of the array
-				Code.load(designator.obj);
-				// now add index
-				Code.load(indForArray);
-				Code.put(Code.aload);
-			}
-			else {
-				indForArray = designator.obj;
-				Code.load(designator.obj);
-			}
-			
-		}
-		// niz[ind] = ... - this situation
-		else if (AssignOperatorClass.class == parent.getClass() && designator.obj.getType().getKind() == Struct.Array && arrayWithIndexOnTheLeftSideOfEqual) {
-			arrayWithIndexOnTheLeftSideOfEqual = false;
-			
-			// pop index
-			Code.put(Code.pop);
-			// add adr of the array
+		if (AssignOperatorClass.class != parent.getClass() && FunCallClass.class != parent.getClass() && ReadClass.class != parent.getClass()) {
 			Code.load(designator.obj);
-			// now add index
-			Code.load(indForArray);
-			
 		}
-		
 	}
 	
 	public void visit(DesignatorWithPrefixClass desginatorFromNamespace) {
@@ -165,39 +175,31 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		// if we are using designator inside expression, we will put it on the stack
 		if (AssignOperatorClass.class != parent.getClass() && FunCallClass.class != parent.getClass()) {
-			// ... + niz[1] + ... situation
-			if (arrayWithIndexOnTheLeftSideOfEqual) {
-				arrayWithIndexOnTheLeftSideOfEqual = false;
-				// pop index
-				Code.put(Code.pop);
-				// add adr of the array
-				Code.load(desginatorFromNamespace.obj);
-				// now add index
-				Code.load(indForArray);
-				Code.put(Code.aload);
-			}
-			else {
-				indForArray = desginatorFromNamespace.obj;
-				Code.load(desginatorFromNamespace.obj);
-			}
-			
-		}
-		// niz[ind] = ... - this situation
-		else if (AssignOperatorClass.class == parent.getClass() && desginatorFromNamespace.obj.getType().getKind() == Struct.Array && arrayWithIndexOnTheLeftSideOfEqual) {
-			arrayWithIndexOnTheLeftSideOfEqual = false;
-			
-			// pop index
-			Code.put(Code.pop);
-			// add adr of the array
 			Code.load(desginatorFromNamespace.obj);
-			// now add index
-			Code.load(indForArray);
 			
 		}
 	}
 	
+	public void visit(NameOfArrayClass designator) {
+		SyntaxNode parent = designator.getParent();
+		// if we are using designator inside expression, we will put it on the stack
+		if (AssignOperatorClass.class != parent.getClass() && FunCallClass.class != parent.getClass()) {
+			Code.load(designator.obj);
+		}
+	}
+	
+	public void visit(NameOfArrayWithPrefixClass desginatorFromNamespace) {
+		SyntaxNode parent = desginatorFromNamespace.getParent();
+		
+		// if we are using designator inside expression, we will put it on the stack
+		if (AssignOperatorClass.class != parent.getClass() && FunCallClass.class != parent.getClass()) {
+			Code.load(desginatorFromNamespace.obj);
+		}
+	}
+	
+	
 	public void visit(IncClass incClass) {
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(1);
 		
@@ -207,7 +209,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(DecClass decClass) {
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(1);
 		
@@ -240,7 +242,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.put(Code.call);
 		Code.put2(offset);
 		
-		if (procCall.getDesignator().obj.getType() != Tab.noType) {
+		if (procCall.getDesignator().obj.getType() != nTab.noType) {
 			Code.put(Code.pop);
 		}
 	}
@@ -265,7 +267,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	// next two visits are for minus if expression starts with minus
 	public void visit(MinusOptClass withMinus) {
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(-1);
 		
@@ -277,7 +279,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			Code.put(Code.pop);
 		}
 		
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(1);
 		
@@ -285,14 +287,14 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(MinusOpClass minusInsideExpression) {
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(-1);
 		
 		Code.load(con);
 	}
 	public void visit(AddOpClass noMinusInsideExpression) {
-		Obj con = Tab.insert(Obj.Con, "$", Tab.intType);
+		Obj con = nTab.insert(Obj.Con, "$", nTab.intType);
 		con.setLevel(0);
 		con.setAdr(1);
 		
@@ -300,7 +302,12 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	public void visit(ExprClass expr) {
+		SyntaxNode parent = expr.getParent();
+		
 		Code.put(Code.mul);
+		if ((parent.getClass() == DesignatorWithPrefixArrayClass.class || parent.getClass() == DesignatorArrayClass.class) && parent.getParent().getClass() == VarClass.class) {
+			Code.put(Code.aload);
+		}
 	}
 	
 	// operators mul div and rem

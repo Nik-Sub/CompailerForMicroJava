@@ -163,6 +163,9 @@ TypeList ::= (VoidTypeClass) VOID
           
 
 VarDecl ::= (VarDeclClass) Type:varType KindOfVar ListVarDecl SEMI
+			|
+			(ClassSemiError) error SEMI:l
+			{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
           	;
           	
           	
@@ -177,6 +180,10 @@ VarDeclOpt ::= (VarDeclOptClass) VarDecl
             ;
             
 ListVarDecl ::= (ListVarDeclClass) COMMA KindOfVar ListVarDecl 
+				|
+				(ClassCommaError) COMMA:l error
+				{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
+				
 				|
 				(NoListVarDeclClass) /* epsilon */
                 ;
@@ -232,6 +239,9 @@ StaticInitializer ::= (StaticInitializerClass) STATIC LBRACE StatementList RBRAC
 
 
 Statement ::= (StatementClass) DesignatorStatement SEMI
+			|
+			(ClassSemiError2) error SEMI:l
+			{: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
            |
            (IfClass) IF LPAREN Condition RPAREN Statement ElseOpt
            |
@@ -349,7 +359,7 @@ ListParams			::= (ListParamsActParsOptClass) LPAREN ActParsOpt RPAREN
 				
 					
 NumConstOpt			::=
-					(NumConstOptClass) COMMA NUMBER
+					(NumConstOptClass) COMMA NUMBER:width
 					|
 					(NoNumConstClass) /* epsilon */
 					;			
